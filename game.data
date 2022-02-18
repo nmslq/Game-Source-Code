@@ -1,0 +1,4 @@
+reload(game, destop, files, source, android)
+if destop run game.destop.open()
+if android run game.android.open()
+endreload
