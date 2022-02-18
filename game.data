@@ -1,4 +1,3 @@
-reload(game, destop, files, source, android)
-if destop run game.destop.open()
-if android run game.android.open()
+reload(game, destop, data, android)
+if destop set windows.name(menu)
 endreload
