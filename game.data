@@ -1,3 +1,4 @@
-reload(game, destop, data, android)
-if destop set windows.name(menu)
+reload(game, destop, data, mods, android)
+if destop set windows.name(game)
+send(game)
 endreload
