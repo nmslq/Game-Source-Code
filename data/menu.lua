@@ -1,10 +1,11 @@
 function inRoom()
-set(menuRoom0)
+set(menuRoom)
 end
 
 function onCreate(text)
 start = create.start.text(0, 0, start, 30, sans)
-exit = create.exit.text(0, 0, exit, 30, sans)
+mods = create.mods.text(0, -30 ,mods, 30, sans)
+exit = create.exit.text(0, -60, exit, 30, sans)
 end
 
 function onUpdate()
