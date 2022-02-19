@@ -1,3 +1,5 @@
+version:0.0.5beta
+now:Updating
 reload(game, destop, data, mods, images, font, android)
 if destop set windows.name(game)
 send(game)
