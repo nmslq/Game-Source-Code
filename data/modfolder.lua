@@ -2,10 +2,10 @@ function onUndate()
    if mods.folder ishave then
      load(mods/.mod)
         if not have mod then
-          set(modRoom.no)
+          setRoom(modRoom.no)
         end
         if have mod then
-          set(modRoom.have)
+          setRoom(modRoom.have)
           end
     end
     if mods.folder nothave then
