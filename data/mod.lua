@@ -15,7 +15,7 @@ function onUpdate()
    if mods.nothave then
      setRoom(modsRoom.no)
      not = create.not.text(0, 0, there isn't have any mod!, 30, sans
-    end
+   end
 end
 
 function onTest(Destop, Android)

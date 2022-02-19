@@ -25,12 +25,13 @@ function onPress()
    if Press exit then
      Close(game)
    end
+end
 
 function onTest(Destop, Android)
-    if Destop then
-       Test.controls(up, down, Z)
+   if Destop then
+      Test.controls(up, down, Z)
     end
-    if Android then
-       Add.controls(up, down, A)
-    end
+   if Android then
+      Add.controls(up, down, A)
+   end
 end
