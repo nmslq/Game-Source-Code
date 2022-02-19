@@ -1,4 +1,4 @@
-reload(game, destop, data, mods, android)
+reload(game, destop, data, mods, images, font, android)
 if destop set windows.name(game)
 send(game)
 endreload
