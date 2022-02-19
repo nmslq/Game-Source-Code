@@ -1,0 +1,2 @@
+on CI Build spawn game.exe
+set.game.exe:start.game.data()
