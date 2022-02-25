@@ -35,3 +35,7 @@ function onTest(Destop, Android)
       Add.controls(up, down, A)
    end
 end
+
+function Start.Game()
+   setRoom(game.1)
+end

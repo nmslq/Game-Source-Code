@@ -8,9 +8,18 @@ function onLoad()
      if right create.sprite(x, y, right)
      if A create.sprite(x, y, A)
      if B create.sprite(x, y, B)
+     if android then
+     Test.controls()
+     if up next.up
+     if down next.down
+     if left next.left
+     if right next.right
+     if A Press
+     if B Esc Exit
+   end
    end
    if destop then
-     reload.controls()
+     Test.controls()
      if up next.up
      if down next.down
      if left next.left
