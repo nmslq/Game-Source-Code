@@ -2,12 +2,12 @@ function onLoad()
    if android then
      reload.controls()
      Add.controls(controls)
-     if up create.spirits(x, y, up)
-     if down create.spirits(x, y, down)
-     if left create.spirits(x, y, left)
-     if right create.spirits(x, y, right)
-     if A create.spirits(x, y, A)
-     if B create.spirits(x, y, B)
+     if up create.sprite(x, y, up)
+     if down create.sprite(x, y, down)
+     if left create.sprite(x, y, left)
+     if right create.sprite(x, y, right)
+     if A create.sprite(x, y, A)
+     if B create.sprite(x, y, B)
    end
    if destop then
      reload.controls()
