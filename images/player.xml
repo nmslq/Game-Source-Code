@@ -1,2 +1,5 @@
 path = "images/player.png"
 <SubTextrue name: idle>
+<SubTextrue name: left>
+<SubTextrue name: right>
+<SubTextrue name: up>
