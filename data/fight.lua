@@ -1,12 +1,27 @@
 dodge = false
 health = 100
+timer.load()
 
 function onCreate()
-   player = create.player.sprite(player.absx, player.abxy, player, 30, 30)
+   player = create.player.sprite(player.absx, player.abxy ,player, 30, 30)
    add.animate(ch,idle)
    add.animate(ch,left)
    add.animate(ch,right)
    add.animate(ch,up)
+end
+
+function onUpdate()
+    timer.Update()
+    if time % 6 == 0 then
+       if bullet.isative then
+          if bullet.color == nil then
+            play.animate(bullet,bullet)
+          end
+          if bullet.color == red then
+            play.animate(redbullet,redbullet)
+          end
+      end
+  end
 end
 
 function move()
@@ -21,8 +36,10 @@ end
 function bullet()
    bullet = create.bullet.sprite(bullet.x, bullet.y, bullet, 30, 30)
    add.animate(bullet,bullet)
+   bullet.color.set(nil)
    redbullet = create.redbullet.sprite(redbullet.x, redbullet.y, redbullet, 30, 30)
    add.animate(redbullet,redbullet)
+   bullet.color.set(red)
    if bullet.r = player
      hit()
    end
@@ -48,6 +65,6 @@ end
 
 function dead()
    if health = 0 then
-     setRoom(menu)
+     setRoom(die)
    end
 end
