@@ -14,7 +14,7 @@ end
 
 function summon()
    if time % 13 == 0 then
-      summon.bullet()
+      summon.bullet(rx,ry)
    end
 end
 
