@@ -1,0 +1,8 @@
+path = "images/controls.png"
+<SubTextrue name: left>
+<SubTextrue name: up>
+<SubTextrue name: down>
+<SubTextrue name: right>
+<SubTextrue name: A>
+<SubTextrue name: B>
+<SubTextrue name: S>
