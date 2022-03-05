@@ -1,6 +1,10 @@
 controls.load()
 fight.load()
 
+function inRoom()
+   setRoom(game.1)
+end
+
 function onUpdate()
   controls.Update()
   fight.Update()
