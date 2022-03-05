@@ -27,10 +27,7 @@ function onPress()
    end
 end
 
-function onTest(Destop, Android)
-   if Destop then
-      Test.controls(up, down, Z)
-    end
+function onTest(Android)
    if Android then
       Add.controls(up, down, A)
    end

@@ -15,3 +15,9 @@ function summon()
       summon.bullet()
    end
 end
+
+function onTest(Android)
+   if Android then
+      Add.controls(up, down, A, B, S)
+   end
+end
