@@ -2,21 +2,24 @@ function onLoad()
    if android then
      reload.controls()
      Add.controls(controls)
-     if up create.sprite(x, y, up)
-     if down create.sprite(x, y, down)
-     if left create.sprite(x, y, left)
-     if right create.sprite(x, y, right)
-     if A create.sprite(x, y, A)
-     if B create.sprite(x, y, B)
-     if android then
-     Test.controls()
-     if up next.up
-     if down next.down
-     if left next.left
-     if right next.right
-     if A Press
-     if B Esc Exit
-   end
+     con = create.con.sprite(0, 0, controls, 30, 30)
+     if up set.sprite(con, x, y, up)
+     if down set.sprite(con, x, y, down)
+     if left set.sprite(con, x, y, left)
+     if right set.sprite(con, x, y, right)
+     if A set.sprite(con, x, y, A)
+     if B set.sprite(con, x, y, B)
+     if S set.sprite(con, x, y, S)
+        if android then
+        Test.controls()
+        if up next.up
+        if down next.down
+        if left next.left
+        if right next.right
+        if A Press
+        if B Esc Exit
+        if S speed+
+       end
    end
    if destop then
      Test.controls()
@@ -26,5 +29,6 @@ function onLoad()
      if right next.right
      if A Press
      if B Esc Exit
+     if S speed+
    end
 end
