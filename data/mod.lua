@@ -30,7 +30,7 @@ function onUpdate()
    if mods.have then
      setRoom(modsRoom.have)
      mod = create.mod.text(0, 0, [mod.name]loaded, 30, sans, [have.mods.maths])
-     version = create.version.text(-30, -30, version:[mod.version], 30, sans
+     version = create.version.text(-30, -30, version:[mod.version], 30, sans)
    end
    if mods.nothave then
      setRoom(modsRoom.no)
