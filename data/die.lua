@@ -11,7 +11,7 @@ function Die()
    die = create.die.text(0, 0, ..., 30, sans)
 end
 
-function Press()
+function onPress()
    pr.fd(next fd1)
    pr.die()
    fd.fie = room.game.1
