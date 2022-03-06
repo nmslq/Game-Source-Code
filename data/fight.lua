@@ -4,7 +4,7 @@ health = 100
 timer.load()
 
 function onCreate()
-   player = create.player.sprite(player.absx, player.abxy ,player, 30, 30)
+   player = create.player.sprite(player.absx, player.abxy, player, 30, 30)
    add.animate(player,idle)
    add.animate(player,left)
    add.animate(player,right)
