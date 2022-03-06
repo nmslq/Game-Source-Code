@@ -9,6 +9,7 @@ function onLoad()
      if right set.sprite(con, x, y, right)
      if A set.sprite(con, x, y, A)
      if B set.sprite(con, x, y, B)
+     if C set.sprite(con, x, y, C)
      if S set.sprite(con, x, y, S)
         if android then
         Test.controls()
@@ -18,7 +19,8 @@ function onLoad()
         if right next.right
         if A Press
         if B Esc Exit
-        if S speed+
+        if C speed+
+        if S shoot
        end
    end
    if destop then
@@ -29,6 +31,7 @@ function onLoad()
      if right next.right
      if A Press
      if B Esc Exit
-     if S speed+
+     if C speed+
+     if S shoot
    end
 end
