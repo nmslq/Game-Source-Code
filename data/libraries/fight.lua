@@ -2,6 +2,7 @@ dodge = false
 max.health = 100
 health = 100
 timer.load()
+debug.load()
 
 function onCreate()
    player = create.player.sprite(player.absx, player.absy, player, 30, 30)

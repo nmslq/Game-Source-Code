@@ -1,9 +1,4 @@
 debug = false
-fight.load()
-
-function onUpdate()
-   fight.Update()
-end
 
 function testkeys(keyboard)
    if debug = false and input.keyboard 'D' = then
