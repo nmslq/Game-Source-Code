@@ -1,9 +1,8 @@
-timer.load()
-
 function playVideo()
    hud.hide()
    game.hide()
    timer.stop()
+   fight.disbale()
    if not Android then
    load.video(mp4)
    load.mp3.vidsound(mp3)
