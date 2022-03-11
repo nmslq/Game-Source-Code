@@ -66,7 +66,7 @@ function shoot()
      moster.kill()
    end
    if timer >= 4 then
-   play.animate(player,idle)
+   play.animate.loop(player,idle)
    end
    if timer >= 30 then
    shbu.romove()
