@@ -14,20 +14,6 @@ function onCreate()
    add.animate(player,shoot)
 end
 
-function onUpdate()
-    timer.Update()
-    if timer % 6 == 0 then
-       if bullet.isative then
-          if bullet.color == nil then
-            play.animate(bullet,bullet)
-          end
-          if bullet.color == red then
-            play.animate(redbullet,redbullet)
-          end
-      end
-  end
-end
-
 function move()
    if left.key.move.ch(5,0)
    play.animate(player,left)
@@ -37,13 +23,27 @@ function move()
    play.animate.loop(player,idle)
 end
 
+function onUpdate()
+       if bullet.isative then
+          if bullet.color == nil then
+            bullet.rotation(bullet.rotation + 1)
+          end
+          if bullet.color == red then
+            redbullet.rotation(redbullet.rotation + 1)
+          end
+      end
+  end
+end
+
 function bullet()
    bullet = create.bullet.sprite(bullet.x, bullet.y, bullet, 30, 30)
    add.animate(bullet,bullet)
    bullet.color.set(nil)
+   play.animate.loop(bullet,bullet)
    redbullet = create.redbullet.sprite(redbullet.x, redbullet.y, redbullet, 30, 30)
    add.animate(redbullet,redbullet)
-   bullet.color.set(red)
+   redbullet.color.set(red)
+   play.animate.loop(redbullet,redbullet)
    if bullet.r = player
      hit()
    end
@@ -70,7 +70,7 @@ function shoot()
    play.animate.loop(player,idle)
    end
    if timer >= 30 then
-   shbu.romove()
+   shbu.remove()
    end
 end
 
