@@ -1,4 +1,5 @@
 controls.load()
+tools.load()
 
 function inRoom()
    setRoom(menuRoom)
@@ -13,6 +14,7 @@ end
 
 function onUpdate()
    controls.Update()
+   tools.Update()
 end
 
 function onPress()
@@ -23,7 +25,7 @@ function onPress()
      setRoom(modsRoom)
    end
    if Press exit then
-     Close(game)
+     exit.game.tools()
    end
 end
 
