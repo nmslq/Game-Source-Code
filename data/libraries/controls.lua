@@ -1,4 +1,4 @@
-function onLoad()
+function Controls()
    if android then
      reload.controls()
      Add.controls(controls)
