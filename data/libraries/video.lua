@@ -25,10 +25,12 @@ function playVideo()
      html.vidsound()
      html.open()
      play.html(video<mp4>,vidsound<mp3>)
+     url.html.video()
         if Android play end then
           html.close()
           htvideo.remove()
           htvidsound.remove()
           play.html.video(end)
+          url.html.video(end)
         end
 end
