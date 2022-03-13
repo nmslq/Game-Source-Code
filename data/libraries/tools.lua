@@ -49,22 +49,22 @@ function tools()
    end
    if win then
       if windows then
-        change.open.windows(text)
+        change.open.windows(tag,text)
       end
       if android then
-        change.open.android(text)
+        change.open.android(tag,text)
       end
    end
    if not files then
       if android then
         android.tools.open(error)
-        android.tools.win(error {files.name})
+        android.tools.win(error,error {files.name})
         android.tools.save(log.txt)
         android.tools.edit(log,error in {files.name})
       end
       if windows then
         windows.tools.open(error)
-        windows.tools.win(error {files.name})
+        windows.tools.win(error,error {files.name})
         windows.tools.save(log.txt)
         windows.tools.edit(log,error in {files.name})
        end
