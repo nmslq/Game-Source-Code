@@ -1,6 +1,7 @@
 controls.load()
 fight.load()
-timer.load
+timer.load()
+stage = 1
 
 function inRoom()
    setRoom(game.1)
@@ -14,6 +15,8 @@ end
 
 function summon()
    if time % 13 == 0 then
+      rx = math.random(stage.x)
+      ry = math.random(stage.y)
       summon.bullet(rx,ry)
    end
 end
