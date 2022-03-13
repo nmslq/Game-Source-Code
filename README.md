@@ -1,6 +1,3 @@
 # Source-Code
-:))))))))
 
-Updating
-
-This is test!
+this is game's source code
