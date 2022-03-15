@@ -6,6 +6,12 @@ function inRoom()
    setRoom(modsRoom)
 end
 
+function addControls()
+   if Android then
+     Add.controls(up, down, A, B)
+   end
+end
+
 function onUpdate()
    controls.Update()
    if mods.folder ishave then
