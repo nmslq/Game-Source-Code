@@ -23,7 +23,7 @@ function summon()
    end
 end
 
-function onTest(Android)
+function addControls(Android)
    if Android then
       Add.controls(up, down, A, B, C, S)
    end
