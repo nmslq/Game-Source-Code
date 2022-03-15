@@ -9,5 +9,6 @@ function stages()
      sky = create.sky.sprite(0,0,sky)
      sky.scale(3.4,3.4)
      sky.scoll(0,0)
+     sky.cam()
    end
 end
