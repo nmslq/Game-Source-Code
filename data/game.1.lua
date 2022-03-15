@@ -1,6 +1,7 @@
 controls.load()
 fight.load()
 timer.load()
+shaders.cam()
 stage = 1
 
 function inRoom()
