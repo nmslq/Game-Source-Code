@@ -1,5 +1,6 @@
 controls.load()
 tools.load()
+shaders.cam()
 
 function inRoom()
    setRoom(menuRoom)
