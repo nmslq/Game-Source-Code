@@ -1,6 +1,10 @@
+cam = camera.fix()
+
 function shader()
-   if shader = normal;
-     camera.nothing()
-     light.nothing()
+   if cam.move then
+     cam.move.fix(x,y)
+   end
+   if cam.rotation then
+     cam.rotation.fix(index)
    end
 end
