@@ -34,7 +34,7 @@ function onPress()
    end
 end
 
-function onTest(Android)
+function addControls(Android)
    if Android then
       Add.controls(up, down, A)
    end
