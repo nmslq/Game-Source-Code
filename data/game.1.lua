@@ -25,6 +25,6 @@ end
 
 function onTest(Android)
    if Android then
-      Add.controls(up, down, A, B, S)
+      Add.controls(up, down, A, B, C, S)
    end
 end
