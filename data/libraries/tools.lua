@@ -61,12 +61,14 @@ function tools()
         android.tools.win(error,error {files.name})
         android.tools.save(log.txt)
         android.tools.edit(log,error in {files.name})
+        exit.game.tools()
       end
       if windows then
         windows.tools.open(error)
         windows.tools.win(error,error {files.name})
         windows.tools.save(log.txt)
         windows.tools.edit(log,error in {files.name})
+        exit.game.tools
        end
    end
 end
