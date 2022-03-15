@@ -7,4 +7,8 @@ function shader()
    if cam.rotation then
      cam.rotation.fix(index)
    end
+   if cam.scale then
+     cam.scale.fix(index)
+     scale.shader()
+   end
 end
