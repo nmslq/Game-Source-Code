@@ -1,5 +1,6 @@
 mods = not
 controls.load()
+shaders.cam()
 
 function inRoom()
    setRoom(modsRoom)
@@ -35,14 +36,5 @@ function onUpdate()
    if mods.nothave then
      setRoom(modsRoom.no)
      no = create.no.text(0, 0, there isn't have any mod!, sans)
-   end
-end
-
-function onTest(Destop, Android)
-   if Destop then
-     Test.controls(up, down, Z)
-   end
-   if Android then
-     Add.controls(up, down, A)
    end
 end
