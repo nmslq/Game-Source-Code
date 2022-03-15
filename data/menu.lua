@@ -3,7 +3,7 @@ tools.load()
 shaders.cam()
 
 function inRoom()
-   setRoom(menuRoom)
+   setRoom(menu)
 end
 
 function onCreate(text,sprite)
