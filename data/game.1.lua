@@ -23,7 +23,7 @@ function summon()
    end
 end
 
-function addControls(Android)
+function addControls()
    if Android then
       Add.controls(up, down, A, B, C, S)
    end
