@@ -19,6 +19,11 @@ function Die()
    die = create.die.text(0, 0, ..., 30, sans)
 end
 
+function addControls()
+   if Android then
+     Add.controls(A)
+end
+
 function onPress()
    setRoom(menu)
 end
