@@ -25,6 +25,9 @@ end
 
 function addControls()
    if Android then
-      Add.controls(up, down, A, B, C, S)
+      Add.controls(full, B, C, S)
+   end
+   if Press B then
+     pause()
    end
 end
