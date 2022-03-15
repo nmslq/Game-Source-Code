@@ -3,6 +3,7 @@ max.health = 100
 health = 100
 timer.load()
 debug.load()
+shaders.cam()
 
 function onCreate()
    player = create.player.sprite(player.absx,player.absy,player)
@@ -15,24 +16,26 @@ function onCreate()
 end
 
 function move()
-   if left.key.move.ch(5,0)
+   if left.key.move.player(5,0)
    play.animate(player,left)
-   if right.key.move.ch(0,5)
+   shaders.cam.move(player.x,player.y)
+   if right.key.move.player(0,5)
    play.animate(player,right)
+   shaders.cam.move(player.x,player.y)
    if nomove then
    play.animate.loop(player,idle)
 end
 
 function onUpdate()
-       if bullet.isative then
-          if bullet.color == nil then
-            bullet.rotation(bullet.rotation + 1)
-          end
-          if bullet.color == red then
-            redbullet.rotation(redbullet.rotation + 1)
-          end
+   shaders.Update()
+   if bullet.isative then
+      if bullet.color == nil then
+        bullet.rotation(bullet.rotation + 1)
       end
-  end
+      if bullet.color == red then
+            redbullet.rotation(redbullet.rotation + 1)
+      end
+   end
 end
 
 function bullet()
