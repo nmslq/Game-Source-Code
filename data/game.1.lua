@@ -11,6 +11,7 @@ end
 function onUpdate()
   controls.Update()
   fight.Update()
+  shaders.Update()
   timer.Update()
 end
 
