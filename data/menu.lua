@@ -8,16 +8,12 @@ end
 function onCreate(text,sprite)
    title = create.title.sprite(title,0,-50)
    title.scale(3,2)
-   title.scoll(0,0)
    start = create.start.text(0,0,start,sans)
    start.scale(1.2,1)
-   start.scoll(0,0)
    mods = create.mods.text(0,0,mods,sans)
    mods.scale(1.2,1)
-   mods.scoll(0,0)
    exit = create.exit.text(0,0,exit,sans)
    exit.scale(1.2,1)
-   exit.scoll(0,0)
 end
 
 function onUpdate()
