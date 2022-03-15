@@ -5,6 +5,12 @@ timer.load()
 debug.load()
 shaders.cam()
 
+function addControls()
+   if Press B then
+     pause()
+   end
+end
+
 function onCreate()
    player = create.player.sprite(player.absx,player.absy,player)
    add.animate(player,idle)
