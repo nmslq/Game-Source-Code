@@ -4,11 +4,13 @@ function pause()
 end
 
 function onPress()
-   case Resume
+   if Press Resume then
      close()
-   case Reset level
+   end
+   if Press Reset level then
      reset()
-   case Exit to menu
+   end
+   if Press Exit to menu then
      exit()
    end
 end
