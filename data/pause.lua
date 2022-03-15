@@ -15,6 +15,21 @@ function onPress()
    end
 end
 
+function close()
+   fight.game.room()
+   close.pause()
+end
+
+function reset()
+   black.screen()
+   reset.game()
+end
+
+function exit()
+   black.screen()
+   setRoom(menu)
+end
+
 function addControls()
    if Android then
      Add.controls(up, down, A)
