@@ -1,3 +1,5 @@
 < name:game,
 version:alpha 0.4,
-build:{android,windows} >
+build:{android,windows},
+android packages:com.game.cxy
+path:data,images,sounds,source >
