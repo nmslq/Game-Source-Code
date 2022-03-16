@@ -4,14 +4,14 @@ function playVideo()
    timer.stop()
    fight.disbale()
    if not Android then
-   load.video(mp4)
-   load.mp3.vidsound(mp3)
-   get.video.sound(mp3)
-   play.mp3.vidsound(mp3)
-   play.mp4.video(mp4)
-   mp4.video.open()
+     load.video(mp4)
+     load.mp3.vidsound(mp3)
+     get.video.sound(mp3)
+     play.mp3.vidsound(mp3)
+     play.mp4.video(mp4)
+     mp4.video.open()
    if play end then
-   mp4.video.close()
+     mp4.video.close()
    end
    if Android then --android can't load mp4 video
      load.video(mp4)
