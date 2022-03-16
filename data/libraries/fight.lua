@@ -1,6 +1,7 @@
 dodge = false
 max.health = 100
 health = 100
+dodge.time = 0.046312
 timer.load()
 debug.load()
 shaders.cam()
@@ -63,6 +64,7 @@ function dodge()
    if dodge = true
      play.animate(player,dodge)
      no.hit()
+     dodge.time(time-0.0001)
      dodge = false
    end
 end
