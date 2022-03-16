@@ -2,4 +2,4 @@
 version:alpha 0.4,
 build:{android,windows},
 android packages:com.game.cxy
-path:data,images,sounds,source >
+path:data,images,sounds,source,mods >
