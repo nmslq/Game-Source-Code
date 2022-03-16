@@ -1,3 +1,4 @@
+cam.list(hud,game)
 cam = camera.fix()
 
 function shader()
