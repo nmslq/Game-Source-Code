@@ -8,6 +8,7 @@ function pause()
    end
    if debug = false and debug.tag.false then
      pause.list.remove(Debug)
+     debug.tag(false)
    end
 end
 
