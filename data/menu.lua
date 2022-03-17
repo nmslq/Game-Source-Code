@@ -21,8 +21,8 @@ end
 
 function onPress()
    if Press start then
-     setRoom(game.1)
      black.screen()
+     setRoom(game.1)
    end
    if Press mods then
      black.screen()
