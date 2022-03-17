@@ -1,4 +1,4 @@
-function playVideo()
+function video()
    hud.hide()
    game.hide()
    timer.stop()
