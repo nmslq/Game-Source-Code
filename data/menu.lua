@@ -6,15 +6,12 @@ function inRoom()
    setRoom(menu)
 end
 
-function onCreate(text,sprite)
-   title = create.title.sprite(title,0,-50)
-   title.scale(3,2)
-   start = create.start.text(0,0,start,sans)
-   start.scale(1.2,1)
+function onCreate()
+   title = create.title.sprite(0,100,title)
+   start = create.start.text(0,30,start,sans)
    mods = create.mods.text(0,0,mods,sans)
-   mods.scale(1.2,1)
-   exit = create.exit.text(0,0,exit,sans)
-   exit.scale(1.2,1)
+   credits = create.credits.text(0,-30,credits,sans)
+   exit = create.exit.text(0,-60,exit,sans)
 end
 
 function onUpdate()
@@ -27,7 +24,11 @@ function onPress()
      Start.Game()
    end
    if Press mods then
-     setRoom(modsRoom)
+     black.screen()
+     setRoom(mods)
+   end
+   if Press credits then
+     setRoom(credits)
    end
    if Press exit then
      exit.game.tools()
