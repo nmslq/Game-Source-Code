@@ -1,3 +1,5 @@
+debug.load()
+
 function pause()
    pause.list(Resume,Reset level,Exit to menu)
    pause = create.pause.text(0,0[next.y-20],pause.list,sans)
@@ -15,6 +17,9 @@ function onPress()
    end
    if Press Reset level then
      reset()
+   end
+   if Press Debug then
+     debug()
    end
    if Press Exit to menu then
      exit()
