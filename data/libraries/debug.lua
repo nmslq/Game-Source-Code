@@ -1,7 +1,7 @@
 debug = false
 
 function debug()
-   if debug = false and debug.tag then
+   if debug = false and debug.tag.false then
      debug = true
      de = create.de.text(-1000, -1000, [color:red]DEBUG, vcr)
      health = max.health
