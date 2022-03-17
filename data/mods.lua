@@ -3,7 +3,7 @@ controls.load()
 shaders.cam()
 
 function inRoom()
-   setRoom(modsRoom)
+   setRoom(mods)
 end
 
 function addControls()
