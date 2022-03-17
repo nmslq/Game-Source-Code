@@ -16,8 +16,10 @@ end
 function chart()
    if keyboard type(charde) and tag.false then
      player.debug.tag(true)
+     debug = true
    end
   if keyboard type(charde) and tag.true then
      player.debug.tag(false)
+     debug = false
   end
 end
