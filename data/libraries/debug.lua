@@ -1,12 +1,12 @@
 debug = false
 
 function debug()
-   if debug = false and input.keyboard 'D' and debug.tag then
+   if debug = false and debug.tag then
      debug = true
      de = create.de.text(-1000, -1000, [color:red]DEBUG, vcr)
      health = max.health
    end
-   if debug = true and input.keyboard 'D' and debug.tag then
+   if debug = true and debug.tag then
       debug = false
       de.Remove()
     end
