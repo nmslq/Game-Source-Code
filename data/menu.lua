@@ -21,13 +21,15 @@ end
 
 function onPress()
    if Press start then
-     Start.Game()
+     setRoom(game.1)
+     black.screen()
    end
    if Press mods then
      black.screen()
      setRoom(mods)
    end
    if Press credits then
+     black.screen()
      setRoom(credits)
    end
    if Press exit then
@@ -39,8 +41,4 @@ function addControls()
    if Android then
       Add.controls(up, down, A)
    end
-end
-
-function Start.Game()
-   setRoom(game.1)
 end
