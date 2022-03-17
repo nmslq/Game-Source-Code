@@ -1,6 +1,12 @@
 function pause()
    pause.list(Resume,Reset level,Exit to menu)
    pause = create.pause.text(0,0[next.y-20],pause.list,sans)
+   if debug = true and debug.tag then
+     pause.list.add(Debug)
+   end
+   if debug = false and debug.tag.false then
+     pause.list.remove(Debug)
+   end
 end
 
 function onPress()
