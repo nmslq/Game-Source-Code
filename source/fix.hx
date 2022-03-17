@@ -1,5 +1,5 @@
 debug(7.4)
-fix bugs(images,data)
+fix bugs(images,data,mods)
 fixVideo()
 vlc bale fix()
 defix()
