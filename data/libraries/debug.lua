@@ -1,4 +1,5 @@
 debug = false
+debug.tag = false
 
 function debug()
    if debug = false and debug.tag.false then
