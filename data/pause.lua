@@ -19,7 +19,7 @@ function onPress()
      reset()
    end
    if Press Debug then
-     debug()
+     debug.Update()
    end
    if Press Exit to menu then
      exit()
