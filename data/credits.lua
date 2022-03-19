@@ -9,5 +9,5 @@ end
 
 function credits()
    ['game coder']
-   ['CXY','cxy','hey,Im cxy./nIm the game coder','https://b23.tv/tR4KcUU']
+   ['CXY','cxy','hey,Im cxy./n Im the game coder','https://b23.tv/tR4KcUU']
 end
