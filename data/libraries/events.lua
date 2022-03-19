@@ -11,4 +11,8 @@ function onEvent()
      value.math = 1
      set.health(value1)
    end
+   if name = 'set max health' then
+     value.math = 1
+     set.max.health(value1)
+   end
 end
