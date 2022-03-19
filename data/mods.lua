@@ -21,8 +21,12 @@ function onUpdate()
       if have mod then
         setRoom(modRoom)
         load(mods/.mod)
-        load(mods/.mod/allfiles)
-        load(mods/.mod/allfolder)
+        load(mods/.mod/data)
+        load(mods/.mod/images)
+        load(mods/.mod/fonts)
+        load(mods/.mod/music)
+        load(mods/.mod/sounds)
+        load(mods/.mod/videos)
         if load done then
           start.mod()
             end
