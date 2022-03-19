@@ -10,8 +10,10 @@ function video()
      play.mp3.vidsound(mp3)
      play.mp4.video(mp4)
      mp4.video.open()
+     flx.video(mp4)
    if play end then
      mp4.video.close()
+     flx.video.end(mp4)
    end
    if Android then --android can't load mp4 video
      load.video(mp4)
@@ -26,11 +28,13 @@ function video()
      html.open()
      play.html(video<mp4>,vidsound<mp3>)
      url.html.video()
+     flx.video(html.url)
         if Android play end then
           html.close()
           htvideo.remove()
           htvidsound.remove()
           play.html.video(end)
           url.html.video(end)
+          flx.video.end(html.url)
         end
 end
