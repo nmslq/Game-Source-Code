@@ -1,15 +1,19 @@
 cam.list(hud,game)
-cam = camera.fix()
+cam = camera.flx()
 
 function shader()
    if cam.move then
-     cam.move.fix(x,y)
+     cam.move.flx(x,y)
    end
    if cam.rotation then
-     cam.rotation.fix(index)
+     cam.rotation.flx(index)
    end
    if cam.scale then
-     cam.scale.fix(index)
+     cam.scale.flx(index)
      scale.shader()
+   end
+   if cam.flash then
+     cam.flx()
+     flash.flx(time,color)
    end
 end
