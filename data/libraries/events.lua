@@ -17,6 +17,6 @@ function onEvent()
    end
    if name = 'change music' then
      value.math = 1
-     set.music(value1
+     set.music(value1)
    end
 end
