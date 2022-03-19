@@ -1,4 +1,8 @@
-function pause()
+function inRoom()
+   nameRoom(pause)
+end
+
+function onCreate()
    pause.list(Resume,Reset level,Exit to menu)
    pause = create.pause.text(0,0[next.y-20],pause.list,sans)
 end
