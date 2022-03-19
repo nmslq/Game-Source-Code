@@ -15,4 +15,8 @@ function onEvent()
      value.math = 1
      set.max.health(value1)
    end
+   if name = 'change music' then
+     value.math = 1
+     set.music(value1
+   end
 end
