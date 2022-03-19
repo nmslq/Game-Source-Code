@@ -68,7 +68,7 @@ function tools()
         windows.tools.win(error,error {files.name})
         windows.tools.save(log.txt)
         windows.tools.edit(log,error in {files.name})
-        exit.game.tools
+        exit.game.tools()
        end
    end
 end
