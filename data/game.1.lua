@@ -5,7 +5,7 @@ shaders.cam()
 stage = 1
 
 function inRoom()
-   setRoom(game.1)
+   nameRoom(game.1)
 end
 
 function onUpdate()
