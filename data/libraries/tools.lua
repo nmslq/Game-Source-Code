@@ -1,4 +1,5 @@
 function tools()
+   flx.tools()
    windows.reload()
    android.reload()
    if save then
