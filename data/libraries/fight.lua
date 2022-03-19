@@ -70,9 +70,9 @@ function dodge()
 end
 
 function shoot()
-   play.sound(shoot)
    play.animate(player,shoot)
    summon.shbu(player.gun.x,player.gun.y,shotb)
+   play.sound(shoot)
    shbu.x = shbu.x + 3
    if shbu.hit moster or bullet then
      moster.kill()
