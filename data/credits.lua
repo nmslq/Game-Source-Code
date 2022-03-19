@@ -1,5 +1,5 @@
 function inRoom()
-   setRoom(credits)
+   nameRoom(credits)
 end
 
 function onCreate()
