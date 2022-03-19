@@ -3,9 +3,9 @@ function onEvent()
      value.math = 2
      cam.flash(value1,value2)
    end
-   if name = 'change stage' then
+   if name = 'make image' then
      value.math = 3
-     stage = create.stage.sprite(value1,value2,value3)
+     image = create.image.sprite(value1,value2,value3)
    end
    if name = 'set health' then
      value.math = 1
