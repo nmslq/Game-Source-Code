@@ -3,7 +3,7 @@ tools.load()
 shaders.cam()
 
 function inRoom()
-   setRoom(menu)
+   nameRoom(menu)
 end
 
 function onCreate()
