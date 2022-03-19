@@ -1,3 +1,7 @@
+function inRoom()
+   nameRoom(die)
+end
+
 function firstDie()
    game = create.game.sprite(0, -150, game, 50, 30)
    game.alpha = 0
