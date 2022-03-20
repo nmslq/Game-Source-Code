@@ -27,21 +27,21 @@ end
 
 function eventText()
    if name = 'flash' then
-     event.text = value1 is timer, value2 is color.
+     event.text = 'value1 is timer, value2 is color.'
    end
    if name = 'make image' then
-     event.text = value1 is x,value2 is y,value3 is image name.
+     event.text = 'value1 is x,value2 is y,value3 is image name.'
    end
    if name = 'make text' then
-     event.text = value1 is x,value2 is y, value3 is text,value4 is text font.
+     event.text = 'value1 is x,value2 is y, value3 is text,value4 is text font.'
    end
    if name = 'set health' then
-     event.text = value1 is your health.
+     event.text = 'value1 is your health.'
    end
    if name = 'add health' then
-     event.text = value1 is add health.
+     event.text = 'value1 is add health.'
    end
    if name = 'set max health'
-     event.text = value1 is your max health.
+     event.text = 'value1 is your max health.'
    end
 end
