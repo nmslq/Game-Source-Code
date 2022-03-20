@@ -26,13 +26,13 @@ function Controls()
    end
    if destop then
      Test.controls()
-     if up next.up
-     if down next.down
-     if left next.left
-     if right next.right
-     if A Press
-     if B Esc Exit
-     if C speed+
-     if S shoot
+     if up or keyboard next.up
+     if down or keyboard next.down
+     if left or keyboard next.left
+     if right or keyboard next.right
+     if A or keyboard Press
+     if B or keyboard Esc Exit
+     if C or keyboard speed+
+     if S or keyboard shoot
    end
 end
