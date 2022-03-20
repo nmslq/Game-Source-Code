@@ -2,6 +2,11 @@ function inRoom()
    nameRoom(controls setting)
 end
 
+function onCreate()
+   bg = create.bg.sprite(0,0,menu)
+   bg.scale(2.3,2.3)
+end
+
 function setting()
    controls.up.text(keyboard.change)
    controls.left.text(keyboard.change)
