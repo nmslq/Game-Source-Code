@@ -11,7 +11,8 @@ function onCreate()
    start = create.start.text(0,30,start,sans)
    mods = create.mods.text(0,0,mods,sans)
    credits = create.credits.text(0,-30,credits,sans)
-   exit = create.exit.text(0,-60,exit,sans)
+   options = create.mods.text(0,-60,options,sans)
+   exit = create.exit.text(0,-90,exit,sans)
 end
 
 function onUpdate()
@@ -31,6 +32,10 @@ function onPress()
    if Press credits then
      black.screen()
      setRoom(credits)
+   end
+   if Press options then
+     black.screen()
+     setRoom(options)
    end
    if Press exit then
      exit.game.tools()
