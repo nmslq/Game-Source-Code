@@ -17,3 +17,8 @@ function setting()
    controls.C.text(keyboard.change)
    controls.S.text(keyboard.change)
 end
+
+function onPress()
+   controls.color.press(255,0,0)
+   controls.color(255,255,255)
+end
