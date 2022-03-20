@@ -3,6 +3,8 @@ function inRoom()
 end
 
 function onCreate()
+   bg = create.bg.sprite(0,0,menu)
+   bg.scale(2.3,2.3)
    options.list(Controls Setting,Game Setting)
    if debug then
      options.list.add(Debug Setting)
