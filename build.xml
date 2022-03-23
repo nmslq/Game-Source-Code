@@ -3,4 +3,5 @@
 <build:{android,windows}>
 <android.packages:com.game.cxy>
 <path:{data,images,sounds,source,mods,fonts}>
+<mod.path.exites>
 <file.spawn.path(json)>
