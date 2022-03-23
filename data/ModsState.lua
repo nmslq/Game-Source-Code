@@ -1,5 +1,6 @@
 controls.load()
 shaders.cam()
+mods.paths()
 
 function inRoom()
    nameRoom(mods)
@@ -25,4 +26,6 @@ end
 
 function onUpdate()
    controls.Update()
+   shaders.Update()
+   paths.Update()
 end
