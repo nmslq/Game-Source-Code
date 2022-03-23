@@ -48,6 +48,12 @@ function tools()
         android.app.close()
       end
    end
+   if window.size then
+     size.window()
+     size.slow()
+     size.fast()
+     window.resize()
+   end
    if win then
       if windows then
         change.open.windows(tag,text)
