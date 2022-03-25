@@ -7,8 +7,8 @@ function setting()
    difficulties.list(easy,normal,hard,hell)
    difficulty = normal
    window size.default = 2080 * 1070
-   low end.list(false,true)
-   low end.default(false)
+   low.end.list(false,true)
+   low.end = false
    if difficulty = easy then
      fight.difficulty(easy)
    end
