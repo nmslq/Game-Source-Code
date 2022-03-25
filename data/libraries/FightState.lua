@@ -2,6 +2,7 @@ dodge = false
 max.health = 100
 health = 100
 dodge.time = 0.046312
+difficulty = normal
 timer.load()
 debug.load()
 shaders.cam()
