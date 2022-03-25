@@ -8,7 +8,7 @@ debug.load()
 shaders.cam()
 
 function addControls()
-   if Press B then
+   if android Press B then
      pause()
    end
 end
