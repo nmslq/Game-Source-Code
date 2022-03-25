@@ -42,7 +42,7 @@ function onUpdate()
         bullet.rotation(bullet.rotation + 1)
       end
       if bullet.color == red then
-            redbullet.rotation(redbullet.rotation + 1)
+        redbullet.rotation(redbullet.rotation + 1)
       end
    end
 end
