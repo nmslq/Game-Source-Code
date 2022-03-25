@@ -8,7 +8,7 @@ debug.load()
 shaders.cam()
 
 function addControls()
-   if android Press B then
+   if input.keyboard 'B' = then
      pause()
    end
 end
