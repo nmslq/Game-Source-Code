@@ -67,7 +67,11 @@ function dodge()
      play.animate(player,dodge)
      no.hit()
      dodge.time(time-0.0001)
-     dodge = false
+     if dodge.time = 0 then
+       dodge = false
+       dodge.time = 0.046312
+         end
+      end
    end
 end
 
