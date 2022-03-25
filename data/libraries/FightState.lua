@@ -69,6 +69,21 @@ function dodge()
    end
 end
 
+function difficulty()
+   if difficulty = easy then
+     max.health = 250
+   end
+   if difficulty = normal then
+     max.health = 150
+   end
+   if difficulty = hard then
+     max.health = 90
+   end
+   if difficulty = hell then
+     max.health = 30
+   end
+end
+
 function shoot()
    play.animate(player,shoot)
    summon.shbu(player.gun.x,player.gun.y,shotb)
