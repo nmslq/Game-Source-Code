@@ -32,6 +32,7 @@ end
 function addControls()
    if Android then
      Add.controls(A)
+   end
 end
 
 function onPress()
