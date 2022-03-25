@@ -9,22 +9,22 @@ function setting()
    window size.default = 2080 * 1070
    low.end.list(false,true)
    low.end = false
-   if difficulty = easy then
+   if difficulty == easy then
      fight.difficulty(easy)
    end
-   if difficulty = normal then
+   if difficulty == normal then
      fight.difficulty(normal)
    end
-   if difficulty = hard then
+   if difficulty == hard then
      fight.difficulty(hard)
    end
-   if difficulty = hell then
+   if difficulty == hell then
      fight.difficulty(hell)
    end
-   if window.size = math.setting then
+   if window.size == math.setting then
      window.size.tools(math.setting)
    end
-   if low.end = true then
+   if low.end == true then
      fight.low(true)
    end
 end
