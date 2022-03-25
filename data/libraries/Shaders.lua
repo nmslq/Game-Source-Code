@@ -8,6 +8,11 @@ function shader()
    if cam.rotation then
      cam.rotation.flx(index)
    end
+   if set.cam then
+     cam.set()
+     flx.cam(hud)
+     flx.cam(game)
+   end
    if cam.scale then
      cam.scale.flx(index)
      scale.shader()
