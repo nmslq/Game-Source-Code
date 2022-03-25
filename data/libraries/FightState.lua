@@ -8,7 +8,7 @@ debug.load()
 shaders.cam()
 
 function addControls()
-   if input.keyboard 'B' = then
+   if input.keyboard 'B' == then
      pause()
    end
 end
@@ -56,18 +56,18 @@ function bullet()
    add.animate(redbullet,redbullet)
    redbullet.color.set(red)
    play.animate.loop(redbullet,redbullet)
-   if bullet.r = player
+   if bullet.r == player
      hit()
    end
 end
 
 function dodge()
-   if space.dodge = true
-   if dodge = true
+   if space.dodge == true
+   if dodge == true
      play.animate(player,dodge)
      no.hit()
      dodge.time(time-0.0001)
-     if dodge.time = 0 then
+     if dodge.time == 0 then
        dodge = false
        dodge.time = 0.046312
          end
@@ -76,16 +76,16 @@ function dodge()
 end
 
 function difficulty()
-   if difficulty = easy then
+   if difficulty == easy then
      set.max.health(250
    end
-   if difficulty = normal then
+   if difficulty == normal then
      set.max.health(150)
    end
-   if difficulty = hard then
+   if difficulty == hard then
      set.max.health(90)
    end
-   if difficulty = hell then
+   if difficulty == hell then
      set.max.health(30)
    end
 end
@@ -116,7 +116,7 @@ function hit()
 end
 
 function dead()
-   if health = 0 then
+   if health == 0 then
      setRoom(die)
    end
 end
