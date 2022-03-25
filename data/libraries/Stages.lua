@@ -1,5 +1,5 @@
 function stages()
-   if stage = 1 then
+   if stage == 1 then
      gr = create.gr.sprite(0,-100,stages/ground)
      gr.scale(1.6, 1.6)
      gr.scoll(1, 1)
