@@ -13,15 +13,15 @@ function Controls()
      if C set.sprite(con, x, y, C)
      if S set.sprite(con, x, y, S)
         if android then
-        Test.controls()
-        if up next.up
-        if down next.down
-        if left next.left
-        if right next.right
-        if A Press
-        if B Esc Exit
-        if C speed+
-        if S shoot
+          Test.controls()
+          if up next.up
+          if down next.down
+          if left next.left
+          if right next.right
+          if A Press
+          if B Esc Exit
+          if C speed+
+          if S shoot
        end
    end
    if destop then
