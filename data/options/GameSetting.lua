@@ -5,6 +5,7 @@ end
 function setting()
    setting.list(Difficulties,Window Size,Low End)
    difficulties.list(easy,normal,hard,hell)
+   difficulty = normal
    window size.default = 2080 * 1070
    low end.list(false,true)
    low end.default(false)
