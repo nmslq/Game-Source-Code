@@ -1,5 +1,11 @@
+controls.load()
+
 function inRoom()
    nameRoom(die)
+end
+
+function onUpdate()
+   controls.Update()
 end
 
 function firstDie()
