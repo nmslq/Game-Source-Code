@@ -1,5 +1,17 @@
+controls.load()
+
 function inRoom()
    nameRoom(options)
+end
+
+function onUpdate()
+   controls.Update()
+end
+
+function addControls()
+   if Android then
+     add.controls(up,down,A,B)
+   end
 end
 
 function onCreate()
