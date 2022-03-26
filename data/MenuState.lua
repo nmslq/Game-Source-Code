@@ -8,6 +8,7 @@ end
 
 function onCreate()
    title = create.title.sprite(0,100,title)
+   title.scale(1.5,1)
    start = create.start.text(0,30,start,sans)
    mods = create.mods.text(0,0,mods,sans)
    credits = create.credits.text(0,-30,credits,sans)
@@ -18,6 +19,7 @@ end
 function onUpdate()
    controls.Update()
    tools.Update()
+   shaders.Update()
 end
 
 function onPress()
