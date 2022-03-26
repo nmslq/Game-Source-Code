@@ -1,4 +1,5 @@
 controls.load()
+shaders.cam()
 
 function inRoom()
    nameRoom(credits)
@@ -12,6 +13,7 @@ end
 
 function onUpdate()
    controls.Update()
+   shaders.Update()
 end
 
 function onCreate()
