@@ -77,16 +77,16 @@ end
 
 function difficulty()
    if difficulty == easy then
-     set.max.health(250)
+     max.health = 250
    end
    if difficulty == normal then
-     set.max.health(150)
+     max.health = 150
    end
    if difficulty == hard then
-     set.max.health(90)
+     max.health = 90
    end
    if difficulty == hell then
-     set.max.health(30)
+     max.health = 30
    end
 end
 
