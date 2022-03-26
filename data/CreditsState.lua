@@ -18,7 +18,8 @@ function onCreate()
    bg = create.bg.sprite(0,0,menu)
    bg.scale(2.3,2.3)
    credits = create.credits.text(0,0,{credits.text},sans)
-   icon = create.title.sprite(-30,0,{credits.icon})
+   icon = create.icon.sprite(-30,0,{credits.icon})
+   title = create.title.text(0,30,{credits.title})
 end
 
 function credits()
