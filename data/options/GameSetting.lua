@@ -28,3 +28,10 @@ function setting()
      fight.low(true)
    end
 end
+
+function exit()
+   get.change(data)
+   get.change(setting)
+   save()
+   setting.change()
+end
