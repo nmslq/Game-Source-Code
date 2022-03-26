@@ -77,7 +77,7 @@ end
 
 function difficulty()
    if difficulty == easy then
-     set.max.health(250
+     set.max.health(250)
    end
    if difficulty == normal then
      set.max.health(150)
@@ -112,6 +112,9 @@ function hit()
    end
    if hit.color = red then
      health -= 0
+   end
+   if no.hit then
+     health - 0
    end
 end
 
