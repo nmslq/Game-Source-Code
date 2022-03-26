@@ -3,6 +3,7 @@ fight.load()
 timer.load()
 shaders.cam()
 stage = 1
+level = 1
 
 function inRoom()
    nameRoom(game.1)
