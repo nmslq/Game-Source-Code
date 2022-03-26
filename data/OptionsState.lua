@@ -10,7 +10,7 @@ end
 
 function addControls()
    if Android then
-     add.controls(up,down,A,B)
+     Add.controls(up,down,A,B)
    end
 end
 
