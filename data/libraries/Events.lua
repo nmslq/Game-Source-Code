@@ -21,7 +21,7 @@ function onEvent()
    end
    if name == 'set max health' then
      value.math = 1
-     max.health = value1
+     set.max.health(value1)
    end
 end
 
