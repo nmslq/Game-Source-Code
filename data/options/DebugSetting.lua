@@ -7,3 +7,10 @@ function setting()
    fps.text(sys.fps)
    player.text(game.playerGetXY)
 end
+
+function exit()
+   get.change(data)
+   get.change(setting)
+   save()
+   setting.change()
+end
