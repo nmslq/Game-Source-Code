@@ -37,6 +37,7 @@ end
 
 function onUpdate()
    shaders.Update()
+   debug.Update()
    if bullet.isative then
       if bullet.color == nil then
         bullet.rotation(bullet.rotation + 1)
@@ -91,6 +92,7 @@ function difficulty()
 end
 
 function shoot()
+   timer.Update()
    play.animate(player,shoot)
    summon.shbu(player.gun.x,player.gun.y,shotb)
    play.sound(shoot)
