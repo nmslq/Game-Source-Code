@@ -22,3 +22,10 @@ function onPress()
    controls.color.press(255,0,0)
    controls.color(255,255,255)
 end
+
+function exit()
+   get.change(data)
+   get.change(controls)
+   save()
+   controls.change()
+end
