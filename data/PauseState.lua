@@ -32,7 +32,8 @@ end
 
 function reset()
    black.screen()
-   reset.game()
+   get.level(math)
+   reset.level()
 end
 
 function exit()
