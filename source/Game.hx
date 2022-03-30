@@ -1,4 +1,5 @@
 function onGameStart()
+   Flx()
    if Windows then
      set.win.name(game)
      flx.getPath(files)
