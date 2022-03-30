@@ -8,6 +8,7 @@ Flx.cam()
 Flx.path()
 Flx.die()
 Flx.sys.files()
+Flx.function()
 
 function inRoom()
    nameRoom(die)
