@@ -1,6 +1,5 @@
 controls.load()
 shaders.cam()
-Flx()
 
 function inRoom()
    nameRoom(credits)
