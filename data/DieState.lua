@@ -1,4 +1,13 @@
 controls.load()
+shaders.cam()
+Flx.room()
+Flx.sprite()
+Flx.text()
+Flx.shaders()
+Flx.cam()
+Flx.path()
+Flx.die()
+Flx.sys.files()
 
 function inRoom()
    nameRoom(die)
