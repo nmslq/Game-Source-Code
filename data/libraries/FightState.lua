@@ -62,6 +62,17 @@ function bullet()
    end
 end
 
+function moster()
+   moster.health = 50
+   moster = create.moster.sprite(moster.x, moster.y, moster)
+   if moster.r == player
+     hit()
+   end
+   if moster.r == bullet
+     hit()
+   end
+end
+
 function dodge()
    if space.dodge == true
    if dodge == true
