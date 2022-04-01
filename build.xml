@@ -1,11 +1,13 @@
 <name:"game">
 <window.name:"game">
 <app.name:"game">
-<version:"beta 0.4.2">
-<app.version:"beta 0.4.2">
+<version:"alpha 0.4.3">
+<app.version:"alpha 0.4.3">
 <build:{"android,linux,mac,windows"}>
 <android.packages:"com.game.cxy">
 <asstes.path:{"data,images,sounds,source,mods,fonts"}>
 <mod.getPath.exites>
+<mod.getPath.spawn:"mods.json">
+<mods.json:"null.folder">
 <folder.spawn.exites("null")>
 <file.spawn.path("files.json")>
