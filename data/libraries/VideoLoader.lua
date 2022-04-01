@@ -42,13 +42,24 @@ function video()
      url.html.video()
      flx.video(html.url)
      flx.vidsound(html.url)
-        if Android play end then
-          html.close()
-          html.video.remove()
-          htmlvidsound.remove()
-          play.html.video(end)
-          url.html.video(end)
-          flx.video.end(html.url)
-          flx.vidsound.end(html.url)
-        end
+     html.stuff()
+     if Android play end then
+       html.close()
+       html.video.remove()
+       htmlvidsound.remove()
+       play.html.video(end)
+       url.html.video(end)
+       flx.video.end(html.url)
+       flx.vidsound.end(html.url)
+     end
+end
+
+function htmlStuff()
+   html.android.playVideo()
+   html.video.bg(null)
+   html.video.bgColor(black)
+   getHtml.video()
+   android.flx.clear()
+   html.color.remove()
+   flx.html()
 end
