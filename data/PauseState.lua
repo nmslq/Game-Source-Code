@@ -26,8 +26,7 @@ function onPress()
 end
 
 function close()
-   fight.game.room()
-   close.pause()
+   setRoom(game{level.getMath})
 end
 
 function reset()
