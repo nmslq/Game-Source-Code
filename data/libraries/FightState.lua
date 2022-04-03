@@ -27,10 +27,10 @@ end
 function move()
    if left.key.move.player(5,0)
    play.animate(player,left)
-   shaders.cam.move(player.x,player.y)
+   shaders.camera.move(player.x,player.y)
    if right.key.move.player(0,5)
    play.animate(player,right)
-   shaders.cam.move(player.x,player.y)
+   shaders.camera.move(player.x,player.y)
    if nomove then
    play.animate.loop(player,idle)
 end
