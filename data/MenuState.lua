@@ -1,6 +1,6 @@
 controls.load()
 tools.load()
-shaders.cam()
+shaders.camera()
 
 function inRoom()
    nameRoom(menu)
