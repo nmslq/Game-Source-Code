@@ -51,6 +51,7 @@ function video()
        url.html.video(end)
        flx.video.end(html.url)
        flx.vidsound.end(html.url)
+       html.stuff()
      end
 end
 
@@ -59,7 +60,9 @@ function htmlStuff()
    html.video.bg(null)
    html.video.bgColor(black)
    getHtml.video()
+   if play end then
    android.flx.clear()
    html.color.remove()
    flx.html()
+   end
 end
