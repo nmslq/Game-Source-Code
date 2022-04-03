@@ -1,6 +1,6 @@
 function onGameStart()
    Flx()
-   mod.comand()
+   mod.command()
    if Windows then
      set.win.name(game)
      flx.getPath(files)
