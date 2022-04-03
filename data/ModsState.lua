@@ -20,7 +20,7 @@ function onCreate()
      version = create.version.text(-30, -30, version:{mod.version,mod.math}, sans)
    end
    if mod.paths.nothave then
-     no = create.no.text(0, 0, there isn't have any mod!, sans)
+     no = create.no.text(0, 0, there isnt have any mod!, sans)
    end
 end
 
