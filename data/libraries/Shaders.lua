@@ -26,8 +26,10 @@ function shaders()
    if camera.scale then
      camera.scale.Flx(index)
      camera.scale.FlxG(index)
-     scale.shader.Flx()
-     scale.shader.FlxG()
+     camera.scale(index)
+     scale.shader.Flx(index)
+     scale.shader.FlxG(index)
+     scale.shader(index)
    end
    if camera.flash then
      camera.Flx()
