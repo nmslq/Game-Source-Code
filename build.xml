@@ -1,10 +1,12 @@
+<build:{"android,linux,mac,windows"}>
 <window.name:"game" version:"normal 0.5">
 <android.app.name:"game" version:"normal 0.5" packages:"com.game.cxy">
 <liunx.name:"game" version:"normal 0.5">
 <mac.name:"game" version:"normal 0.5">
 <windows.packages:"main.yml">
 <android.packages:"main.yml">
-<build:{"android,linux,mac,windows"}>
+<liunx.packages:"main.yml">
+<mac.packages:"main.yml">
 <asstes.path:{"data,images,sounds,source,fonts"}>
 <mod.getPath.exites>
 <mod.folder.getPath>
