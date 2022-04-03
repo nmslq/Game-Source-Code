@@ -15,7 +15,7 @@ end
 
 function onCreate()
    player = create.player.sprite(player.absx,player.absy,player)
-   player.cam.set(game)
+   player.cam.set('game')
    add.animate(player,idle)
    add.animate(player,left)
    add.animate(player,right)
