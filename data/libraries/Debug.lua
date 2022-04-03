@@ -9,6 +9,6 @@ function debug()
    end
    if debug == true and input.keyboard 'D' == then
       debug = false
-      debug.Remove()
+      debug.remove()
     end
 end
