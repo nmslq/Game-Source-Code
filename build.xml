@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
 <build:{"android,linux,mac,windows"}>
 <window.name:"game" version:"normal 0.5">
 <android.app.name:"game" version:"normal 0.5" packages:"com.game.cxy">
@@ -15,3 +17,4 @@
 <mods.json:"null.folder">
 <folder.spawn.exites("null")>
 <file.spawn.path("files.json")>
+</project>
