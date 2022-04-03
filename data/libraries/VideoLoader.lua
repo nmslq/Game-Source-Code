@@ -46,7 +46,7 @@ function video()
      if Android play end then
        html.close()
        html.video.remove()
-       htmlvidsound.remove()
+       html.vidsound.remove()
        play.html.video(end)
        url.html.video(end)
        flx.video.end(html.url)
