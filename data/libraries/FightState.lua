@@ -5,7 +5,7 @@ dodge.time = 0.046312
 difficulty = normal
 timer.load()
 debug.load()
-shaders.cam()
+shaders.camera()
 
 function addControls()
    if input.keyboard 'B' == then
