@@ -1,5 +1,5 @@
 controls.load()
-shaders.cam()
+shaders.camera()
 
 function inRoom()
    nameRoom(pause)
