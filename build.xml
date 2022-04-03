@@ -1,12 +1,12 @@
 <name:"game">
-<window.name:"game">
-<app.name:"game">
-<version:"normal 0.5">
-<app.version:"normal 0.5">
+<window.name:"game" version:"normal 0.5">
+<android.app.name:"game" version:"normal 0.5" packages:"com.game.cxy">
+<windows.packages:"main.yml">
+<android.packages:"main.yml">
 <build:{"android,linux,mac,windows"}>
-<android.packages:"com.game.cxy">
-<asstes.path:{"data,images,sounds,source,mods,fonts"}>
+<asstes.path:{"data,images,sounds,source,fonts"}>
 <mod.getPath.exites>
+<mod.folder.getPath>
 <mod.getPath.spawn:"mods.json">
 <mods.json:"null.folder">
 <folder.spawn.exites("null")>
