@@ -109,7 +109,7 @@ function shoot()
    play.animate(player,shoot)
    shbu = create.shbu.sprite(player.getGunX,player.getGunY,shotb)
    shbu.set.camera('game')
-   play.sound(shoot)
+   play.sound('shoot')
    shbu.x = shbu.x + 3
    if shbu.hit moster then
      moster.kill()
