@@ -36,7 +36,3 @@ function Controls()
      if S or keyboard shoot
    end
 end
-
-function addPadCam()
-   androidControls.set.cam('hud')
-end
