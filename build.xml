@@ -1,8 +1,8 @@
 <name:"game">
 <window.name:"game">
 <app.name:"game">
-<version:"alpha 0.4.3">
-<app.version:"alpha 0.4.3">
+<version:"beta 0.5">
+<app.version:"beta 0.5">
 <build:{"android,linux,mac,windows"}>
 <android.packages:"com.game.cxy">
 <asstes.path:{"data,images,sounds,source,mods,fonts"}>
