@@ -1,5 +1,5 @@
 controls.load()
-shaders.cam()
+shaders.camera()
 mods.paths()
 
 function inRoom()
