@@ -7,7 +7,7 @@
 <android.packages:"main.yml">
 <liunx.packages:"main.yml">
 <mac.packages:"main.yml">
-<haxelib.name:"AndroidTools" haxelib.install:"AndroidTools" haxelib.url:"https://github.com/jigsaw-4277821/AndroidTools" if "android"/>
+<haxelib.install:"AndroidTools" haxelib.url:"https://github.com/jigsaw-4277821/AndroidTools" if "android"/>
 <asstes.path:{"data,images,sounds,source,fonts"}>
 <mod.getPath.exites>
 <mod.folder.getPath>
