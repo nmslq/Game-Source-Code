@@ -69,7 +69,7 @@ function tools()
      size.fast()
      window.resize()
    end
-   if win then
+   if lime then
       if windows then
         change.open.windows(tag,text)
         windows.sys.flx(window)
@@ -79,17 +79,17 @@ function tools()
         android.sys.flx(window)
       end
    end
-   if not files then
+   if not files error then
       if android then
         android.tools.open(error)
-        android.tools.win(error,error {files.name})
+        android.tools.lime(error,error {files.name})
         android.tools.save(log.txt)
         android.tools.edit(log,error in {files.name})
         exit.game.tools()
       end
       if windows then
         windows.tools.open(error)
-        windows.tools.win(error,error {files.name})
+        windows.tools.lime(error,error {files.name})
         windows.tools.save(log.txt)
         windows.tools.edit(log,error in {files.name})
         exit.game.tools()
