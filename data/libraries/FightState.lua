@@ -15,7 +15,7 @@ end
 
 function onCreate()
    player = create.player.sprite(player.absx,player.absy,player)
-   player.cam.set('game')
+   player.set.camera('game')
    add.animate(player,idle)
    add.animate(player,left)
    add.animate(player,right)
@@ -65,10 +65,11 @@ end
 function moster()
    moster.health = 50
    moster = create.moster.sprite(moster.x, moster.y, moster)
-   if moster.r == player
+   moster.set.camera('game')
+   if moster.hit player then
      hit()
    end
-   if moster.r == bullet
+   if moster.hit bullet then
      hit()
    end
 end
@@ -77,13 +78,12 @@ function dodge()
    if space.dodge == true
    if dodge == true
      play.animate(player,dodge)
-     no.hit()
      dodge.time(time-0.0001)
      if dodge.time == 0 then
        dodge = false
        dodge.time = 0.046312
-         end
-      end
+     end
+   end
    end
 end
 
@@ -105,10 +105,11 @@ end
 function shoot()
    timer.Update()
    play.animate(player,shoot)
-   summon.shbu(player.gun.x,player.gun.y,shotb)
+   shbu = create.shbu.sprite(player.getGunX,player.getGunY,shotb)
+   shbu.set.camera('game')
    play.sound(shoot)
    shbu.x = shbu.x + 3
-   if shbu.hit moster or bullet then
+   if shbu.hit moster then
      moster.kill()
    end
    if timer >= 4 then
