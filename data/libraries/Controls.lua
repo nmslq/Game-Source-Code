@@ -12,6 +12,7 @@ function Controls()
      if B set.sprite(con, x, y, B)
      if C set.sprite(con, x, y, C)
      if S set.sprite(con, x, y, S)
+     AndroidControls.set.camera('hud')
         if android then
           Test.controls()
           if up next.up
