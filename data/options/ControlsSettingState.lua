@@ -1,3 +1,17 @@
+controls.load()
+shaders.camera()
+
+function onUpdate()
+   controls.Update()
+   shaders.Update()
+end
+
+function addControls()
+   if Android then
+     Add.controls(up,down,A,B)
+   end
+end
+
 function inRoom()
    nameRoom(controls setting)
 end
