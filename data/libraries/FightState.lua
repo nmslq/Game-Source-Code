@@ -14,7 +14,7 @@ function addControls()
 end
 
 function onCreate()
-   player = create.player.animSprite(player.absx,player.absy,player)
+   player = create.player.animSprite(player.x,player.y,player)
    player.set.camera('game')
    add.animate(player,idle)
    add.animate(player,left)
