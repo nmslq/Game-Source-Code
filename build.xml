@@ -4,6 +4,8 @@
 
         <android.build:"apk">
 
+        <android.buildManifest:"xml">
+
         <windows.build:"zip">
 
         <mac.build:"zip">
