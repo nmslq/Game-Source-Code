@@ -2,7 +2,7 @@
 <TextureAtlas imagePath="playet.png">
         <SubTextrue name="idle0000" x="0" y="0" width="100" height="100">
         <SubTextrue name="left0000" x="100" y="0" width="100" height="100">
-        <SubTextrue name="right0000" x="100" y="0" width="100" height="100">
+        <SubTextrue name="right0000" x="0" y="100" width="100" height="100">
         <SubTextrue name="up0000" x="100" y="100" width="100" height="100">
         <SubTextrue name="shoot0000" x="0" y="200" width="100" height="100">
         <SubTextrue name="dodge0000" x="100" y="200" width="100" height="100">
