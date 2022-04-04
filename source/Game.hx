@@ -1,17 +1,17 @@
 function onGameStart()
-   Flx()
+   flx()
    mod.command()
    if Windows then
      set.window.name(game)
-     Flx.getPath(files)
+     flx.getPath(files)
      file.getPath()
      getPath.exites()
    end
    if Android then
-     clean.sys()
+     clean.system()
      system.filePath()
      file.getPath.exites()
-     android.Flx.getPath(files)
-     Flx.getPath.exites()
+     android.flx.getPath(files)
+     flx.getPath.exites()
    end
 end
