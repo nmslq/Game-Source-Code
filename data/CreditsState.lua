@@ -2,7 +2,7 @@ controls.load()
 shaders.camera()
 
 function inRoom()
-   nameRoom(credits)
+   nameRoom('credits')
 end
 
 function addControls()
@@ -17,11 +17,11 @@ function onUpdate()
 end
 
 function onCreate()
-   bg = create.bg.sprite(0,0,menu)
+   bg = create.bg.sprite(0,0,'menu')
    bg.scale(2.3,2.3)
-   credits = create.credits.text(0,0,{credits.text},sans)
-   icon = create.icon.sprite(-30,0,{credits.icon})
-   title = create.title.text(0,30,{credits.title})
+   credits = create.credits.text(0,0,{'credits.text'},'sans')
+   icon = create.icon.sprite(-30,0,{'credits.icon'})
+   title = create.title.text(0,30,{'credits.title'})
 end
 
 function credits()
