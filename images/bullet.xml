@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="bullet.png">
-        <SubTextrue name="bullet0001" x="0" y="0" width="50" height="50">
-        <SubTextrue name="bullet0002" x="50" y="0" width="50" height="50">
-        <SubTextrue name="bullet0003" x="0" y="50" width="50" height="50">
-        <SubTextrue name="bullet0004" x="50" y="50" width="50" height="50">
+        <SubTextrue name="bullet0000" x="0" y="0" width="50" height="50">
+        <SubTextrue name="bullet0001" x="50" y="0" width="50" height="50">
+        <SubTextrue name="bullet0002" x="0" y="50" width="50" height="50">
+        <SubTextrue name="bullet0003" x="50" y="50" width="50" height="50">
 </TextureAtlas>
