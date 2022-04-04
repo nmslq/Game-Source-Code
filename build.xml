@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-        <build:{"android,linux,mac,windows"}>
+
+        <build.list:{"android,linux,mac,windows"}>
+
+        <android.build:"apk">
+
+        <windows.build:"zip">
+
+        <mac.build:"zip">
+
+        <liunx.build:"zip">
 
         <window.name:"game" version:"normal 0.5">
 
@@ -26,12 +35,14 @@
 
         <mod.folder.getPath>
 
-        <mod.getPath.spawn:"mods.json">
+        <android.spawn.packages:"sdcard/android/data/com.game.cxy/mods>
 
-        <mods.json:"null.folder">
+        <android.spawn.files:"sdcard/android/data/com.game.cxy/mods/modslist.txt>
 
-        <folder.spawn.exites("null")>
+        <android.spawn.folder:"null">
 
-        <file.spawn.path("files.json")>
+        <folder.spawn.exites:"null">
+
+        <assets.spawn.getPathFiles:"files.json">
 
 </project>
