@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
         <build:{"android,linux,mac,windows"}>
+
         <window.name:"game" version:"normal 0.5">
+
         <android.app.name:"game" version:"normal 0.5" packages:"com.game.cxy">
+
         <liunx.name:"game" version:"normal 0.5">
+
         <mac.name:"game" version:"normal 0.5">
+
         <windows.packages:"main.yml">
+
         <android.packages:"main.yml">
+
         <liunx.packages:"main.yml">
+
         <mac.packages:"main.yml">
+
         <haxelib.install:"AndroidTools" haxelib.url:"https://github.com/jigsaw-4277821/AndroidTools" if "android"/>
+
         <asstes.path:{"data,images,sounds,source,fonts"}>
+
         <mod.getPath.exites>
+
         <mod.folder.getPath>
+
         <mod.getPath.spawn:"mods.json">
+
         <mods.json:"null.folder">
+
         <folder.spawn.exites("null")>
+
         <file.spawn.path("files.json")>
+
 </project>
