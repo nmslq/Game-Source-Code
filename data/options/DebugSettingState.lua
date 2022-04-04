@@ -13,18 +13,18 @@ function addControls()
 end
 
 function setting()
-   setting.list(FPS Show,Player XY)
+   setting.list('FPS Show','Player XY')
    fps.show.list(false,true)
    fps.show = true
    player.xy.list(false,true)
    player.xy = true
    fps.text(sys.fps)
-   player.text(game.playerGetXY)
+   player.text('game.playerGetXY')
 end
 
 function exit()
-   get.change(data)
-   get.change(setting)
+   get.change('data')
+   get.change('setting')
    save()
    setting.change()
 end
