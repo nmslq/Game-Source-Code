@@ -81,17 +81,17 @@ function tools()
    end
    if not files error then
       if android then
-        android.tools.open(error)
-        android.tools.lime(error,error {files.name})
-        android.tools.save(log.txt)
-        android.tools.edit(log,error in {files.name})
+        android.tools.open('error')
+        android.tools.lime('error','error {files.name}')
+        android.tools.save('log.txt')
+        android.tools.edit('log','error in {files.name}')
         exit.game.tools()
       end
       if windows then
-        windows.tools.open(error)
-        windows.tools.lime(error,error {files.name})
-        windows.tools.save(log.txt)
-        windows.tools.edit(log,error in {files.name})
+        windows.tools.open('error')
+        windows.tools.lime('error','error {files.name}')
+        windows.tools.save('log.txt')
+        windows.tools.edit('log',"error in {files.name}')
         exit.game.tools()
        end
    end
