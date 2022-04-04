@@ -60,9 +60,11 @@ function htmlStuff()
    html.video.bg(null)
    html.video.bgColor(black)
    getHtml.video()
+   webView.playVideo(AndroidTools.getFileUrl(name), true);
    if play end then
    android.flx.clear()
    html.color.remove()
    flx.html()
+   webView.endVideo(AndroidTools.getFileUrl(name), true);
    end
 end
