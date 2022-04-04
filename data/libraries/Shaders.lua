@@ -1,40 +1,40 @@
 camera.list(hud,game)
-camera = camera.Flx()
+camera = camera.flx()
 FlxG.camera()
 FlxG.shaders()
 
 function shaders()
    if move.camera then
-     move.camera.Flx(x,y)
+     move.camera.flx(x,y)
      move.camera.FlxG(x,y)
      move.camera(x,y)
    end
    if camera.rotation then
-     camera.rotation.Flx(index)
+     camera.rotation.flx(index)
      camera.rotation.FlxG(index)
      camera.rotation(index)
    end
    if set.camera then
-     camera.set.Flx()
+     camera.set.flx()
      camera.set.FlxG()
-     Flx.camera('hud')
+     flx.camera('hud')
      FlxG.camera('hud')
-     Flx.camera('game')
+     flx.camera('game')
      FlxG.camera('game')
      camera.set()
    end
    if camera.scale then
-     camera.scale.Flx(index)
+     camera.scale.flx(index)
      camera.scale.FlxG(index)
      camera.scale(index)
-     scale.shader.Flx(index)
+     scale.shader.flx(index)
      scale.shader.FlxG(index)
      scale.shader(index)
    end
    if camera.flash then
-     camera.Flx()
+     camera.flx()
      camera.FlxG()
-     flash.Flx(color,time)
+     flash.flx(color,time)
      flash.FlxG()
    end
 end
