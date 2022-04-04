@@ -10,13 +10,13 @@
 
         <liunx.build:"zip">
 
-        <window.name:"game" version:"normal 0.5.1.1">
+        <window.name:"game" version:"normal 0.5.1.2">
 
-        <android.app.name:"game" version:"normal 0.5.1.1" packages:"com.game.cxy">
+        <android.app.name:"game" version:"normal 0.5.1.2" packages:"com.game.cxy">
 
-        <liunx.name:"game" version:"normal 0.5.1.1">
+        <liunx.name:"game" version:"normal 0.5.1.2">
 
-        <mac.name:"game" version:"normal 0.5.1.1">
+        <mac.name:"game" version:"normal 0.5.1.2">
 
         <windows.packages:"main.yml">
 
