@@ -13,30 +13,30 @@ function addControls()
 end
 
 function inRoom()
-   nameRoom(game setting)
+   nameRoom('game setting')
 end
 
 function setting()
-   setting.list(Difficulties,Window Size,Low End)
-   difficulties.list(easy,normal,hard,hell)
+   setting.list('Difficulties','Window Size','Low End')
+   difficulties.list('easy','normal','hard','hell')
    difficulty = normal
    window size.default = 2080 * 1070
    low.end.list(false,true)
    low.end = false
    if difficulty == easy then
-     fight.difficulty(easy)
+     fight.difficulty('easy')
    end
    if difficulty == normal then
-     fight.difficulty(normal)
+     fight.difficulty('normal')
    end
    if difficulty == hard then
-     fight.difficulty(hard)
+     fight.difficulty('hard')
    end
    if difficulty == hell then
-     fight.difficulty(hell)
+     fight.difficulty('hell')
    end
    if window.size == math.setting then
-     window.size.tools(math.setting)
+     window.size.tools('math.setting')
    end
    if low.end == true then
      fight.low(true)
@@ -44,8 +44,8 @@ function setting()
 end
 
 function exit()
-   get.change(data)
-   get.change(setting)
+   get.change('data')
+   get.change('setting')
    save()
    setting.change()
 end
