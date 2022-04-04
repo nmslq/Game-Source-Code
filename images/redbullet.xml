@@ -1,2 +1,7 @@
-path = "images/redbullet.png"
-<SubTextrue name: redbullet>
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="redbullet.png">
+        <SubTextrue name="redbullet0001" x="0" y="0" width="50" height="50">
+        <SubTextrue name="redbullet0002" x="50" y="0" width="50" height="50">
+        <SubTextrue name="redbullet0003" x="0" y="50" width="50" height="50">
+        <SubTextrue name="redbullet0004" x="50" y="50" width="50" height="50">
+</TextureAtlas>
