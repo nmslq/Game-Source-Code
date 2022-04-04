@@ -1,3 +1,5 @@
+import Game;
+
 debug(7.4)
 flx.path(images,data,mods)
 flx.getPath()
