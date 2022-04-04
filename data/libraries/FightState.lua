@@ -14,25 +14,25 @@ function addControls()
 end
 
 function onCreate()
-   player = create.player.animSprite(player.x,player.y,player)
+   player = create.player.animSprite(player.x,player.y,'player')
    player.set.camera('game')
-   add.animate(player,idle)
-   add.animate(player,left)
-   add.animate(player,right)
-   add.animate(player,up)
-   add.animate(player,dodge)
-   add.animate(player,shoot)
+   add.animate('player','idle')
+   add.animate('player','left')
+   add.animate('player','right')
+   add.animate('player','up')
+   add.animate('player','dodge')
+   add.animate('player','shoot')
 end
 
 function move()
    if left.key.move.player(5,0)
-   play.animate(player,left)
+   play.animate('player','left')
    shaders.move.camera(player.x,player.y)
    if right.key.move.player(0,5)
-   play.animate(player,right)
+   play.animate('player','right')
    shaders.move.camera(player.x,player.y)
    if nomove then
-   play.animate.loop(player,idle)
+   play.animate.loop('player','idle')
 end
 
 function onUpdate()
@@ -49,16 +49,16 @@ function onUpdate()
 end
 
 function bullet()
-   bullet = create.bullet.animSprite(bullet.x, bullet.y, bullet)
-   add.animate(bullet,bullet)
+   bullet = create.bullet.animSprite(bullet.x, bullet.y, 'bullet')
+   add.animate('bullet','bullet')
    bullet.color.set(nil)
    bullet.set.camera('game')
-   play.animate.loop(bullet,bullet)
-   redbullet = create.redbullet.animSprite(redbullet.x, redbullet.y, redbullet)
-   add.animate(redbullet,redbullet)
+   play.animate.loop('bullet','bullet')
+   redbullet = create.redbullet.animSprite(redbullet.x, redbullet.y, 'redbullet')
+   add.animate('redbullet','redbullet')
    redbullet.color.set(red)
    bullet.set.camera('game')
-   play.animate.loop(redbullet,redbullet)
+   play.animate.loop('redbullet','redbullet')
    if bullet.r == player
      hit()
    end
@@ -79,7 +79,7 @@ end
 function dodge()
    if space.dodge == true
    if dodge == true
-     play.animate(player,dodge)
+     play.animate('player','dodge')
      dodge.time(time-0.0001)
      if dodge.time == 0 then
        dodge = false
@@ -106,8 +106,8 @@ end
 
 function shoot()
    timer.Update()
-   play.animate(player,shoot)
-   shbu = create.shbu.animSprite(player.getGunX,player.getGunY,shotb)
+   play.animate('player','shoot')
+   shbu = create.shbu.animSprite(player.getGunX,player.getGunY,'shotb')
    shbu.set.camera('game')
    play.sound('shoot')
    shbu.x = shbu.x + 3
@@ -115,7 +115,7 @@ function shoot()
      moster.kill()
    end
    if timer >= 4 then
-   play.animate.loop(player,idle)
+   play.animate.loop('player','idle')
    end
    if timer >= 30 then
    shbu.remove()
@@ -136,6 +136,6 @@ end
 
 function dead()
    if health == 0 then
-     setRoom(die)
+     setRoom('die')
    end
 end
