@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-
         <build.list:{"android,linux,mac,windows"}>
 
         <android.build:"apk">
@@ -44,5 +43,4 @@
         <folder.spawn.exites:"null">
 
         <assets.spawn.getPathFiles:"files.json">
-
 </project>
