@@ -35,24 +35,24 @@ function tools()
    if open then
       if windows then
         windows.system.open('lime')
-        windows.system.Flx('window')
+        windows.system.flx('window')
         windows.system.FlxG('window')
       end
       if android then
         android.system.open(win)
-        android.system.Flx(window)
+        android.system.flx(window)
         android.system.FlxG('window')
       end
    end
    if close then
       if windows then
         windows.system.close('lime')
-        windows.system.FlxClose('window')
+        windows.system.flxClose('window')
         windows.system.FlxG('window')
       end
       if android then
         android.system.close('lime')
-        android.system.FlxClose('window')
+        android.system.flxClose('window')
         android.system.FlxG('window')
       end
    end
@@ -69,7 +69,7 @@ function tools()
       end
    end
    if window.size then
-     windows.system.Flx('window')
+     windows.system.flx('window')
      winows.system.FlxG('window')
      size.window()
      size.slow()
@@ -81,13 +81,13 @@ function tools()
       if windows then
         windows.system.lime('tag','text')
         windows.system.windowText('tag','text')
-        windows.system.Flx('window')
+        windows.system.flx('window')
         windows.system.FlxG('window')
       end
       if android then
         android.system.lime('tag','text')
         android.system.windowText('tag',text')
-        android.system.Flx('window')
+        android.system.flx('window')
         android.system.FlxG('window')
       end
    end
