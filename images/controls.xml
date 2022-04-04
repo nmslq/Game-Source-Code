@@ -1,13 +1,15 @@
-path = "images/controls.png"
-<SubTextrue name: left>
-<SubTextrue name: up>
-<SubTextrue name: down>
-<SubTextrue name: right>
-<SubTextrue name: A>
-<SubTextrue name: B>
-<SubTextrue name: S>
-<SubTextrue name: C>
-<SubTextrue name: Q>
-<SubTextrue name: Z>
-<SubTextrue name: D>
-<SubTextrue name: ?>
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="controls.png">
+        <SubTextrue name="left0000" x="0" y="0" width="100" height="100">
+        <SubTextrue name="up0000" x="100" y="0" width="100" height="100">
+        <SubTextrue name="down0000" x="200" y="0" width="100" height="100">
+        <SubTextrue name="right0000" x="300" y="0" width="100" height="100">
+        <SubTextrue name="A0000" x="0" y="100" width="100" height="100">
+        <SubTextrue name="B0000" x="100" y="100" width="100" height="100">
+        <SubTextrue name="S0000" x="200" y="100" width="100" height="100">
+        <SubTextrue name="C0000" x="300" y="100" width="100" height="100">
+        <SubTextrue name="Q0000" x="0" y="200" width="100" height="100">
+        <SubTextrue name="Z0000" x="100" y="200" width="100" height="100">
+        <SubTextrue name="D0000" x="200" y="200" width="100" height="100">
+        <SubTextrue name="?0000" x="300" y="200" width="100" height="100">
+</TextureAtlas>
