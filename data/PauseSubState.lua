@@ -2,7 +2,7 @@ controls.load()
 shaders.camera()
 
 function inRoom()
-   nameRoom(pause)
+   nameRoom('pause')
 end
 
 function onUpdate()
@@ -11,8 +11,8 @@ function onUpdate()
 end
 
 function onCreate()
-   pause.list(Resume,Reset level,Exit to menu)
-   pause = create.pause.text(0,0[next.y-20],pause.list,sans)
+   pause.list('Resume','Reset level','Exit to menu')
+   pause = create.pause.text(0, 0[next.y-20] ,pause.list, 'sans')
 end
 
 function onPress()
@@ -28,18 +28,18 @@ function onPress()
 end
 
 function close()
-   setRoom(game{level.getMath})
+   setRoom('game{level.getMath}')
 end
 
 function reset()
    black.screen()
-   get.level(math)
+   get.level('math')
    reset.level()
 end
 
 function exit()
    black.screen()
-   setRoom(menu)
+   setRoom('menu')
 end
 
 function addControls()
