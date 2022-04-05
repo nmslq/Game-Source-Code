@@ -4,17 +4,15 @@ FlxG.camera()
 FlxG.shaders()
 
 function shaders()
-   if move.camera then
+   if lua.help {move.camera} then
      move.camera.flx(x,y)
      move.camera.FlxG(x,y)
      move.camera(x,y)
-   end
-   if camera.rotation then
+   elseif lua.help {camera.rotation} then
      camera.rotation.flx(index)
      camera.rotation.FlxG(index)
      camera.rotation(index)
-   end
-   if set.camera then
+   elseif lua.help {set.camera} then
      camera.set.flx()
      camera.set.FlxG()
      flx.camera('hud')
@@ -22,19 +20,26 @@ function shaders()
      flx.camera('game')
      FlxG.camera('game')
      camera.set()
-   end
-   if camera.scale then
+   elseif lua.help {camera.scale} then
      camera.scale.flx(index)
      camera.scale.FlxG(index)
      camera.scale(index)
      scale.shader.flx(index)
      scale.shader.FlxG(index)
      scale.shader(index)
-   end
-   if camera.flash then
+   elseif lua.help {camera.flash} then
      camera.flx()
      camera.FlxG()
      flash.flx(color,time)
      flash.FlxG()
+   elseif lua.help {FlxG.createCamera}
+     cameraName.FlxG()
+     cameraName.flx()
+     add.cameraList()
+     FlxG.shader.cameraListAdd()
+     shader.cameraAddCreate()
+     shaderCameraXY.FlxG.AddListCreate()
+     shaderCameraScale.FlxG.AddListCreate()
+     shaderCameraRotation.FlxG.AddListCreate()
    end
 end
