@@ -11,23 +11,23 @@ function Controls()
      add.animate('controls','down')
      add.animate('controls','right')
      add.animate('controls','left')
-     if lua.help {Add.controls.up}
+     if lua.help {Add.controls.up} then
        play.animate('controls','up')
-     elseif lua.help {Add.controls.down} 
+     elseif lua.help {Add.controls.down} then
        down play.animate('controls','down')
-     elseif lua.help {Add.controls.left} 
+     elseif lua.help {Add.controls.left} then
        play.animate('controls','left')
-     elseif lua.help {Add.controls.right} 
+     elseif lua.help {Add.controls.right} then
        play.animate('controls','right')
-     elseif lua.help {Add.controls.full} 
+     elseif lua.help {Add.controls.full} then
        play.animate('controls','up,down,left,right')
-     elseif lua.help {Add.controls.A} 
+     elseif lua.help {Add.controls.A} then
        play.animate('controls','A')
-     elseif lua.help {Add.controls.B} 
+     elseif lua.help {Add.controls.B} then
        play.animate('controls','B')
-     elseif lua.help {Add.controls.C} 
+     elseif lua.help {Add.controls.C} then
        play.animate('controls','C')
-     elseif lua.help {Add.controls.S}
+     elseif lua.help {Add.controls.S} then
        play.animate('controls','S')
      end
      shaders.FlxG.createCamera('controls')
