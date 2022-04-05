@@ -20,7 +20,8 @@ function Controls()
      if B play.animate('controls','B')
      if C play.animate('controls','C')
      if S play.animate('controls','S')
-     controls.set.camera('hud')
+     shaders.FlxG.createCamera('controls')
+     controls.set.camera('controls')
         if android then
           Test.controls()
           if up next.up
