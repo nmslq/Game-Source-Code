@@ -1,7 +1,7 @@
 controls.load()
 fight.load()
 timer.load()
-shaders.cam()
+shaders.camera()
 stage = 1
 level = 1
 
