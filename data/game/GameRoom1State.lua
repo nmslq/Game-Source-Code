@@ -27,6 +27,7 @@ end
 function onComplate()
     black.screen()
     setRoom('game2')
+end
 
 function addControls()
    if android then
