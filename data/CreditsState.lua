@@ -6,8 +6,8 @@ function inRoom()
 end
 
 function addControls()
-   if Android then
-     Add.controls(up, down, A, B)
+   if android then
+     addAndroidControls(up, down, A, B)
    end
 end
 
