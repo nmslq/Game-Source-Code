@@ -32,8 +32,8 @@ function Die()
 end
 
 function addControls()
-   if Android then
-     Add.controls(A)
+   if android then
+     addAndroidControls(A)
    end
 end
 
