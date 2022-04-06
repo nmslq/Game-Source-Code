@@ -3,7 +3,7 @@ function video()
    cam.game.hide()
    timer.stop()
    fight.disbale()
-   if not Android then
+   if not android then
      load.video('mp4')
      load.mp3.vidsound('mp3')
      getPath.video('system')
@@ -21,7 +21,7 @@ function video()
      flx.video.end('mp4')
      flx.vidsound.end('mp3')
    end
-   if Android then --android can't load mp4 video
+   if android then --android can't load mp4 video
      load.video('mp4')
      load.mp3.vidsound('mp3')
      get.video.sound('mp3')
@@ -44,7 +44,7 @@ function video()
      flx.video('html.url')
      flx.vidsound('html.url')
      html.stuff()
-     if Android play end then
+     if android playEnd then
        html.close()
        html.video.remove()
        html.vidsound.remove()
