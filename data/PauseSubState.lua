@@ -43,7 +43,7 @@ function exit()
 end
 
 function addControls()
-   if Android then
-     Add.controls(up, down, A)
+   if android then
+     addAndroidControls(up, down, A)
    end
 end
