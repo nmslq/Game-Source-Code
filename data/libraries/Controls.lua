@@ -11,23 +11,23 @@ function Controls()
      add.animate('controls','down')
      add.animate('controls','right')
      add.animate('controls','left')
-     if lua.help {Add.controls.up} then
+     if lua.help {addAndroidControls.up} then
        play.animate('controls','up')
-     elseif lua.help {Add.controls.down} then
+     elseif lua.help {addAndroidControls.down} then
        down play.animate('controls','down')
-     elseif lua.help {Add.controls.left} then
+     elseif lua.help {addAndroidControls.left} then
        play.animate('controls','left')
-     elseif lua.help {Add.controls.right} then
+     elseif lua.help {addAndroidControls.right} then
        play.animate('controls','right')
-     elseif lua.help {Add.controls.full} then
+     elseif lua.help {addAndroidControlss.full} then
        play.animate('controls','up,down,left,right')
-     elseif lua.help {Add.controls.A} then
+     elseif lua.help {addAndroidControls.A} then
        play.animate('controls','A')
-     elseif lua.help {Add.controls.B} then
+     elseif lua.help {addAndroidControls.B} then
        play.animate('controls','B')
-     elseif lua.help {Add.controls.C} then
+     elseif lua.help {addAndroidControls.C} then
        play.animate('controls','C')
-     elseif lua.help {Add.controls.S} then
+     elseif lua.help {addAndroidControls.S} then
        play.animate('controls','S')
      end
      shaders.FlxG.createCamera('controls')
