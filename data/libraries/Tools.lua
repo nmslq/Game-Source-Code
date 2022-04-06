@@ -4,19 +4,18 @@ function tools()
    flx.path.files()
    windows.reload()
    android.reload()
-   if save then
+   if lua.help {tools.save} then
       if android then
         save.android.systemFiles('files')
         files.system.exites('files')
         files.create.android('files')
-        end
-       if windows then
-         windows.files.save('files')
-         windows.files.exites('files')
-         windows.create.filesExites('files')
-       end
-   end
-   if edit then
+      end
+      if windows then
+        windows.files.save('files')
+        windows.files.exites('files')
+        windows.create.filesExites('files')
+      end
+   elseif lua.help {tools.edit} then
       if android then
         load.android.files.name()
         files.getPath.exites('files')
@@ -31,8 +30,7 @@ function tools()
         change.windows.files()
         edit.files('windows')
       end
-   end
-   if open then
+   elseif lua.help {tools.open} then
       if windows then
         windows.system.open('lime')
         windows.system.flx('window')
@@ -43,8 +41,7 @@ function tools()
         android.system.flx(window)
         android.system.FlxG('window')
       end
-   end
-   if close then
+   elseif lua.help {tools.close} then
       if windows then
         windows.system.close('lime')
         windows.system.flxClose('window')
@@ -55,8 +52,7 @@ function tools()
         android.system.flxClose('window')
         android.system.FlxG('window')
       end
-   end
-   if exit then
+   elseif lua.help {tools.exit} then
       if windows then
         windows.close.game()
         windows.system.close()
@@ -67,17 +63,17 @@ function tools()
         android.app.system()
         android.exit.system()
       end
-   end
-   if window.size then
-     windows.system.flx('window')
-     winows.system.FlxG('window')
-     size.window()
-     size.slow()
-     size.fast()
-     Flx.window.resize()
-     FlxG.window.resize()
-   end
-   if limeText then
+   elseif lua.help {window.size} then
+      if windows then
+        windows.system.flx('window')
+        winows.system.FlxG('window')
+        size.window()
+        size.slow()
+        size.fast()
+        Flx.window.resize()
+        FlxG.window.resize()
+      end
+   elseif lua.help {limeText} then
       if windows then
         windows.system.lime('tag','text')
         windows.system.windowText('tag','text')
