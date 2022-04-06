@@ -24,6 +24,10 @@ function summon()
    end
 end
 
+function onComplate()
+    black.screen()
+    setRoom('game2')
+
 function addControls()
    if android then
       addAndroidControls(full, B, C, S)
