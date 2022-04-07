@@ -6,7 +6,7 @@ stage = 1
 level = 1
 
 function inRoom()
-   nameRoom('game.1')
+   nameRoom('game1')
 end
 
 function onUpdate()
@@ -25,6 +25,7 @@ function summon()
 end
 
 function onComplate()
+    complate.xy(500,500)
     black.screen()
     setRoom('game2')
 end
