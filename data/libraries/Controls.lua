@@ -19,7 +19,7 @@ function Controls()
        play.animation('controls','left')
      elseif lua.help {addAndroidControls.right} then
        play.animation('controls','right')
-     elseif lua.help {addAndroidControlss.full} then
+     elseif lua.help {addAndroidControls.full} then
        play.animation('controls','up,down,left,right')
      elseif lua.help {addAndroidControls.A} then
        play.animation('controls','A')
@@ -30,8 +30,8 @@ function Controls()
      elseif lua.help {addAndroidControls.S} then
        play.animation('controls','S')
      end
-     shaders.FlxG.createCamera('controls')
-     controls.set.camera('controls')
+     shaders.FlxG.createCamera('CameraControls')
+     controls.set.camera('CameraControls')
         if android then
           Test.controls()
           if up next.up
