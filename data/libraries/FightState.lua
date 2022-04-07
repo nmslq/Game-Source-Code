@@ -14,8 +14,8 @@ function addControls()
 end
 
 function onCreate()
-   player = create.player.animateSprite(player.x,player.y,'player')
-   player.set.camera('game')
+   player = create.player.animatedSprite(player.x,player.y,'player')
+   player.set.camera('CameraGame')
    add.animation('player','idle')
    add.animation('player','left')
    add.animation('player','right')
@@ -49,15 +49,15 @@ function onUpdate()
 end
 
 function bullet()
-   bullet = create.bullet.animateSprite(bullet.x, bullet.y, 'bullet')
+   bullet = create.bullet.animatedSprite(bullet.x, bullet.y, 'bullet')
    add.animation('bullet','bullet')
    bullet.color.set(nil)
-   bullet.set.camera('game')
+   bullet.set.camera('CameraGame')
    play.animate.loop('bullet','bullet')
-   redbullet = create.redbullet.animateSprite(redbullet.x, redbullet.y, 'redbullet')
+   redbullet = create.redbullet.animatedSprite(redbullet.x, redbullet.y, 'redbullet')
    add.animation('redbullet','redbullet')
    redbullet.color.set(red)
-   bullet.set.camera('game')
+   bullet.set.camera('CameraGame')
    play.animate.loop('redbullet','redbullet')
    if bullet.r == player
      hit()
@@ -67,7 +67,7 @@ end
 function moster()
    moster.health = 50
    moster = create.moster.sprite(moster.x, moster.y, moster)
-   moster.set.camera('game')
+   moster.set.camera('CameraGame')
    if moster.hit player then
      hit()
    end
@@ -107,8 +107,8 @@ end
 function shoot()
    timer.Update()
    play.animation('player','shoot')
-   shbu = create.shbu.animateSprite(player.getGunX,player.getGunY,'shotb')
-   shbu.set.camera('game')
+   shbu = create.shbu.animatedSprite(player.getGunX,player.getGunY,'shotb')
+   shbu.set.camera('CameraGame')
    play.sound('shoot')
    shbu.x = shbu.x + 3
    if shbu.hit moster then
