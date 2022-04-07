@@ -7,7 +7,7 @@ function paths()
    flx.modFolder('fonts')
    flx.modFolder('videos')
    if windows then
-     windows.filesSystem.exites('$sdcard$/mods/$files$')
+     windows.filesSystem.exites('$sdcard$/mods/$ModFilesName$')
      path.files('mods')
      file.getPath()
      loadSystem.getPathExites()
