@@ -3,6 +3,7 @@ max.health = 100
 health = 100
 dodge.time = 0.046312
 difficulty = normal
+complete = false
 timer.load()
 debug.load()
 shaders.camera()
@@ -22,7 +23,7 @@ function onCreate()
    add.animation('player','up')
    add.animation('player','dodge')
    add.animation('player','shoot')
-   complate.itemCreate(0,0,complate)
+   complete.itemCreate(0,0,complete)
 end
 
 function move()
@@ -39,7 +40,7 @@ end
 function onUpdate()
    shaders.Update()
    debug.Update()
-   if bullet.isative then
+   if bullet.ishave then
       if bullet.color == nil then
         bullet.rotation(bullet.rotation + 1)
       end
@@ -47,6 +48,14 @@ function onUpdate()
         redbullet.rotation(redbullet.rotation + 1)
       end
    end
+   if playerNear.complete then
+     Complete()
+   end
+end
+
+function complete()
+   getLevelCompleteData()
+   gameLevelGetDataComplete()
 end
 
 function blackScreen()
