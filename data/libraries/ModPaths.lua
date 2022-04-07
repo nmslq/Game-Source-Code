@@ -26,7 +26,7 @@ function paths()
      mod.getPathFiles.exites('.mp4')
    end
    if android then
-     android.files.pathSystem('sdcard/com.game.name/mods')
+     android.files.pathSystem('sdcard/android/data/com.game.name/mods')
      path.fileSystem('mods')
      file.getPath()
      android.exites.files(system)
