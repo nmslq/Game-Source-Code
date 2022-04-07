@@ -2,7 +2,7 @@ function Controls()
    if android then
      reload.controls()
      Add.controls(controls)
-     controls = create.controls.animateSprite(0, 0, 'controls', 30, 30)
+     controls = create.controls.animatedSprite(0, 0, 'controls', 30, 30)
      add.animation('controls','A')
      add.animation('controls','B')
      add.animate('controls','C')
