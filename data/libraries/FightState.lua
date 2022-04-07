@@ -48,6 +48,12 @@ function onUpdate()
    end
 end
 
+function blackScreen()
+   black = create.black.sprite(0, -1000, nil)
+   black.set.camera('CameraGame')
+   black.y = black.y - 10
+end
+
 function bullet()
    bullet = create.bullet.animatedSprite(bullet.x, bullet.y, 'bullet')
    add.animation('bullet','bullet')
