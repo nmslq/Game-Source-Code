@@ -24,8 +24,11 @@ function summon()
    end
 end
 
+function onCreate()
+   complate.xy(500,500)
+end
+
 function onComplate()
-    complate.xy(500,500)
     black.screen()
     setRoom('game2')
 end
