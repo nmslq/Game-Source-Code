@@ -22,6 +22,7 @@ function onCreate()
    add.animation('player','up')
    add.animation('player','dodge')
    add.animation('player','shoot')
+   complate.itemCreate(0,0,complate)
 end
 
 function move()
