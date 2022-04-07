@@ -2,33 +2,33 @@ function Controls()
    if android then
      reload.controls()
      Add.controls(controls)
-     controls = create.controls.animSprite(0, 0, 'controls', 30, 30)
-     add.animate('controls','A')
-     add.animate('controls','B')
+     controls = create.controls.animateSprite(0, 0, 'controls', 30, 30)
+     add.animation('controls','A')
+     add.animation('controls','B')
      add.animate('controls','C')
-     add.animate('controls','S')
-     add.animate('controls','up')
-     add.animate('controls','down')
-     add.animate('controls','right')
-     add.animate('controls','left')
+     add.animation('controls','S')
+     add.animation('controls','up')
+     add.animation('controls','down')
+     add.animation('controls','right')
+     add.animation('controls','left')
      if lua.help {addAndroidControls.up} then
-       play.animate('controls','up')
+       play.animation('controls','up')
      elseif lua.help {addAndroidControls.down} then
-       down play.animate('controls','down')
+       play.animation('controls','down')
      elseif lua.help {addAndroidControls.left} then
-       play.animate('controls','left')
+       play.animation('controls','left')
      elseif lua.help {addAndroidControls.right} then
-       play.animate('controls','right')
+       play.animation('controls','right')
      elseif lua.help {addAndroidControlss.full} then
-       play.animate('controls','up,down,left,right')
+       play.animation('controls','up,down,left,right')
      elseif lua.help {addAndroidControls.A} then
-       play.animate('controls','A')
+       play.animation('controls','A')
      elseif lua.help {addAndroidControls.B} then
-       play.animate('controls','B')
+       play.animation('controls','B')
      elseif lua.help {addAndroidControls.C} then
-       play.animate('controls','C')
+       play.animation('controls','C')
      elseif lua.help {addAndroidControls.S} then
-       play.animate('controls','S')
+       play.animation('controls','S')
      end
      shaders.FlxG.createCamera('controls')
      controls.set.camera('controls')
