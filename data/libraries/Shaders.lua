@@ -1,7 +1,6 @@
 camera.list('CameraHud','CameraGame')
 camera = camera.flx()
 camera = camera.FlxG()
-FlxG.camera()
 FlxG.shaders()
 
 function shaders()
