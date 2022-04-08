@@ -22,17 +22,17 @@
 
         <windows.packages="main.yml">
 
-        <android.packages:"main.yml">
+        <android.packages="main.yml">
 
-        <liunx.packages:"main.yml">
+        <liunx.packages="main.yml">
 
-        <mac.packages:"main.yml">
+        <mac.packages="main.yml">
 
-        <haxelib.install:"HaxelibAndroidTools" haxelib.url:"https://github.com/jigsaw-4277821/AndroidTools" if "android"/>
+        <haxelib.install="HaxelibAndroidTools" haxelib.url="https://github.com/jigsaw-4277821/AndroidTools" if "android"/>
 
-        <haxelib.install:"extension-webview" haxelib.url:"https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
+        <haxelib.install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
 
-        <asstes.path:{"data,images,sounds,source,fonts"}>
+        <asstes.path={"data,images,sounds,source,fonts"}>
 
         <mod.getPath.exites>
 
@@ -44,7 +44,7 @@
 
         <android.spawn.folder="null">
 
-        <folder.spawn.exites:"null">
+        <folder.spawn.exites="null">
 
         <assets.spawn.getPathFiles="files.json">
 </project>
