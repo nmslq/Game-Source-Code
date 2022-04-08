@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-        <build.list:{"android,linux,mac,windows"}>
+        <build.list={"android,linux,mac,windows"}>
 
-        <android.build:"apk">
+        <android.build="apk">
 
-        <android.buildManifest:"xml">
+        <android.buildManifest="xml">
 
-        <windows.build:"zip">
+        <windows.build="zip">
 
-        <mac.build:"zip">
+        <mac.build="zip">
 
-        <liunx.build:"zip">
+        <liunx.build="zip">
 
-        <window.name:"game" version:"normal build 0.5.2.4">
+        <window.name="game" version="normal build 0.5.2.4" screenWidth="1270" screenHeight="720" fullScreen="false">
 
-        <android.app.name:"game" version:"normal build 0.5.2.4" packages:"com.game.cxy">
+        <android.app.name="game" version="normal build 0.5.2.4" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true">
 
-        <liunx.name:"game" version:"normal build 0.5.2.4">
+        <liunx.name="game" version="normal build 0.5.2.4" screenWidth="1270" screenHeight="720" fullScreen="false">
 
-        <mac.name:"game" version:"normal build 0.5.2.4">
+        <mac.name="game" version="normal build 0.5.2.4" screenWidth="1270" screenHeight="720" fullScreen="false">
 
-        <windows.packages:"main.yml">
+        <windows.packages="main.yml">
 
         <android.packages:"main.yml">
 
@@ -38,13 +38,13 @@
 
         <mod.folder.getPath>
 
-        <android.spawn.packages:"sdcard/android/data/com.game.cxy/mods>
+        <android.spawn.packages="sdcard/android/data/com.game.cxy/mods>
 
-        <android.spawn.files:"sdcard/android/data/com.game.cxy/mods/modslist.txt>
+        <android.spawn.files="sdcard/android/data/com.game.cxy/mods/modslist.txt>
 
-        <android.spawn.folder:"null">
+        <android.spawn.folder="null">
 
         <folder.spawn.exites:"null">
 
-        <assets.spawn.getPathFiles:"files.json">
+        <assets.spawn.getPathFiles="files.json">
 </project>
