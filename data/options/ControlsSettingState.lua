@@ -33,8 +33,8 @@ function setting()
 end
 
 function onPress()
-   controls.color.press('255,0,0')
-   controls.color('255,255,255')
+   controlsTextColor.press(FlxG.RED,['255,0,0'])
+   controlsTextColor(FlxG.Black,['255,255,255'])
 end
 
 function exit()
