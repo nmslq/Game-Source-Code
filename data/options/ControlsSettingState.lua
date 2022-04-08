@@ -30,11 +30,11 @@ function setting()
    controls.B.text('keyboard.change')
    controls.C.text('keyboard.change')
    controls.S.text('keyboard.change')
+   controlsTextColor(FlxG.Black,['255,255,255'])
 end
 
 function onPress()
    controlsTextColor.press(FlxG.RED,['255,0,0'])
-   controlsTextColor(FlxG.Black,['255,255,255'])
 end
 
 function exit()
