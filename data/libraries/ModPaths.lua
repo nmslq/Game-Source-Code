@@ -35,7 +35,7 @@ function paths()
      getPathSystem.folder('mods')
      getPathSystem.modFileName('$modFilesName$.mod')
      file.getPath()
-     folder.getPath
+     folder.getPath()
      android.exites.files(system)
      dirMod.getPath(androidSystem)
      mod.getPathFolder.exites('data')
