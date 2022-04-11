@@ -30,5 +30,8 @@ function stages()
      saw.setScrollFactor(1,1)
      add.animation('saw','saw')
      saw.set.camera('CameraGame')
+        if playerNear.saw then
+          dead()
+        end
    end
 end
