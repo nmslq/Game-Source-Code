@@ -28,6 +28,7 @@ function stages()
      sky.set.camera('CameraGame')
      saw = create.saw.animatedSprite(10,0,'stages/saw')
      saw.setScrollFactor(1,1)
+     add.animation('saw','saw')
      saw.set.camera('CameraGame')
    end
 end
