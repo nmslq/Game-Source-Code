@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="saw.png">
+        <SubTextrue name="saw0000" x="0" y="0" width="100" height="70">
+        <SubTextrue name="saw0001" x="100" y="0" width="100" height="70">
+        <SubTextrue name="saw0002" x="200" y="0" width="100" height="70">
+        <SubTextrue name="saw0003" x="0" y="70" width="100" height="70">
+        <SubTextrue name="saw0004" x="100" y="70" width="100" height="700">
+        <SubTextrue name="saw0005" x="200" y="70" width="100" height="70">
+</TextureAtlas>
