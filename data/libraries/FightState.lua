@@ -123,7 +123,7 @@ end
 function shoot()
    timer.Update()
    play.animation('player','shoot')
-   shbu = create.shbu.Sprite(player.getGunX,player.getGunY,'shotb')
+   shbu = create.shbu.sprite(player.getGunX,player.getGunY,'shotb')
    shbu.set.camera('CameraGame')
    play.sound('shoot')
    shbu.x = shbu.x + 3
