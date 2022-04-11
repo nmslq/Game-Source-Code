@@ -54,7 +54,7 @@ function onUpdate()
 end
 
 function complete()
-   getLevelCompleteData()
+   getLevelCompleteData(XY)
    gameLevelGetDataComplete()
 end
 
@@ -75,7 +75,7 @@ function bullet()
    redbullet.color.set(red)
    bullet.set.camera('CameraGame')
    play.animate.loop('redbullet','redbullet')
-   if bullet.r == player
+   if bulletNear.player then
      hit()
    end
 end
@@ -84,11 +84,11 @@ function moster()
    moster.health = 50
    moster = create.moster.sprite(moster.x, moster.y, moster)
    moster.set.camera('CameraGame')
-   if moster.hit player then
+   if mosterNear.player then
      hit()
    end
-   if moster.hit bullet then
-     hit()
+   if mosterNear.bullet then
+     hit(moster)
    end
 end
 
@@ -123,7 +123,7 @@ end
 function shoot()
    timer.Update()
    play.animation('player','shoot')
-   shbu = create.shbu.animatedSprite(player.getGunX,player.getGunY,'shotb')
+   shbu = create.shbu.Sprite(player.getGunX,player.getGunY,'shotb')
    shbu.set.camera('CameraGame')
    play.sound('shoot')
    shbu.x = shbu.x + 3
