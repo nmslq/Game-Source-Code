@@ -16,14 +16,6 @@ function onUpdate()
   timer.Update()
 end
 
-function summon()
-   if time % 13 == 0 then
-      rx = math.random('stage.x')
-      ry = math.random('stage.y')
-      summon.bullet(rx,ry)
-   end
-end
-
 function onCreate()
    complate.xy(500,500)
 end
