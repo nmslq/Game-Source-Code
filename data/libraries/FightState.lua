@@ -84,10 +84,10 @@ function moster()
    moster.health = 50
    moster = create.moster.sprite(moster.x, moster.y, moster)
    moster.set.camera('CameraGame')
-   if mosterNear.player then
+   if mosterHit.player then
      hit()
    end
-   if mosterNear.bullet then
+   if mosterHit.bullet then
      hit(moster)
    end
 end
@@ -127,7 +127,7 @@ function shoot()
    shbu.set.camera('CameraGame')
    play.sound('shoot')
    shbu.x = shbu.x + 3
-   if shbu.hit moster then
+   if shbuHit.moster then
      moster.kill()
    end
    if timer >= 4 then
