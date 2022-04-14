@@ -27,10 +27,11 @@ function exit()
    get.change('setting')
    save()
    setting.change()
+   setRoom('option')
 end
 
 function onPress()
    if press B then
-     setRoom('menu')
+     exit()
    end
 end
