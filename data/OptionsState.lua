@@ -44,7 +44,7 @@ function onPress()
         setRoom('debug setting')
       end
    end
-   if press B then
+   if Press B then
      setRoom('menu')
    end
 end

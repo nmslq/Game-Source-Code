@@ -24,23 +24,23 @@ function onUpdate()
 end
 
 function onPress()
-   if Press start then
+   if Press A and Press start then
      black.screen()
      setRoom('game1')
    end
-   if Press mods then
+   if Press A and Press mods then
      black.screen()
      setRoom('mods')
    end
-   if Press credits then
+   if Press A and Press credits then
      black.screen()
      setRoom('credits')
    end
-   if Press options then
+   if Press A and Press options then
      black.screen()
      setRoom('options')
    end
-   if Press exit then
+   if Press A and Press exit then
       if android then
         android.tools.exitGameApp()
       end

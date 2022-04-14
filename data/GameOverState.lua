@@ -38,7 +38,7 @@ function addControls()
 end
 
 function onPress()
-   if press A then
+   if Press A then
      setRoom('menu')
    end
 end

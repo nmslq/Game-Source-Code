@@ -25,7 +25,7 @@ function onCreate()
 end
 
 function onPress()
-   if press B then
+   if Press B then
      setRoom('menu')
    end
 end
