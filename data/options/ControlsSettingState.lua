@@ -39,7 +39,7 @@ function onPress()
      controlsKeyChange()
    end
    if Press B then
-     setRoom('menu')
+     exit()
    end
 end
 
@@ -48,4 +48,6 @@ function exit()
    get.change('controls')
    save()
    controls.change()
+   black.screen()
+   setRoom('option')
 end
