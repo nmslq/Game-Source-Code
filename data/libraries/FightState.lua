@@ -54,13 +54,17 @@ function onUpdate()
    end
    if playerNear.complete then
      Complete()
+     complete = true
    end
 end
 
 function complete()
-   getCompleteEndDataDo()
-   getEndDataDo()
-   startGetComplateEndDataDo()
+   if complete == true then
+     getCompleteEndDataDo()
+     getEndDataDo()
+     startGetComplateEndDataDo()
+     complete = false
+   end
 end
 
 function blackScreen()
