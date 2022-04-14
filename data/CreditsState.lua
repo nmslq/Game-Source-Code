@@ -17,10 +17,10 @@ function onUpdate()
 end
 
 function onPress()
-   if press A then
+   if Press A then
      browersGetUrlOpen('url')
    end
-   if press B then
+   if Press B then
      setRoom('menu')
    end
 end
