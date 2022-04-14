@@ -49,5 +49,5 @@ function exit()
    save()
    controls.change()
    black.screen()
-   setRoom('option')
+   setRoom('options')
 end

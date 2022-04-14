@@ -28,7 +28,7 @@ function exit()
    save()
    setting.change()
    black.screen()
-   setRoom('option')
+   setRoom('options')
 end
 
 function onPress()
