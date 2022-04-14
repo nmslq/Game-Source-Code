@@ -13,14 +13,20 @@ function addControls()
 end
 
 function onCreate()
-   bg = create.bg.sprite(0, 0, 'menu')
-   bg.scale(2.3,2.3)
+   bg = create.sprite(0, 0, 'menu')
+   bg.setObjectScale(2.3,2.3)
    if mod.paths.have then
-     mods = create.mod.text(0, 0, '{modname}:{mod.math}', 'sans')
-     version = create.version.text(-30, -30, 'version:{mod.version,mod.math}', 'sans')
+     mods = create.text(0, 0, '{modname}:{mod.math}', 'sans')
+     version = create.text(-30, -30, 'version:{mod.version,mod.math}', 'sans')
    end
    if mod.paths.nothave then
-     no = create.no.text(0, 0, 'there isnt have any mod!', 'sans')
+     no = create.text(0, 0, 'there isnt have any mod!', 'sans')
+   end
+end
+
+function onPress()
+   if press B then
+     setRoom('menu')
    end
 end
 
