@@ -48,6 +48,7 @@ function exit()
    get.change('setting')
    save()
    setting.change()
+   black.screen()
    setRoom('option')
 end
 
