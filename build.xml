@@ -38,6 +38,8 @@
 
         <mod.folderGetPath.exites/>
 
+        <{readme.md}.FilePathDelete/>
+
         <android.spawn.packages="sdcard/android/data/com.game.cxy/mods" if android/>
 
         <android.spawn.files="sdcard/android/data/com.game.cxy/mods/modslist.txt" if android/>
