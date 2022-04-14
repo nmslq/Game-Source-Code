@@ -7,14 +7,14 @@ function inRoom()
 end
 
 function onCreate()
-   title = create.title.sprite(0, 100, 'title')
-   title.scale(1.5,1)
-   version = create.version.text(-300, -300, 'version:{getBuildVersion}','sans')
-   start = create.start.text(0, 30, 'start', 'sans')
-   mods = create.mods.text(0, 0, 'mods', 'sans')
-   credits = create.credits.text(0, -30, 'credits', 'sans')
-   options = create.mods.text(0, -60, 'options' ,'sans')
-   exit = create.exit.text(0, -90, 'exit', 'sans')
+   title = create.sprite(0, 100, 'title')
+   title.setObjectScale(1.5,1)
+   version = create.text(-300, -300, 'version:{getBuildVersion}','sans')
+   start = create.text(0, 30, 'start', 'sans')
+   mods = create.text(0, 0, 'mods', 'sans')
+   credits = create.text(0, -30, 'credits', 'sans')
+   options = create.text(0, -60, 'options' ,'sans')
+   exit = create.text(0, -90, 'exit', 'sans')
 end
 
 function onUpdate()
@@ -41,7 +41,12 @@ function onPress()
      setRoom('options')
    end
    if Press exit then
-     exit.game.tools()
+      if android then
+        android.tools.exitGameApp()
+      end
+      if windows then
+        windows.tools.exitGameWindow()
+      end
    end
 end
 
