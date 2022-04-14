@@ -14,14 +14,20 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
+   if press A then
+     browersGetUrlOpen('url')
+   end
+   if press B then
+     setRoom('menu')
+   end
 end
 
 function onCreate()
-   bg = create.bg.sprite(0,0,'menu')
-   bg.scale(2.3,2.3)
-   credits = create.credits.text(0,0,{'credits.text'},'sans')
-   icon = create.icon.sprite(-30,0,{'credits.icon'})
-   title = create.title.text(0,30,{'credits.title'})
+   bg = create.sprite(0,0,'menu')
+   bg.setObjectScale(2.3,2.3)
+   credits = create.text(0,0,{'credits.text'},'sans')
+   icon = create.sprite(-30,0,{'credits.icon'})
+   title = create.text(0,30,{'credits.title'})
 end
 
 function credits()
