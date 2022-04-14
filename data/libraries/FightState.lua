@@ -7,6 +7,7 @@ complete = false
 timer.load()
 debug.load()
 shaders.camera()
+moster.health = 50
 
 function addControls()
    if input.keyboard 'B' == then
@@ -15,26 +16,29 @@ function addControls()
 end
 
 function onCreate()
-   player = create.player.animatedSprite(player.x,player.y,'player')
+   player = create.animatedSprite(player.x,player.y,'player')
    player.set.camera('CameraGame')
-   add.animation('player','idle')
+   add.animation.loop('player','idle')
    add.animation('player','left')
    add.animation('player','right')
    add.animation('player','up')
    add.animation('player','dodge')
    add.animation('player','shoot')
    complete.itemCreate(0,0,complete)
+   getLevelCompleteData(XY)
+   gameLevelGetDataComplete()
 end
 
 function move()
    if left.key.move.player(5,0)
    play.animate('player','left')
    shaders.move.camera(player.x,player.y)
-   if right.key.move.player(0,5)
+   elseif right.key.move.player(0,5)
    play.animate('player','right')
    shaders.move.camera(player.x,player.y)
-   if nomove then
+   elseif nomove then
    play.animation.loop('player','idle')
+   end
 end
 
 function onUpdate()
@@ -54,19 +58,21 @@ function onUpdate()
 end
 
 function complete()
-   getLevelCompleteData(XY)
-   gameLevelGetDataComplete()
+   getCompleteEndDataDo()
+   getEndDataDo()
+   startGetComplateEndDataDo()
 end
 
 function blackScreen()
-   black = create.black.sprite(0, -1000, nil)
+   black = create.sprite(0, -1000, nil)
+   black.setObjectScale(2,2)
    black.set.camera('CameraGame')
-   black.y = black.y - 10
+   set(get(black.y) = get(black.y) - 10)
 end
 
 function bullet()
-   bullet = create.bullet.animatedSprite(bullet.x, bullet.y, 'bullet')
-   add.animation('bullet','bullet')
+   bullet = create.animatedSprite(bullet.x, bullet.y, 'bullet')
+   add.animation.loop('bullet','bullet')
    bullet.color.set(nil)
    bullet.set.camera('CameraGame')
    play.animate.loop('bullet','bullet')
@@ -75,19 +81,18 @@ function bullet()
    redbullet.color.set(red)
    bullet.set.camera('CameraGame')
    play.animate.loop('redbullet','redbullet')
-   if bulletNear.player then
+   if bulletHit.player then
      hit()
    end
 end
 
 function moster()
-   moster.health = 50
-   moster = create.moster.sprite(moster.x, moster.y, moster)
+   moster = create.sprite(moster.x, moster.y, moster)
    moster.set.camera('CameraGame')
    if mosterHit.player then
      hit()
    end
-   if mosterHit.bullet then
+   if mosterHit.shbu then
      hit(moster)
    end
 end
@@ -126,7 +131,7 @@ function shoot()
    shbu = create.shbu.sprite(player.getGunX,player.getGunY,'shotb')
    shbu.set.camera('CameraGame')
    play.sound('shoot')
-   shbu.x = shbu.x + 3
+   set(get(shbu.x) = get(shbu.x) + 3)
    if shbuHit.moster then
      moster.kill()
    end
@@ -134,19 +139,23 @@ function shoot()
    play.animate.loop('player','idle')
    end
    if timer >= 30 then
-   shbu.remove()
+   shbu.removeSprite()
    end
+end
+
+function hit(moster)
+   set(get(moster.health) - 15)
 end
 
 function hit()
    if hit.color = nil then
-     health - 15
+     set(get(health) - 15)
    end
    if hit.color = red then
-     health -= 0
+     set(get(health) = 0)
    end
    if no.hit then
-     health - 0
+     set(get(health) - 0)
    end
 end
 
