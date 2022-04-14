@@ -17,7 +17,7 @@ function inRoom()
 end
 
 function onCreate()
-   bg = create.bg.sprite(0, 0, 'menu')
+   bg = create.sprite(0, 0, 'menu')
    bg.scale(2.3,2.3)
 end
 
@@ -34,7 +34,13 @@ function setting()
 end
 
 function onPress()
-   controlsTextColor.press(FlxG.RED,['255,0,0'])
+   if Press A and Press change.anyKey then
+     controlsTextColor.press(FlxG.RED,['255,0,0'])
+     controlsKeyChange()
+   end
+   if Press B then
+     setRoom('menu')
+   end
 end
 
 function exit()
