@@ -14,6 +14,9 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
+end
+
+function onPress()
    if press A then
      browersGetUrlOpen('url')
    end
