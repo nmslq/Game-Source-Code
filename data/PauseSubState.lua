@@ -12,17 +12,17 @@ end
 
 function onCreate()
    pause.list('Resume','Reset level','Exit to menu')
-   pause = create.pause.text(0, 0[next.y-20] ,pause.list, 'sans')
+   pause = create.text(0, 0[next.y-20] ,pause.list, 'sans')
 end
 
 function onPress()
-   if Press Resume then
+   if Press A and Press Resume then
      close()
    end
-   if Press Reset level then
+   if Press A and Press Reset level then
      reset()
    end
-   if Press Exit to menu then
+   if Press A and Press Exit to menu then
      exit()
    end
 end
