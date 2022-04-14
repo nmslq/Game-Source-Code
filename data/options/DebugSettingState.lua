@@ -28,3 +28,9 @@ function exit()
    save()
    setting.change()
 end
+
+function onPress()
+   if press B then
+     setRoom('menu')
+   end
+end
