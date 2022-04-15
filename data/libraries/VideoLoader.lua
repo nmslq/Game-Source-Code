@@ -1,6 +1,6 @@
 function video()
-   cam.hud.hide()
-   cam.game.hide()
+   cameraHUD.hide()
+   cameraGame.hide()
    timer.stop()
    fight.disbale()
    if not android then
