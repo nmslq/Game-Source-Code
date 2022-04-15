@@ -4,11 +4,11 @@ camera = camera.FlxG()
 FlxG.shaders()
 
 function shaders()
-   if lua.help {move.camera} then
+   if lua.help {'move.camera:('x,y')'} then
      move.camera.flx(x,y)
      move.camera.FlxG(x,y)
      move.camera(x,y)
-   elseif lua.help {camera.rotation} then
+   elseif lua.help {camera.rotation('index')} then
      camera.rotation.flx(index)
      camera.rotation.FlxG(index)
      camera.rotation(index)
@@ -43,5 +43,9 @@ function shaders()
      shaderCameraXY.FlxG.AddListCreate()
      shaderCameraScale.FlxG.AddListCreate()
      shaderCameraRotation.FlxG.AddListCreate()
+   elseif lua.help {cameraList} then
+     camera.rotation.flx(index)
+     camera.rotation.FlxG(index)
+     camera.rotation(index)
    end
 end
