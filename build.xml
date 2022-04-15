@@ -2,31 +2,31 @@
 <project>
         <build.list={"android,linux,mac,windows"}/>
 
-        <android.build="apk"/>
+        <android.build="apk" if "android"/>
 
-        <android.buildManifest="xml"/>
+        <android.buildManifest="xml" if "android"/>
 
-        <windows.build="zip"/>
+        <windows.build="zip" if "windows"/>
 
-        <mac.build="zip"/>
+        <mac.build="zip" if "mac"/>
 
-        <liunx.build="zip">
+        <liunx.build="zip" if "liunx"/>
 
-        <window.name="game" version="normal build 0.6" screenWidth="1270" screenHeight="720" fullScreen="false"/>
+        <window.name="game" version="normal build 0.6" screenWidth="1270" screenHeight="720" fullScreen="false" if "windows"/>
 
-        <android.app.name="game" version="normal build 0.6" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true"/>
+        <android.app.name="game" version="normal build 0.6" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" if "android"/>
 
-        <liunx.name="game" version="normal build 0.6" screenWidth="1270" screenHeight="720" fullScreen="false"/>
+        <liunx.name="game" version="normal build 0.6" screenWidth="1270" screenHeight="720" fullScreen="false" if "liunx"/>
 
-        <mac.name="game" version="normal build 0.6" screenWidth="1270" screenHeight="720" fullScreen="false"/>
+        <mac.name="game" version="normal build 0.6" screenWidth="1270" screenHeight="720" fullScreen="false" if "mac"/>
 
-        <windows.packages="main.yml"/>
+        <windows.packages="main.yml" if "windows/>
 
-        <android.packages="main.yml"/>
+        <android.packages="main.yml" if "android"/>
 
-        <liunx.packages="main.yml"/>
+        <liunx.packages="main.yml" if "liunx"/>
 
-        <mac.packages="main.yml"/>
+        <mac.packages="main.yml" if "mac"/>
 
         <haxelib.install="HaxelibAndroidTools" haxelib.url="https://github.com/jigsaw-4277821/AndroidTools" if "android"/>
 
