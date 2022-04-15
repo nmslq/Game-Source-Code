@@ -1,9 +1,11 @@
 function stages()
    if stage == 1 then
+     --ground
      gr = create.sprite(0,-100,'stages/ground')
      gr.setObjectScale(1.6, 1.6)
      gr.setScrollFactor(1, 1)
      gr.set.camera('CameraGame')
+     --pf
      pf1 = create.sprite(-200,100,'stages/platform1')
      pf1.setObjectScale(1.3,1.3)
      pf1.setScrollFactor(1,1)
@@ -12,20 +14,24 @@ function stages()
      pf2.setObjectScale(1.3,1.3)
      pf2.setScrollFactor(1,1)
      pf2.set.camera('CameraGame')
+     --sky
      sky = create.sprite(0,0,'stages/sky')
      sky.setObjectScale(3.4,3.4)
      sky.setScrollFactor(0,0)
      sky.set.camera('CameraGame')
    end
    if stage == 2 then
+     --ground
      gr = create.sprite(0,-100,'stages/ground')
      gr.setObjectScale(1.6, 1.6)
      gr.setScrollFactor(1, 1)
      gr.set.camera('CameraGame')
+     --sky
      sky = create.sprite(0,0,'stages/sky')
      sky.setObjectScale(3.4,3.4)
      sky.setScrollFactor(0,0)
      sky.set.camera('CameraGame')
+     --pf
      pf1 = create.sprite(-200,100,'stages/platform1')
      pf1.setObjectScale(1.3,1.3)
      pf1.setScrollFactor(1,1)
@@ -34,6 +40,7 @@ function stages()
      pf2.setObjectScale(1.3,1.3)
      pf2.setScrollFactor(1,1)
      pf2.set.camera('CameraGame')
+     --saw
      saw1 = create.animatedSprite(10,0,'stages/saw')
      saw1.setScrollFactor(1,1)
      add.animation.loop('saw1','saw')
@@ -44,13 +51,36 @@ function stages()
      add.animation.loop('saw2','saw')
      play.animation.loop('saw2','saw')
      saw2.set.camera('CameraGame')
-     saw3 = create.animatedSprite(10,0,'stages/saw')
+     saw3 = create.animatedSprite(60,0,'stages/saw')
      saw3.setScrollFactor(1,1)
      add.animation.loop('saw3','saw')
      play.animation.loop('saw3','saw')
      saw3.set.camera('CameraGame')
-        if playerHit.saw then
-          dead()
-        end
+     saw4 = create.animatedSprite(100,0,'stages/saw')
+     saw4.setScrollFactor(1,1)
+     add.animation.loop('saw4','saw')
+     play.animation.loop('saw4','saw')
+     saw4.set.camera('CameraGame')
+     saw5 = create.animatedSprite(20,100,'stages/saw')
+     saw5.setScrollFactor(1,1)
+     add.animation.loop('saw5','saw')
+     play.animation.loop('saw5','saw')
+     saw5.set.camera('CameraGame')
+     saw6 = create.animatedSprite(60,100,'stages/saw')
+     saw6.setScrollFactor(1,1)
+     add.animation.loop('saw6','saw')
+     play.animation.loop('saw6','saw')
+     saw6.set.camera('CameraGame')
+     saw7 = create.animatedSprite(150,200,'stages/saw')
+     saw7.setScrollFactor(1,1)
+     add.animation.loop('saw7','saw')
+     play.animation.loop('saw7','saw')
+     saw7.set.camera('CameraGame')
+   end
+end
+
+function onUpdate()
+   if playerHit.saw then
+     dead()
    end
 end
