@@ -18,7 +18,7 @@ end
 
 function onPress()
    if Press A then
-     browersUrlViewOpen('url')
+     browersUrlViewOpen('getUrl')
    end
    if Press B then
      setRoom('menu')
