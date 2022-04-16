@@ -1,4 +1,6 @@
-function onGameStart()
+import Flx;
+
+public static function onGameStart()
    flx()
    mod.command()
    if Windows then
