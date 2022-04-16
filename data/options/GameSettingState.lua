@@ -16,6 +16,11 @@ function inRoom()
    nameRoom('game setting')
 end
 
+function onCreate()
+   bg = create.sprite(0, 0, 'menu')
+   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+end
+
 function setting()
    setting.list('Difficulties','Window Size','Low End')
    difficulties.list('easy','normal','hard','hell')
