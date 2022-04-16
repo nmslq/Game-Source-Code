@@ -18,7 +18,7 @@ end
 
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
-   bg.setObjectScale(2.3,2.3)
+   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
    options.list('Controls Setting','Game Setting')
    if debug then
      options.list.add('Debug Setting')
