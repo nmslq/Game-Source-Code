@@ -10,6 +10,7 @@ function onCreate()
    title = create.sprite(0, 100, 'title')
    title.setObjectScale(1.5,1)
    version = create.text(-300, -300, 'version:{getBuildVersion}','sans')
+   version.setObjectSize(15)
    start = create.text(0, 30, 'start', 'sans')
    mods = create.text(0, 0, 'mods', 'sans')
    credits = create.text(0, -30, 'credits', 'sans')
@@ -42,10 +43,10 @@ function onPress()
    end
    if Press A and Press exit then
       if android then
-        android.tools.exitGameApp()
+        AndroidTools.exitGameApp()
       end
       if windows then
-        windows.tools.exitGameWindow()
+        WindowsTools.exitGameWindow()
       end
    end
 end
