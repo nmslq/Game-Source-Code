@@ -15,7 +15,7 @@ function tools()
         windows.files.exites('files')
         windows.create.filesExites('files')
       end
-   elseif lua.help {editFiles('objectName,fileText'} then
+   elseif lua.help {editFiles('objectName,fileText')} then
       if android then
         load.android.files.name()
         files.getPath.exites('files')
@@ -30,7 +30,7 @@ function tools()
         change.windows.files()
         edit.files('windows')
       end
-   elseif lua.help {openWindow('title'} then
+   elseif lua.help {openWindow('title')} then
       if windows then
         windows.system.open('lime')
         windows.system.flx('window')
