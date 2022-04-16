@@ -14,7 +14,7 @@ end
 
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
-   bg.setObjectScale(2.3,2.3)
+   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
    if modPaths.modHave then
      mods = create.text(0, 0, '{modname}:{mod.math}', 'sans')
      version = create.text(-30, -30, 'version:{mod.version,mod.math}', 'sans')
