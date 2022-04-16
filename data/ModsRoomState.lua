@@ -1,6 +1,6 @@
 controls.load()
 shaders.camera()
-mods.paths()
+modPathsOpen()
 
 function inRoom()
    nameRoom('mods')
@@ -15,11 +15,11 @@ end
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
    bg.setObjectScale(2.3,2.3)
-   if mod.paths.have then
+   if modPaths.modHave then
      mods = create.text(0, 0, '{modname}:{mod.math}', 'sans')
      version = create.text(-30, -30, 'version:{mod.version,mod.math}', 'sans')
    end
-   if mod.paths.nothave then
+   if modPaths.modNotHave then
      no = create.text(0, 0, 'there isnt have any mod!', 'sans')
    end
 end
@@ -33,5 +33,4 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
-   paths.Update()
 end
