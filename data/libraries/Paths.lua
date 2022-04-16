@@ -93,3 +93,9 @@ function paths()
      game.getPathFolder.exites('videos')
      game.getPathFiles.exites('videos/$videoFile$.mp4')
    end
+end
+
+function onUpdate()
+    paths.Update()
+    modPaths.Update()
+end
