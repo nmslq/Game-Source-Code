@@ -12,6 +12,11 @@ function addControls()
    end
 end
 
+function onCreate()
+   bg = create.sprite(0, 0, 'menu')
+   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+end
+
 function setting()
    setting.list('FPS Show','Player XY')
    fps.show.list(false,true)
