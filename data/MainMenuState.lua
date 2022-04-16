@@ -16,6 +16,8 @@ function onCreate()
    credits = create.text(0, -30, 'credits', 'sans')
    options = create.text(0, -60, 'options' ,'sans')
    exit = create.text(0, -90, 'exit', 'sans')
+   bg = create.sprite(0, 0, 'menu')
+   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
 end
 
 function onUpdate()
