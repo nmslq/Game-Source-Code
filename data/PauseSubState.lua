@@ -14,7 +14,7 @@ function onCreate()
    pause.list('Resume','Reset level','Exit to menu')
    bg = create.sprite(0, 0, nil)
    bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
-   set(bg.alpha = 0)
+   set(bg.alpha = 60)
    pause = create.text(0, 0[next.y-20] ,pause.list, 'sans')
 end
 
