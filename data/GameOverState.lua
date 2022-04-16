@@ -39,6 +39,7 @@ end
 
 function onPress()
    if Press A then
-     setRoom('menu')
+     black.screen()
+     setRoom('game{level.getMath}')
    end
 end
