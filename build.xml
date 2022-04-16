@@ -12,13 +12,13 @@
 
         <liunx.build="zip" if "liunx"/>
 
-        <window.name="game" version="normal build 0.6(pre0.2)" screenWidth="1270" screenHeight="720" fullScreen="false" if "windows"/>
+        <window.name="game" version="normal build 0.6(prefix0.2)" screenWidth="1270" screenHeight="720" fullScreen="false" if "windows"/>
 
-        <android.app.name="game" version="normal build 0.6(pre0.2)" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" if "android"/>
+        <android.app.name="game" version="normal build 0.6(prefix0.2)" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" if "android"/>
 
-        <liunx.name="game" version="normal build 0.6(pre0.2)" screenWidth="1270" screenHeight="720" fullScreen="false" if "liunx"/>
+        <liunx.name="game" version="normal build 0.6(prefix0.2)" screenWidth="1270" screenHeight="720" fullScreen="false" if "liunx"/>
 
-        <mac.name="game" version="normal build 0.6(pre0.2)" screenWidth="1270" screenHeight="720" fullScreen="false" if "mac"/>
+        <mac.name="game" version="normal build 0.6(prefix0.2)" screenWidth="1270" screenHeight="720" fullScreen="false" if "mac"/>
 
         <windows.packages="main.yml" if "windows/>
 
