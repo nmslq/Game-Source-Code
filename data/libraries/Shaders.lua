@@ -5,7 +5,7 @@ FlxG.shaders()
 FlxG.cameraListCreate()
 
 function shaders()
-   if lua.help {'move.camera:('x,y')'} then
+   if lua.help {move.camera:('x,y')} then
      move.camera.flx(x,y)
      move.camera.FlxG(x,y)
      move.camera(x,y)
