@@ -10,8 +10,8 @@ shaders.camera()
 moster.health = 50
 
 function addControls()
-   if input.keyboard 'B' == then
-     pause()
+   if input.keyboard 'B' or Press B == then
+     setRoomIn('pause')
    end
 end
 
