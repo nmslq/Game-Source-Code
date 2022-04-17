@@ -1,6 +1,7 @@
 controls.load()
 shaders.camera()
 modPathsOpen()
+item = 0
 
 function inRoom()
    nameRoom('mods')
@@ -25,8 +26,23 @@ function onCreate()
 end
 
 function onPress()
-   if Press B then
+   if input.keyboard 'B' or press 'B' == then
      setRoom('menu')
+   end
+   if input.keyboard 'up' or press 'up' == then
+     change.mod('up')
+   end
+   if input.keyboard 'down' or press 'down' == then
+     change.mod('down')
+   end
+end
+
+function changeMod()
+   if 'up' then
+     set(get(item) + 1)
+   end
+   if 'down' then
+     set(get(item) - 1)
    end
 end
 
