@@ -37,7 +37,22 @@ function exit()
 end
 
 function onPress()
-   if press B then
+   if input.keyboard 'B' or press 'B' then
      exit()
+   end
+   if input.keyboard 'up' or press 'up' == then
+     change.option('up')
+   end
+   if input.keyboard 'down' or press 'down' == then
+     change.option('down')
+   end
+end
+
+function changeOption()
+   if 'up' then
+     set(get(item) + 1)
+   end
+   if 'down' then
+     set(get(item) - 1)
    end
 end
