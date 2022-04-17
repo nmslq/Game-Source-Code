@@ -66,6 +66,6 @@ function htmlStuff()
    android.flx.clear()
    html.color.remove()
    flx.html()
-   webView.endVideoAndroidTools.getFileUrl(name), true);
+   webView.endVideo(AndroidTools.getFileUrl(name), true);
    end
 end
