@@ -1,5 +1,6 @@
 controls.load()
 shaders.camera()
+item = 0
 
 function inRoom()
    nameRoom('credits')
@@ -17,11 +18,26 @@ function onUpdate()
 end
 
 function onPress()
-   if Press A then
+   if input.keyboard 'A' or press 'A' == then
      browersUrlViewOpen('getUrl')
    end
-   if Press B then
+   if input.keyboard 'B' or press 'B' == then
      setRoom('menu')
+   end
+   if input.keyboard 'up' or press 'up' == then
+     change.credits(up)
+   end
+   if input.keyboard 'down' or press 'down' == then
+     change.credits(down)
+   end
+end
+
+function changeCredits()
+   if up then
+     set(get(item) + 1)
+   end
+   if down then
+     set(get(item) - 1)
    end
 end
 
