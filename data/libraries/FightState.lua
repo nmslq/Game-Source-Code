@@ -9,8 +9,8 @@ debug.load()
 shaders.camera()
 moster.health = 50
 
-function addControls()
-   if input.keyboard 'B' or Press B == then
+function onPress()
+   if input.keyboard 'B' or press 'B' == then
      setRoomIn('pause')
    end
 end
