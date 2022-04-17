@@ -47,5 +47,12 @@ function shaders()
    elseif lua.help {remove.camera} then
      cameraFlxG.removeCameraList('cameraList')
      FlxG.cameraListRemove()
+   elseif lua.help {cameraName.hide()}
+     camera = getLuaCameraName()
+     set(cameraName.alpha = 0)
+     cameraName.hide = true
+     getCameraSprite.hide()
+     getCameraText.hide()
+   --elseif lua.help {cameraName.
    end
 end
