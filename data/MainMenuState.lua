@@ -1,6 +1,7 @@
 controls.load()
 tools.load()
 shaders.camera()
+item = 0
 
 function inRoom()
    nameRoom('menu')
@@ -27,29 +28,44 @@ function onUpdate()
 end
 
 function onPress()
-   if input.keyboard 'A' or press 'A' and Press 'start' == then
+   if input.keyboard 'A' and press 'start' or press 'A' and press 'start' == then
      black.screen()
      setRoom('game1')
    end
-   if input.keyboard 'A' or press 'A' and Press 'mods' == then
+   if input.keyboard 'A' and press 'mods' or press 'A' and press 'mods' == then
      black.screen()
      setRoom('mods')
    end
-   if input.keyboard 'A' or press 'A' and Press 'credits' == then
+   if input.keyboard 'A' and press 'credits' or press 'A' and press 'credits' == then
      black.screen()
      setRoom('credits')
    end
-   if input.keyboard 'A' or press 'A' and Press 'options' == then
+   if input.keyboard 'A' and press 'options' or press 'A' and press 'options' == then
      black.screen()
      setRoom('options')
    end
-   if input.keyboard 'A' or press 'A' and Press 'exit' == then
+   if input.keyboard 'A' and press 'exit' or press 'A' and press 'exit' == then
       if android then
         AndroidTools.exitGameApp()
       end
       if windows then
         WindowsTools.exitGameWindow()
       end
+   end
+   if input.keyboard 'up' or press 'up' == then
+     change.menu('up')
+   end
+   if input.keyboard 'down' or press 'down' == then
+     change.menu('down')
+   end
+end
+
+function changeMenu()
+   if 'up' then
+     set(get(item) + 1)
+   end
+   if 'down' then
+     set(get(item) - 1)
    end
 end
 
