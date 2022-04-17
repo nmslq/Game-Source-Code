@@ -32,6 +32,7 @@ function shaders()
      camera.flx()
      camera.FlxG()
      flash.flx(color,time)
+     color.systemGetColor()
      flash.FlxG()
    elseif lua.help {create.camera('cameraName')}
      cameraName.FlxG()
