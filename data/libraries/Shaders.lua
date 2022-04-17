@@ -53,6 +53,11 @@ function shaders()
      cameraName.hide = true
      getCameraSprite.hide()
      getCameraText.hide()
-   --elseif lua.help {cameraName.
+   elseif lua.help {cameraName.unhide()}
+     camera = getLuaCameraName()
+     set(cameraName.alpha = 1)
+     cameraName.hide = true
+     getCameraSprite.hide()
+     getCameraText.hide()
    end
 end
