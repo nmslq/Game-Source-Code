@@ -28,19 +28,20 @@ function onPress()
    if Press A and Press Exit to menu then
      exit()
    end
-   if Press B then
-     close()
-   end
 end
 
 function close()
-   setRoom('game{level.getMath}')
+   setRoomBack('game{level.getMath}')
 end
 
 function reset()
    black.screen()
-   get.level('math')
    reset.level()
+end
+
+function resetLevel()
+   black.screen()
+   setRoom('game{level.getMath})
 end
 
 function exit()
