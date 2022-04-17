@@ -39,7 +39,7 @@ function onPress()
      controlsTextColor.press(FlxG.RED,['255,0,0'])
      controlsKeyChange()
    end
-   if input.keyboard 'B' press 'B' then
+   if input.keyboard 'B' or press 'B' then
      exit()
    end
    if input.keyboard 'up' or press 'up' == then
