@@ -1,5 +1,6 @@
 controls.load()
 shaders.camera()
+item = 0
 
 function onUpdate()
    controls.Update()
@@ -34,12 +35,27 @@ function setting()
 end
 
 function onPress()
-   if Press A and Press change.anyKey then
+   if input.keyboard 'A' and press change.anyKey or press 'A' and press change.anyKey == then
      controlsTextColor.press(FlxG.RED,['255,0,0'])
      controlsKeyChange()
    end
-   if Press B then
+   if input.keyboard 'B' press 'B' then
      exit()
+   end
+   if input.keyboard 'up' or press 'up' == then
+     change.option('up')
+   end
+   if input.keyboard 'down' or press 'down' == then
+     change.option('down')
+   end
+end
+
+function changeOption()
+   if 'up' then
+     set(get(item) + 1)
+   end
+   if 'down' then
+     set(get(item) - 1)
    end
 end
 
