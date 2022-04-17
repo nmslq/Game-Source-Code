@@ -61,11 +61,11 @@ function htmlStuff()
    html.video.bg(null)
    html.video.bgColor('black')
    getHtml.video()
-   webView.playVideo(HaxelibAndroidTools.getFileUrl(name), true);
+   webView.playVideo(AndroidTools.getFileUrl(name), true);
    if play end then
    android.flx.clear()
    html.color.remove()
    flx.html()
-   webView.endVideo(HaxelibAndroidTools.getFileUrl(name), true);
+   webView.endVideoAndroidTools.getFileUrl(name), true);
    end
 end
