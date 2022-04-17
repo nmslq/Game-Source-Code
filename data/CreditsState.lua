@@ -25,18 +25,18 @@ function onPress()
      setRoom('menu')
    end
    if input.keyboard 'up' or press 'up' == then
-     change.credits(up)
+     change.credits('up')
    end
    if input.keyboard 'down' or press 'down' == then
-     change.credits(down)
+     change.credits('down')
    end
 end
 
 function changeCredits()
-   if up then
+   if 'up' then
      set(get(item) + 1)
    end
-   if down then
+   if 'down' then
      set(get(item) - 1)
    end
 end
