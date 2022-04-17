@@ -28,7 +28,7 @@
 
         <mac.packages="main.yml" if "mac"/>
 
-        <haxelib.install="HaxelibAndroidTools" haxelib.url="https://github.com/jigsaw-4277821/AndroidTools" if "android"/>
+        <haxelib.install="extension-androidtools" haxelib.url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
 
         <haxelib.install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
 
