@@ -30,21 +30,36 @@ function onCreate()
 end
 
 function onPress()
-   if Press A and Press Controls Setting then
+   if input.keyboard 'A' and press 'Controls Setting' or press 'A' and press 'Controls Setting' == then
      black.screen()
      setRoom('controls setting')
    end
-   if Press A and Press Game Setting then
+   if input.keyboard 'A' and press 'Game Setting' or press 'A' and press 'Game Setting' == then
      black.screen()
      setRoom('game setting')
    end
    if debug then
-      if Press A and Press Debug Setting then
+      if input.keyboard 'A' and press 'Debug Setting' or press 'A' and press 'Debug Setting' == then
         black.screen()
         setRoom('debug setting')
       end
    end
-   if Press B then
+   if input.keyboard 'B' or Press B == then
      setRoom('menu')
+   end
+   if input.keyboard 'up' or press 'up' == then
+     change.option('up')
+   end
+   if input.keyboard 'down' or press 'down' == then
+     change.option('down')
+   end
+end
+
+function changeOption()
+   if 'up' then
+     set(get(item) + 1)
+   end
+   if 'down' then
+     set(get(item) - 1)
    end
 end
