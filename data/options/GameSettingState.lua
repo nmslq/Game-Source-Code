@@ -44,7 +44,7 @@ function setting()
      fight.difficulty('nightmare')
    end
    if window.size == math.setting then
-     WindowTools.windowSize('math.setting')
+     WindowTools.windowSize('optionHeight','optionWidth',true)
    end
    if low.end == true then
      set(fight.low = true)
