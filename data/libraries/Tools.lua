@@ -119,15 +119,15 @@ function tools()
       if android then
         AndroidTools.openApplicationAlert('0,0,20,20,error,ok,1,0,-40,{applicationAlertClose()}')
         AndroidTools.applicationAlertText('error','errorFile:( {files.name} {errormsg}')
-        AndroidTools.saveFiles('log.txt')
-        AndroidTools.editFiles('log','error in {files.name}')
+        AndroidTools.saveFiles('log/log.txt')
+        AndroidTools.editFiles('log','error in {files.name} {errormsg}')
         AndroidTools.exitGameApp()
       end
       if windows then
         windows.tools.open('0,0,20,20,error,ok,1,0,-40,{windowClose()')
-        windows.tools.limeText('error','error {files.name}')
-        windows.tools.save('log.txt')
-        windows.tools.edit('log',"error in {files.name}')
+        windows.tools.windowText('error','errorFile:( {files.name} {errormsg}')
+        windows.tools.save('log/log.txt')
+        windows.tools.edit('log',"error in {files.name} {errormsg}')
         WindowsTools.exitGameWindow()
        end
    end
