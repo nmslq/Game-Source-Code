@@ -54,12 +54,13 @@ function tools()
         android.system.flxClose('window')
         android.system.FlxG('window')
       end
-   elseif lua.help {exitGame()} then
+   elseif lua.help {exitGameWindow()} then
       if windows then
         windows.close.game()
         windows.system.close()
         window.exit.system()
       end
+   elseif lua.help {exitGameApp()} then
       if android then
         android.app.close()
         android.app.system()
@@ -92,18 +93,18 @@ function tools()
    end
    if not files error then
       if android then
-        android.tools.open('error')
-        android.tools.limeText('error','error {files.name}')
-        android.tools.save('log.txt')
-        android.tools.edit('log','error in {files.name}')
-        exit.game.tools()
+        AndroidTools.openApplicationAlert('error')
+        AndroidTools.applicationAlertText('error','error {files.name}')
+        AndroidTools.saveFiles('log.txt')
+        AndroidTools.editFiles('log','error in {files.name}')
+        AndroidTools.exitGameApp()
       end
       if windows then
         windows.tools.open('error')
         windows.tools.limeText('error','error {files.name}')
         windows.tools.save('log.txt')
         windows.tools.edit('log',"error in {files.name}')
-        exit.game.tools()
+        WindowsTools.exitGameWindow()
        end
    end
 end
