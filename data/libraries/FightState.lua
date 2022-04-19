@@ -31,13 +31,13 @@ end
 
 function move()
    if left.key.move.player(5,0)
-   play.animate('player','left')
-   shaders.move.camera(player.x,player.y)
+     play.animate('player','left')
+     shaders.move.camera(player.x,player.y)
    elseif right.key.move.player(0,5)
-   play.animate('player','right')
-   shaders.move.camera(player.x,player.y)
+     play.animate('player','right')
+     shaders.move.camera(player.x,player.y)
    elseif nomove then
-   play.animation.loop('player','idle')
+     play.animation.loop('player','idle')
    end
 end
 
@@ -116,16 +116,16 @@ end
 
 function difficulty()
    if difficulty == easy then
-     set.max.health(250)
+     set(max.health = 250)
    end
    if difficulty == normal then
-     set.max.health(150)
+     set(max.health = 150)
    end
    if difficulty == hard then
-     set.max.health(90)
+     set(max.health = 90)
    end
    if difficulty == hell then
-     set.max.health(30)
+     set(max.health = 30)
    end
 end
 
