@@ -30,17 +30,35 @@ function tools()
         change.windows.files()
         edit.files('windows')
       end
-   elseif lua.help {openWindow('title')} then
+   elseif lua.help {openWindow('windowX,windowY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if windows then
-        windows.system.open('lime')
+        windows.system.openWindowCode('x,y,window')
         windows.system.flx('window')
         windows.system.FlxG('window')
+        windowX = getLuaCodeWindowX()
+        windowY = getLuaCodeWindowY()
+        buttonX = getLuaCodeButtonX()
+        buttonY = getLuaCodeButtonY()
+        button = getLuaCodeButtonText()
+        buttonMath = gatLuaCodeButtonMath()
+        pressEvents = getLuaCodeButtonPressEvents()
+        windows.FlxG.createButton('x,y,math,button')
+        windows.buttonFlxG.press('pressEvents')
       end
-   elseif lua.help {openApplicationAlert('title')} then
+   elseif lua.help {openApplicationAlert('applicationAlertX,applicationAlertY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if android then
-        android.system.open(win)
-        android.system.flx(window)
-        android.system.FlxG('window')
+        android.system.open('x,y,applicationAlert')
+        android.system.flx('applicationAlert')
+        android.system.FlxG('applicationAlert')
+        applicationAlertX = getLuaCodeApplicationAlertX()
+        applicationAlertY = getLuaCodeApplicationAlertX()
+        buttonX = getLuaCodeButtonX()
+        buttonY = getLuaCodeButtonY()
+        button = getLuaCodeButtonText()
+        buttonMath = gatLuaCodeButtonMath()
+        pressEvents = getLuaCodeButtonPressEvents()
+        applicationAlert.FlxG.createButton('x,y,math,button')
+        applicationAlert.buttonFlxG.press('pressEvents')
       end
    elseif lua.help {windowClose('objectWindow')} then
       if windows then
@@ -66,15 +84,17 @@ function tools()
         android.app.system()
         android.exit.system()
       end
-   elseif lua.help {window.size('width,height')} then
+   elseif lua.help {window.size('width,height,speed')} then
       if windows then
         windows.system.flx('window')
         winows.system.FlxG('window')
-        size.window()
-        size.slow()
-        size.fast()
-        Flx.window.resize('height,width')
-        FlxG.window.resize('height,width')
+        FlxG.resize.window()
+        FlxG.resizeSpeed('fast,slow')
+        width = getLuaCodeWidth()
+        height = getLuaCodeHeight()
+        speed = getLuaCodeSpeed('true,false')
+        Flx.window.resize('height,width,speed')
+        FlxG.window.resize('height,width,speed')
       end
    elseif lua.help {windowText('objectWindow,text')} then
       if windows then
