@@ -30,13 +30,20 @@ function tools()
         change.windows.files()
         edit.files('windows')
       end
-   elseif lua.help {openWindow('windowX,windowY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.help {openWindow('windowX,windowY,windowsScaleX,windowsScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if windows then
-        windows.system.openWindowCode('x,y,window')
+        windows.system.openWindowCode('x,y,scaleX,scaleY,window')
         windows.system.flx('window')
         windows.system.FlxG('window')
         windowX = getLuaCodeWindowX()
         windowY = getLuaCodeWindowY()
+        windowsScaleX = getLuaCodeWindowScaleX()
+        windowsScaleY = getLuaCodeWindowScaleY()
+        buttonX = getLuaCodeButtonX()
+        buttonY = getLuaCodeButtonY()
+        button = getLuaCodeButtonText()
+        buttonMath = gatLuaCodeButtonMath()
+        pressEvents = getLuaCodeButtonPressEvents()
         buttonX = getLuaCodeButtonX()
         buttonY = getLuaCodeButtonY()
         button = getLuaCodeButtonText()
@@ -45,13 +52,15 @@ function tools()
         windows.FlxG.createButton('x,y,math,button')
         windows.buttonFlxG.press('pressEvents')
       end
-   elseif lua.help {openApplicationAlert('applicationAlertX,applicationAlertY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.help {openApplicationAlert('applicationAlertX,applicationAlertY,applicationAlertScaleX,applicationAlertScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if android then
         android.system.open('x,y,applicationAlert')
         android.system.flx('applicationAlert')
         android.system.FlxG('applicationAlert')
         applicationAlertX = getLuaCodeApplicationAlertX()
         applicationAlertY = getLuaCodeApplicationAlertX()
+        applicationAlertScaleX = getLuaCodeApplicationAlertScaleX()
+        applicationAlertScaleY = getLuaCodeApplicationAlertScaleX()
         buttonX = getLuaCodeButtonX()
         buttonY = getLuaCodeButtonY()
         button = getLuaCodeButtonText()
@@ -105,7 +114,7 @@ function tools()
       end
    elseif lua.help {applicationAlertText('objectApplicationAlert,text')} then
       if android then
-        android.system.lime('tag','text')
+        android.system.openApp('tag','text')
         android.system.windowText('tag',text')
         android.system.flx('window')
         android.system.FlxG('window')
@@ -113,14 +122,14 @@ function tools()
    end
    if not files error then
       if android then
-        AndroidTools.openApplicationAlert('error')
-        AndroidTools.applicationAlertText('error','error {files.name}')
+        AndroidTools.openApplicationAlert('0,0,20,20,error,ok,1,0,-40,{applicationAlertClose()}')
+        AndroidTools.applicationAlertText('error','errorFile:( {files.name} {errormsg}')
         AndroidTools.saveFiles('log.txt')
         AndroidTools.editFiles('log','error in {files.name}')
         AndroidTools.exitGameApp()
       end
       if windows then
-        windows.tools.open('error')
+        windows.tools.open('0,0,20,20,error,ok,1,0,-40,{windowClose()')
         windows.tools.limeText('error','error {files.name}')
         windows.tools.save('log.txt')
         windows.tools.edit('log',"error in {files.name}')
