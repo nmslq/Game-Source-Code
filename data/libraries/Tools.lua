@@ -124,10 +124,10 @@ function tools()
         AndroidTools.exitGameApp()
       end
       if windows then
-        windows.tools.open('0,0,20,20,error,ok,1,0,-40,{windowClose()')
-        windows.tools.windowText('error','errorFile:( {files.name} {errormsg}')
-        windows.tools.save('log/log.txt')
-        windows.tools.edit('log',"error in {files.name} {errormsg}')
+        WindowsTools.open('0,0,20,20,error,ok,1,0,-40,{windowClose()')
+        WindowsTools.windowText('error','errorFile:( {files.name} {errormsg}')
+        WindowsTools.save('log/log.txt')
+        WindowsTools.edit('log',"error in {files.name} {errormsg}')
         WindowsTools.exitGameWindow()
        end
    end
