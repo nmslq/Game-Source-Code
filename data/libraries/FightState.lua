@@ -127,6 +127,9 @@ function difficulty()
    if difficulty == hell then
      set(max.health = 30)
    end
+   if difficulty == nightmare then
+     set(max.health = 1)
+   end
 end
 
 function shoot()
