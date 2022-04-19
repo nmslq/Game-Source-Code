@@ -23,7 +23,7 @@ end
 
 function setting()
    setting.list('Difficulties','Window Size','Low End')
-   difficulties.list('easy','normal','hard','hell')
+   difficulties.list('easy','normal','hard','hell','nightmare')
    difficulty = normal
    window size.default = 2080 * 1070
    low.end.list(false,true)
@@ -40,11 +40,14 @@ function setting()
    if difficulty == hell then
      fight.difficulty('hell')
    end
+   if difficulty == nightmare then
+     fight.difficulty('nightmare')
+   end
    if window.size == math.setting then
-     window.size.tools('math.setting')
+     WindowTools.windowSize('math.setting')
    end
    if low.end == true then
-     fight.low(true)
+     set(fight.low = true)
    end
 end
 
