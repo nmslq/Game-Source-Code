@@ -30,11 +30,12 @@ function tools()
         change.windows.files()
         edit.files('windows')
       end
-   elseif lua.help {openWindow('windowX,windowY,windowsScaleX,windowsScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.help {openWindow('tag,windowX,windowY,windowsScaleX,windowsScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if windows then
-        windows.system.openWindowCode('x,y,scaleX,scaleY,window')
+        windows.system.openWindowCode('tag,x,y,scaleX,scaleY,window')
         windows.system.flx('window')
         windows.system.FlxG('window')
+        tag = getLuaCodeTag()
         windowX = getLuaCodeWindowX()
         windowY = getLuaCodeWindowY()
         windowsScaleX = getLuaCodeWindowScaleX()
@@ -47,11 +48,12 @@ function tools()
         windows.FlxG.createButton('x,y,math,button')
         windows.buttonFlxG.press('pressEvents')
       end
-   elseif lua.help {openApplicationAlert('applicationAlertX,applicationAlertY,applicationAlertScaleX,applicationAlertScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.help {openApplicationAlert('tag,applicationAlertX,applicationAlertY,applicationAlertScaleX,applicationAlertScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if android then
-        android.system.open('x,y,applicationAlert')
+        android.system.openApplicationAlert('tag,x,y,scaleX,scaleY,applicationAlert')
         android.system.flx('applicationAlert')
         android.system.FlxG('applicationAlert')
+        tag = getLuaCodeTag()
         applicationAlertX = getLuaCodeApplicationAlertX()
         applicationAlertY = getLuaCodeApplicationAlertX()
         applicationAlertScaleX = getLuaCodeApplicationAlertScaleX()
@@ -117,14 +119,14 @@ function tools()
    end
    if not files error then
       if android then
-        AndroidTools.openApplicationAlert('0,0,20,20,error,ok,1,0,-40,{applicationAlertClose()}')
+        AndroidTools.openApplicationAlert('0,0,20,20,error,ok,1,0,-40,{AndroidTools.applicationAlertClose()}')
         AndroidTools.applicationAlertText('error','errorFile:( {files.name} {errormsg}')
         AndroidTools.saveFiles('log/log.txt')
         AndroidTools.editFiles('log','error in {files.name} {errormsg}')
         AndroidTools.exitGameApp()
       end
       if windows then
-        WindowsTools.open('0,0,20,20,error,ok,1,0,-40,{windowClose()')
+        WindowsTools.open('0,0,20,20,error,ok,1,0,-40,{WindowsTools.windowClose()')
         WindowsTools.windowText('error','errorFile:( {files.name} {errormsg}')
         WindowsTools.saveFiles('log/log.txt')
         WindowsTools.editFiles('log',"error in {files.name} {errormsg}')
