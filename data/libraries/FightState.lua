@@ -48,7 +48,7 @@ function onUpdate()
       if bullet.color == nil then
         bullet.rotation(bullet.rotation + 1)
       end
-      if bullet.color == red then
+      if bullet.color == 'red' then
         redbullet.rotation(redbullet.rotation + 1)
       end
    end
@@ -91,7 +91,7 @@ function bullet()
 end
 
 function moster()
-   moster = create.sprite(moster.x, moster.y, moster)
+   moster = create.sprite(moster.x, moster.y, 'moster')
    moster.set.camera('CameraGame')
    if mosterHit.player then
      hit()
@@ -115,19 +115,19 @@ function dodge()
 end
 
 function difficulty()
-   if difficulty == easy then
+   if difficulty == 'easy' then
      set(max.health = 250)
    end
-   if difficulty == normal then
+   if difficulty == 'normal' then
      set(max.health = 150)
    end
-   if difficulty == hard then
+   if difficulty == 'hard' then
      set(max.health = 90)
    end
-   if difficulty == hell then
+   if difficulty == 'hell' then
      set(max.health = 30)
    end
-   if difficulty == nightmare then
+   if difficulty == 'nightmare' then
      set(max.health = 1)
    end
 end
@@ -155,13 +155,13 @@ function hit(moster)
 end
 
 function hit()
-   if hit.color = nil then
+   if bulletHitColor = nil then
      set(get(health) - 15)
    end
-   if hit.color = red then
+   if bulletHitColor = red then
      set(get(health) = 0)
    end
-   if no.hit then
+   if no.hitBullet then
      set(get(health) - 0)
    end
 end
