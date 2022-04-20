@@ -40,5 +40,16 @@ function stages()
      pf2.setObjectScale(1.3,1.3)
      pf2.setScrollFactor(1,1)
      pf2.set.camera('CameraGame')
+     --saw
+     fightCreateSaw(10,0)
+     fightCreateSaw(40,0)
+     fightCreateSaw(100,0)
+     fightCreateSaw(140,0)
+     fightCreateSaw(170,0)
+     fightCreateSaw(200,0)
+     fightCreateSaw(10,50)
+     fightCreateSaw(100,200)
+     fightCreateSaw(200,130)
+     fightCreateSaw(50,230)
    end
 end
