@@ -12,6 +12,8 @@
 
         <liunx.build="zip" if "liunx"/>
 
+        <android.setUpTools="sdk" android.setUpTools="ndk" android.setUpTools="jdk" if "android"/>
+
         <window.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" if "windows"/>
 
         <android.app.name="game" version="Normal Build 0.6.3(Pre)" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" if "android"/>
