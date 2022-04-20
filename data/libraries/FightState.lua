@@ -56,6 +56,19 @@ function onUpdate()
      Complete()
      complete = true
    end
+   if playerHit.saw then
+     dead()
+   end
+end
+
+function saw(x,y)
+   x = getLuaCodeX()
+   Y = getLuaCodeY()
+   saw = create.animatedSprite(x,y,'stages/saw')
+   saw.setScrollFactor(1,1)
+   add.animation.loop('saw','saw')
+   play.animation.loop('saw','saw')
+   saw.set.camera('CameraGame')
 end
 
 function complete()
