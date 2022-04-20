@@ -45,7 +45,7 @@ function shaders()
      shaderCameraXY.FlxG.AddListCreate()
      shaderCameraScale.FlxG.AddListCreate()
      shaderCameraRotation.FlxG.AddListCreate()
-   elseif lua.help {remove.camera} then
+   elseif lua.help {remove.camera()} then
      cameraFlxG.removeCameraList('cameraList')
      FlxG.cameraListRemove()
    elseif lua.help {cameraName.hide()}
