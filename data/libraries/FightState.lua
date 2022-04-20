@@ -34,13 +34,15 @@ function onCreate()
 end
 
 function move()
-   if left.key.move.player(5,0)
+   if getControlsInput == 'left' then
+     player.moveTo(playerX - 5,playerY)
      play.animate('player','left')
      shaders.move.camera(player.x,player.y)
-   elseif right.key.move.player(0,5)
+   elseif getControlsInput == 'right' then
+     player.moveTo(playerX + 5,playerY)
      play.animate('player','right')
      shaders.move.camera(player.x,player.y)
-   elseif nomove then
+   elseif noMove then
      play.animation.loop('player','idle')
    end
 end
