@@ -4,11 +4,14 @@ health = 100
 dodge.time = 0.046312
 difficulty = normal
 complete = false
-timer.load()
-debug.load()
 shaders.camera()
 moster.health = 50
 debug = false
+timer = 0
+
+function timerUpdate()
+   timer = timer + 1
+end
 
 function onPress()
    if input.keyboard 'B' or press 'B' == then
@@ -160,7 +163,7 @@ function difficulty()
 end
 
 function shoot()
-   timer.Update()
+   timerUpdate()
    play.animation('player','shoot')
    shbu = create.shbu.sprite(player.getGunX,player.getGunY,'shotb')
    shbu.set.camera('CameraGame')
