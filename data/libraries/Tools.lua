@@ -6,14 +6,29 @@ function tools()
    android.reload()
    if lua.help {saveFiles('fileName')} then
       if android then
+        fileName = getLuaCodeFileName()
         save.android.systemFiles('files')
         files.system.exites('files')
         files.create.android('files')
       end
       if windows then
+        fileName = getLuaCodeFileName()
         windows.files.save('files')
         windows.files.exites('files')
         windows.create.filesExites('files')
+      end
+   elseif lua.help {deleteFiles('fileName')} then
+      if android then
+        fileName = getLuaCodeFileName()
+        delete.android.systemFiles('files')
+        files.system.deleteExites('files')
+        files.delete.android('files')
+      end
+      if windows then
+        fileName = getLuaCodeFileName()
+        windows.files.delete('files')
+        windows.files.deleteExites('files')
+        windows.delete.filesExites('files')
       end
    elseif lua.help {editFiles('objectName,fileText')} then
       if android then
@@ -68,15 +83,17 @@ function tools()
       end
    elseif lua.help {windowClose('objectWindow')} then
       if windows then
+        objectWindow = getLuaCodeObjectWindow()
         windows.system.close('lime')
         windows.system.flxClose('window')
         windows.system.FlxG('window')
       end
    elseif lua.help {applicationAlertClose('objectApplicationAlert') then
       if android then
+        objectApplicationAlert = getLuaCodeObjectApplicationAlert()
         android.system.close('lime')
-        android.system.flxClose('window')
-        android.system.FlxG('window')
+        android.system.flxClose('applicationAlert')
+        android.system.FlxG('applicationAlert')
       end
    elseif lua.help {exitGameWindow()} then
       if windows then
@@ -104,6 +121,8 @@ function tools()
       end
    elseif lua.help {windowText('objectWindow,text')} then
       if windows then
+        objectWindow = getLuaCodeObjectWindow()
+        text = getLuaCodeText()
         windows.system.lime('tag','text')
         windows.system.windowText('tag','text')
         windows.system.flx('window')
@@ -111,7 +130,9 @@ function tools()
       end
    elseif lua.help {applicationAlertText('objectApplicationAlert,text')} then
       if android then
-        android.system.openApp('tag','text')
+        objectApplicationAlert = getLuaCodeObjectApplicationAlert()
+        text = getLuaCodeText()
+        android.system.openApplicationAlert('tag','text')
         android.system.windowText('tag',text')
         android.system.flx('window')
         android.system.FlxG('window')
