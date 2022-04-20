@@ -32,27 +32,43 @@ function Controls()
      end
      shaders.createCamera('CameraControls')
      controls.set.camera('CameraControls')
-        if android then
-          Test.controls()
-          if up next.up()
-          if down next.down()
-          if left next.left()
-          if right next.right()
-          if A Press()
-          if B Esc Exit()
-          if C speed+()
-          if S shoot()
-       end
+     testAndroidControls()
+     if getInputAndroidControls == 'up' then
+       controlsAndroidInput('up') = true
+     elseif getInputAndroidControls == 'down' then
+       controlsAndroidInput('down') = true
+     elseif getInputAndroidControls == 'left' then
+       controlsAndroidInput('left') = true
+     elseif getInputAndroidControls == 'right' then
+       controlsAndroidInput('right') = true
+     elseif getInputAndroidControls == 'A' then
+       controlsAndroidInput('A') = true
+     elseif getInputAndroidControls == 'B' then
+       controlsAndroidInput('B') = true
+     elseif getInputAndroidControls == 'C' then
+       controlsAndroidInput('C') = true
+     elseif getInputAndroidControls == 'S' then
+       controlsAndroidInput('S') = true
+      end
    end
    if destop then
-     Test.controls()
-     if up or keyboard next.up()
-     if down or keyboard next.down()
-     if left or keyboard next.left()
-     if right or keyboard next.right()
-     if A or keyboard Press()
-     if B or keyboard Esc Exit()
-     if C or keyboard speed+()
-     if S or keyboard shoot()
+     testKeyboardControls()
+     if getInputKeyboardControls == 'up' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('up') = true
+     elseif getInputKeyboardControls == 'down' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('down') = true
+     elseif getInputKeyboardControls == 'left' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('left') = true
+     elseif getInputKeyboardControls == 'right' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('right') = true
+     elseif getInputKeyboardControls == 'A' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('A') = true
+     elseif getInputKeyboardControls == 'B' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('B') = true
+     elseif getInputKeyboardControls == 'C' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('C') = true
+     elseif getInputKeyboardControls == 'right' or getInputKeyboardControls == 'getControlsSettingKey' then
+       controlsKeyboardInput('S') = true
+     end
    end
 end
