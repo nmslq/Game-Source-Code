@@ -36,14 +36,14 @@ function exit()
    setRoom('options')
 end
 
-function onPress()
-   if input.keyboard 'B' or press 'B' == then
+function controlsInput()
+   if getControlsInput == 'B' == then
      exit()
    end
-   if input.keyboard 'up' or press 'up' == then
+   if getControlsInput == 'up' == then
      change.option('up')
    end
-   if input.keyboard 'down' or press 'down' == then
+   if getControlsInput == 'down' == then
      change.option('down')
    end
 end
