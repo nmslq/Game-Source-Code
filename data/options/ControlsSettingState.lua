@@ -35,17 +35,17 @@ function setting()
 end
 
 function onPress()
-   if input.keyboard 'A' and press change.anyKey or press 'A' and press change.anyKey == then
+   if getControlsInput == 'A' and press change.anyKey then
      controlsTextColor.press(FlxG.RED,['255,0,0'])
      controlsKeyChange()
    end
-   if input.keyboard 'B' or press 'B' == then
+   if getControlsInput == 'B' == then
      exit()
    end
-   if input.keyboard 'up' or press 'up' == then
+   if getControlsInput == 'up' then
      change.option('up')
    end
-   if input.keyboard 'down' or press 'down' == then
+   if getControlsInput == 'down' then
      change.option('down')
    end
 end

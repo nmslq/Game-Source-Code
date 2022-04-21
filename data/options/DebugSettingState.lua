@@ -23,7 +23,7 @@ function setting()
    fps.show = true
    player.xy.list(false,true)
    player.xy = true
-   fps.text(sys.fps)
+   fps.text(system.fps)
    player.text('game.playerGetXY')
 end
 

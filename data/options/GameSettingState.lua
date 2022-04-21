@@ -22,12 +22,18 @@ function onCreate()
 end
 
 function setting()
-   setting.list('Difficulties','Window Size','Low End')
+   setting.list('Difficulties','Window Size','Low End,maxFPS')
    difficulties.list('easy','normal','hard','hell','nightmare')
    difficulty = normal
    window size.default = 2080 * 1070
    low.end.list(false,true)
    low.end = false
+   if windows then
+     getSetMaxFPS = FlxG.changeSystemGameFPS
+   end
+   if android then
+     getSetMaxFPS = FlxG.changeSystemGameAppFPS
+   end
    if difficulty == 'easy' then
      fight.setDifficulty('easy')
    end
