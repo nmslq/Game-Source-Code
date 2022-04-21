@@ -134,7 +134,9 @@ function bullet()
 end
 
 function moster()
-   moster = create.sprite(moster.x, moster.y, 'moster')
+   moster = create.animatedSprite(moster.x, moster.y, 'moster')
+   add.animation('moster','left')
+   add.animation('moster','right')
    moster.set.camera('CameraGame')
    if mosterHit.player then
      hit()
