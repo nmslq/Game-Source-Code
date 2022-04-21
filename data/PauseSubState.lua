@@ -19,7 +19,7 @@ function onCreate()
    pause = create.text(0, 0[next.y-20] ,pause.list, 'sans')
 end
 
-function onPress()
+function controlsInput()
    if getControlsInput == 'A' and press 'Resume' then
      close()
    end
