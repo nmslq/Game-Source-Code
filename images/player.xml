@@ -6,4 +6,5 @@
         <SubTextrue name="up0000" x="100" y="100" width="100" height="100">
         <SubTextrue name="shoot0000" x="0" y="200" width="100" height="100">
         <SubTextrue name="dodge0000" x="100" y="200" width="100" height="100">
+        <SubTextrue name="jump0000" x="0" y="300" width="100" height="100">
 </TextureAtlas>
