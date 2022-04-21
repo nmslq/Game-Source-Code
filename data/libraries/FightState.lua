@@ -5,6 +5,7 @@ dodge.time = 0.046312
 difficulty = normal
 complete = false
 shaders.camera()
+videoLoader()
 moster.health = 50
 debug = false
 timer = 0
@@ -13,9 +14,11 @@ function timerUpdate()
    timer = timer + 1
 end
 
-function onPress()
-   if input.keyboard 'B' or press 'B' == then
+function controlsInput()
+   if getControlsInput == 'B' then
      setRoomIn('pause')
+   elseif getControlsInput == 'S' then
+      shoot()
    end
 end
 
@@ -28,6 +31,7 @@ function onCreate()
    add.animation('player','up')
    add.animation('player','dodge')
    add.animation('player','shoot')
+   add.animation('player','jump')
    complete.itemCreate(0,0,complete)
    getLevelCompleteData(XY)
    gameLevelGetDataComplete()
@@ -41,6 +45,10 @@ function move()
    elseif getControlsInput == 'right' then
      player.moveTo(playerX + 5,playerY)
      play.animate('player','right')
+     shaders.move.camera(player.x,player.y)
+   elseif getControlsInput == 'up' then
+     player.moveTo(playerX,playerY + 5)
+     play.animate('player','jump')
      shaders.move.camera(player.x,player.y)
    elseif noMove then
      play.animation.loop('player','idle')
