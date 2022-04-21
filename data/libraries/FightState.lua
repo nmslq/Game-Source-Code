@@ -19,7 +19,9 @@ function controlsInput()
      setRoomIn('pause')
    elseif getControlsInput == 'S' then
       shoot()
-   end
+   elseif getControlsInput == 'C' then
+      player.moveSpeed = 10
+    end
 end
 
 function onCreate()
@@ -38,12 +40,13 @@ function onCreate()
 end
 
 function move()
+   player.moveSpeed = 5
    if getControlsInput == 'left' then
-     player.moveTo(playerX - 5,playerY)
+     player.moveTo(playerX - player.moveSpeed,playerY)
      play.animate('player','left')
      shaders.move.camera(player.x,player.y)
    elseif getControlsInput == 'right' then
-     player.moveTo(playerX + 5,playerY)
+     player.moveTo(playerX + player.moveSpeed,playerY)
      play.animate('player','right')
      shaders.move.camera(player.x,player.y)
    elseif getControlsInput == 'up' then
@@ -58,7 +61,7 @@ end
 function onUpdate()
    shaders.Update()
    debug.Update()
-   if bullet.ishave then
+   if bullet.isHave then
       if bullet.color == nil then
         bullet.rotation(bullet.rotation + 1)
       end
@@ -156,19 +159,19 @@ end
 
 function difficulty()
    if difficulty == 'easy' then
-     set(max.health = 250)
+     max.health = 250
    end
    if difficulty == 'normal' then
-     set(max.health = 150)
+     max.health = 150
    end
    if difficulty == 'hard' then
-     set(max.health = 90)
+     max.health = 90
    end
    if difficulty == 'hell' then
-     set(max.health = 30)
+     max.health = 30
    end
    if difficulty == 'nightmare' then
-     set(max.health = 1)
+     max.health = 1
    end
 end
 
@@ -191,18 +194,18 @@ function shoot()
 end
 
 function hit(moster)
-   set(get(moster.health) - 15)
+   moster.health - 15
 end
 
 function hit()
    if bulletHitColor = nil then
-     set(get(health) - 15)
+     health - 15
    end
    if bulletHitColor = red then
-     set(get(health) = 0)
+     health = 0
    end
    if no.hitBullet then
-     set(get(health) - 0)
+     health - 0
    end
 end
 
