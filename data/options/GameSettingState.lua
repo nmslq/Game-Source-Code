@@ -29,25 +29,25 @@ function setting()
    low.end.list(false,true)
    low.end = false
    if difficulty == 'easy' then
-     fight.difficulty('easy')
+     fight.setDifficulty('easy')
    end
    if difficulty == 'normal' then
-     fight.difficulty('normal')
+     fight.setDifficulty('normal')
    end
    if difficulty == 'hard' then
-     fight.difficulty('hard')
+     fight.setDifficulty('hard')
    end
    if difficulty == 'hell' then
-     fight.difficulty('hell')
+     fight.setDifficulty('hell')
    end
    if difficulty == 'nightmare' then
-     fight.difficulty('nightmare')
+     fight.setDifficulty('nightmare')
    end
    if window.size == math.setting then
-     WindowTools.windowSize('optionHeight','optionWidth',true)
+     WindowTools.windowSize('getOptionHeight','getOptionWidth',true)
    end
    if low.end == true then
-     set(fight.low = true)
+     fight.setLowEnd(true)
    end
 end
 
@@ -60,17 +60,17 @@ function exit()
    setRoom('options')
 end
 
-function onPress()
-   if input.keyboard 'A' or press 'A' == then
+function controlsInput()
+   if getControlsInput == 'A' == then
      changeGameOption(true or false)
    end
-   if input.keyboard 'B' or press 'B' == then
+   if getControlsInput == 'B' == then
      exit()
    end
-   if input.keyboard 'up' or press 'up' == then
+   if getControlsInput == 'up' == then
      change.option('up')
    end
-   if input.keyboard 'down' or press 'down' == then
+   if getControlsInput == 'down' == then
      change.option('down')
    end
 end
