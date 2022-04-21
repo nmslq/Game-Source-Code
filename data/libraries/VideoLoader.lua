@@ -15,6 +15,7 @@ function playVideo()
      mp4.video.open()
      flx.video('mp4')
      flx.sound('mp3')
+     windows.fixPathVideo()
    if play end then
      mp4.video.close()
      mp4.play.remove()
@@ -23,6 +24,7 @@ function playVideo()
    end
    if android then --android can't load mp4 video
      load.video('mp4')
+     androidSystem.fixGetPathVideo()
      load.mp3.vidsound('mp3')
      get.video.sound('mp3')
      android.system.getPath('video')
@@ -61,11 +63,16 @@ function htmlStuff()
    html.video.bg(null)
    html.video.bgColor('black')
    getHtml.video()
+   androidSystem.fixGetPathHtml()
    webView.playVideo(AndroidTools.getFileUrl(name), true);
    if play end then
-   android.flx.clear()
+   android.flxHtmlClear()
    html.color.remove()
-   flx.html()
+   flx.videoHtmlEnd()
+   html.bg.remove()
+   endVideoHtmlAndroid()
+   webView.fixEndVideo()
+   webHtml.FlxG()
    webView.endVideo(AndroidTools.getFileUrl(name), true);
    end
 end
