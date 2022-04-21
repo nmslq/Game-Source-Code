@@ -1,4 +1,4 @@
-function video()
+function playVideo()
    cameraHUD.hide()
    cameraGame.hide()
    timer.stop()
