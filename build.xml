@@ -14,13 +14,13 @@
 
         <android.setUpTools="sdk" android.setUpTools="ndk" android.setUpTools="jdk" if "android"/>
 
-        <window.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" if "windows"/>
+        <window.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
 
-        <android.app.name="game" version="Normal Build 0.6.3(Pre)" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" if "android"/>
+        <android.app.name="game" version="Normal Build 0.6.3(Pre)" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" if "android"/>
 
-        <liunx.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" if "liunx"/>
+        <liunx.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "liunx"/>
 
-        <mac.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" if "mac"/>
+        <mac.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "mac"/>
 
         <windows.packages="main.yml" if "windows/>
 
