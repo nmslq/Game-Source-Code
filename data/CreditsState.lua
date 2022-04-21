@@ -17,17 +17,17 @@ function onUpdate()
    shaders.Update()
 end
 
-function onPress()
-   if input.keyboard 'A' or press 'A' == then
+function controlsInput()
+   if getControlsInput == 'A' then
      browersUrlViewOpen('getUrl')
    end
-   if input.keyboard 'B' or press 'B' == then
+   if getControlsInput == 'B' then
      setRoom('menu')
    end
-   if input.keyboard 'up' or press 'up' == then
+   if getControlsInput == 'up' then
      change.credits('up')
    end
-   if input.keyboard 'down' or press 'down' == then
+   if getControlsInput == 'down' then
      change.credits('down')
    end
 end

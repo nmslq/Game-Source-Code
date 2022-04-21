@@ -20,19 +20,19 @@ function onCreate()
 end
 
 function onPress()
-   if input.keyboard 'A' and press 'Resume' or press 'A' and press 'Resume' then
+   if getControlsInput == 'A' and press 'Resume' then
      close()
    end
-   if input.keyboard 'A' and press 'Reset Level' or press 'A' and press 'Reset level' then
+   if getControlsInput == 'A' and press 'Reset Level' then
      reset()
    end
-   if input.keyboard 'A' and press 'Exit to menu' or press 'A' and press 'Exit to menu' == then
+   if getControlsInput == 'A' and press 'Exit to menu' then
      exit()
    end
-   if input.keyboard 'up' or press 'up' == then
+   if getControlsInput == 'up' then
      change.item('up')
    end
-   if input.keyboard 'down' or press 'down' == then
+   if getControlsInput == 'down' then
      change.item('down')
    end
 end

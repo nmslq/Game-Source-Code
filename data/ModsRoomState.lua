@@ -25,14 +25,14 @@ function onCreate()
    end
 end
 
-function onPress()
-   if input.keyboard 'B' or press 'B' == then
+function controlsInput()
+   if getControlsInput == 'B' then
      setRoom('menu')
    end
-   if input.keyboard 'up' or press 'up' == then
+   if getControlsInput == 'up' then
      change.mod('up')
    end
-   if input.keyboard 'down' or press 'down' == then
+   if getControlsInput == 'down' then
      change.mod('down')
    end
 end

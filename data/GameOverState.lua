@@ -38,7 +38,7 @@ function addControls()
 end
 
 function onPress()
-   if input.keyboard 'A' or press 'A' == then
+   if getControlsInput == 'A' then
      black.screen()
      setRoom('game{level.getMath}')
    end

@@ -28,23 +28,23 @@ function onUpdate()
 end
 
 function onPress()
-   if input.keyboard 'A' and press 'start' or press 'A' and press 'start' == then
+   if getControlsInput == 'A' and press 'start' then
      black.screen()
      setRoom('game1')
    end
-   if input.keyboard 'A' and press 'mods' or press 'A' and press 'mods' == then
+   if getControlsInput == 'A' and press 'mods' then
      black.screen()
      setRoom('mods')
    end
-   if input.keyboard 'A' and press 'credits' or press 'A' and press 'credits' == then
+   if getControlsInput == 'A' and press 'credits' then
      black.screen()
      setRoom('credits')
    end
-   if input.keyboard 'A' and press 'options' or press 'A' and press 'options' == then
+   if getControlsInput == 'A' and press 'options' then
      black.screen()
      setRoom('options')
    end
-   if input.keyboard 'A' and press 'exit' or press 'A' and press 'exit' == then
+   if getControlsInput == 'A' and press 'exit' then
       if android then
         AndroidTools.exitGameApp()
       end
@@ -52,10 +52,10 @@ function onPress()
         WindowsTools.exitGameWindow()
       end
    end
-   if input.keyboard 'up' or press 'up' == then
+   if getControlsInput == 'up' then
      change.menu('up')
    end
-   if input.keyboard 'down' or press 'down' == then
+   if getControlsInput == 'down' then
      change.menu('down')
    end
 end
