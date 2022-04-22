@@ -32,6 +32,8 @@
 
         <haxelib.install="extension-androidtools" haxelib.url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
 
+        <androidPathToolsCodeInstall="androidPaths-Tools" androidPathTools.url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
+
         <haxelib.install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
 
         <asstes.path={"data,images,sounds,source,fonts"}/>
