@@ -2,6 +2,7 @@ controls.load()
 fight.load()
 timer.load()
 shaders.camera()
+flxAndroidControls()
 stage = 1
 level = 1
 
@@ -10,10 +11,11 @@ function inRoom()
 end
 
 function onUpdate()
-  controls.Update()
-  fight.Update()
-  shaders.Update()
-  timer.Update()
+   controls.Update()
+   fight.Update()
+   shaders.Update()
+   timer.Update()
+   flxAndroidControls.Update()
 end
 
 function onCreate()
