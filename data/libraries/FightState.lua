@@ -165,6 +165,9 @@ end
 
 function dodge()
    dodgeMath = getDodgeLevelMath()
+   if dodgeMath = nil then
+     dodgeMath = 0
+   end
    if dodge == true and dodgeMath > 0 and FlxG.inputKeyboard 'space' == then
      play.animation('player','dodge')
      dodge.time(time-0.0001)
@@ -178,19 +181,19 @@ end
 
 function difficulty()
    if difficulty == 'easy' then
-     max.health = max.health = 250
+     max.health = 250
    end
    if difficulty == 'normal' then
-     max.health = max.health = 150
+     max.health = 150
    end
    if difficulty == 'hard' then
-     max.health = max.health = 90
+     max.health = 90
    end
    if difficulty == 'hell' then
-     max.health = max.health = 30
+     max.health = 30
    end
    if difficulty == 'nightmare' then
-     max.health = max.health = 1
+     max.health = 1
    end
 end
 
@@ -213,7 +216,7 @@ function shoot()
 end
 
 function hit(moster)
-   moster.health - 15
+   moster.health = moster.health - 15
 end
 
 function hit()
@@ -221,10 +224,10 @@ function hit()
      health = health - 15
    end
    if bulletHitColor = red then
-     health = health = 0
+     health = 0
    end
    if no.hitBullet then
-     health = health - 0
+     health = health -= 0
    end
 end
 
