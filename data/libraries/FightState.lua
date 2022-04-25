@@ -161,19 +161,19 @@ end
 
 function difficulty()
    if difficulty == 'easy' then
-     max.health = 250
+     max.health = max.health = 250
    end
    if difficulty == 'normal' then
-     max.health = 150
+     max.health = max.health = 150
    end
    if difficulty == 'hard' then
-     max.health = 90
+     max.health = max.health = 90
    end
    if difficulty == 'hell' then
-     max.health = 30
+     max.health = max.health = 30
    end
    if difficulty == 'nightmare' then
-     max.health = 1
+     max.health = max.health = 1
    end
 end
 
@@ -201,13 +201,13 @@ end
 
 function hit()
    if bulletHitColor = nil then
-     health - 15
+     health = health - 15
    end
    if bulletHitColor = red then
-     health = 0
+     health = health = 0
    end
    if no.hitBullet then
-     health - 0
+     health = health - 0
    end
 end
 
