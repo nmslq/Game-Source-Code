@@ -5,7 +5,7 @@ dodge.time = 0.046312
 difficulty = normal
 complete = false
 shaders.camera()
-Flx.playVideo()
+FlxVideo()
 moster.health = 50
 debug = false
 timer = 0
