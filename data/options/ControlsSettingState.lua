@@ -1,10 +1,12 @@
 controls.load()
 shaders.camera()
+flxAndroidControls()
 item = 0
 
 function onUpdate()
    controls.Update()
    shaders.Update()
+   flxAndroidControls.Update()
 end
 
 function addControls()
@@ -34,7 +36,7 @@ function setting()
    controlsTextColor(FlxG.Black,['255,255,255'])
 end
 
-function onPress()
+function controlsInput()
    if getControlsInput == 'A' and press change.anyKey then
      controlsTextColor.press(FlxG.RED,['255,0,0'])
      controlsKeyChange()
@@ -52,10 +54,10 @@ end
 
 function changeOption()
    if 'up' then
-     set(get(item) + 1)
+     item = item + 1
    end
    if 'down' then
-     set(get(item) - 1)
+     item = item - 1
    end
 end
 
