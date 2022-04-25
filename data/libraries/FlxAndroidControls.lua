@@ -55,9 +55,12 @@ function flxAndroidControls()
      getAndroidTouchXY for in controlsMaxInputXY then
        buttonInput()
        flx.buttonInput()
+       flxAndroidCheck()
+       FlxG.controlsInputCheck()
        flx.input = true
      else
        flx.buttonInput(false)
+       FlxG.controlsInputCheck()
        flx.input = false
       end
    end
