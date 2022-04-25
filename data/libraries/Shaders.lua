@@ -1,6 +1,5 @@
 camera.list('CameraHud','CameraGame')
-camera = camera.flx()
-camera = camera.FlxG()
+camera = camera.FlxG.create()
 FlxG.shaders()
 FlxG.cameraListCreate()
 
@@ -49,14 +48,14 @@ function shaders()
      cameraFlxG.removeCameraList('cameraList')
      FlxG.cameraListRemove()
    elseif lua.help {cameraName.hide()}
-     camera = getLuaCameraName()
-     set(cameraName.alpha = 0)
+     cameraName = getLuaCameraName()
+     cameraName.alpha = cameraName.alpha = 0
      cameraName.hide = true
      getCameraSprite.hide()
      getCameraText.hide()
    elseif lua.help {cameraName.unhide()}
-     camera = getLuaCameraName()
-     set(cameraName.alpha = 1)
+     cameraName = getLuaCameraName()
+     cameraName.alpha = cameraName.alpha = 1
      cameraName.hide = true
      getCameraSprite.hide()
      getCameraText.hide()
