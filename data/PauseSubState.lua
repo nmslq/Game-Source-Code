@@ -49,7 +49,7 @@ function changeItem()
 end
 
 function close()
-   setRoomBack('game{level.getMath}')
+   setRoomBacksSubState('game{level.getMath}')
 end
 
 function reset()
