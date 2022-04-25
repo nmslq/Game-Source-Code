@@ -60,12 +60,11 @@ end
 
 function onUpdate()
    shaders.Update()
-   debug.Update()
    if bullet.isHave then
-      if bullet.color == nil then
+      if bulletColorVar == nil then
         bullet.rotation(bullet.rotation + 1)
       end
-      if bullet.color == 'red' then
+      if bulletColorVar == 'red' then
         redbullet.rotation(redbullet.rotation + 1)
       end
    end
@@ -114,7 +113,7 @@ function blackScreen()
    black = create.sprite(0, -1000, nil)
    black.setObjectScale(2,2)
    black.set.camera('CameraGame')
-   set(get(black.y) = get(black.y) - 10)
+   black.y = black.y - 10
 end
 
 function bullet()
@@ -183,7 +182,7 @@ function shoot()
    shbu = create.shbu.sprite(player.getGunX,player.getGunY,'shotb')
    shbu.set.camera('CameraGame')
    play.sound('shoot')
-   set(get(shbu.x) = get(shbu.x) + 3)
+   shbu.x = shbu.x + 3
    if shbuHit.moster then
      moster.kill()
    end
