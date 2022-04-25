@@ -1,6 +1,7 @@
 dodge = false
 max.health = 100
 health = 100
+dodgeMath = 0
 dodge.time = 0.046312
 difficulty = normal
 complete = false
@@ -88,16 +89,16 @@ function saw(x,y)
 end
 
 function debug()
-   if debug == false and input.keyboard 'D' == then
+   if debug == false and FlxG.inputKeyboard 'D' == then
      debug = true
      debug = create.text(-1000, -1000, [color:red]'DEBUG', 'vcr')
      debug.set.camera('hud')
      set(health = max.health)
    end
-   if debug == true and input.keyboard 'D' == then
+   if debug == true and FlxG.inputKeyboard 'D' == then
       debug = false
       debug.removeText()
-    end
+   end
 end
 
 function complete()
@@ -163,8 +164,8 @@ function mosterMove()
 end
 
 function dodge()
-   if space.dodge == true
-   if dodge == true
+   dodgeMath = getDodgeLevelMath()
+   if dodge == true and dodgeMath > 0 and FlxG.inputKeyboard 'space' == then
      play.animation('player','dodge')
      dodge.time(time-0.0001)
      if dodge.time == 0 then
