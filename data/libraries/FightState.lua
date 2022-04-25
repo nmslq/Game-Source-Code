@@ -16,7 +16,7 @@ end
 
 function controlsInput()
    if getControlsInput == 'B' then
-     setRoomIn('pause')
+     setRoomInSubState('pause')
    elseif getControlsInput == 'S' then
       shoot()
    elseif getControlsInput == 'C' then
