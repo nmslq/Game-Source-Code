@@ -33,6 +33,8 @@ function Controls()
      shaders.createCamera('CameraControls')
      controls.set.camera('CameraControls')
      testAndroidControls()
+     flxAndroidControls()
+     flxAndroidControlsInput('check')
      if getInputAndroidControls == 'up' then
        controlsAndroidInput('up') = true
      elseif getInputAndroidControls == 'down' then
