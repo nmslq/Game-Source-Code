@@ -1,15 +1,17 @@
+packages;
+
 import Flx;
 
 public static function onGameStart()
    flx()
    mod.command()
-   if Windows then
+   if windows then
      set.window.name(game)
      flx.getPath(files)
      file.getPath()
      getPath.exites()
    end
-   if Android then
+   if android then
      clean.system()
      system.filePath()
      file.getPath.exites()
