@@ -65,7 +65,7 @@ function htmlStuff()
    getHtml.video()
    androidSystem.fixGetPathHtml()
    webView.playVideo(AndroidTools.getFileUrl(name), true);
-   if play end then
+   if playEnd then
    android.flxHtmlClear()
    html.color.remove()
    flx.videoHtmlEnd()
