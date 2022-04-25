@@ -1,4 +1,4 @@
-function androidControls()
+function flxAndroidControls()
    controls.buttonInputGetTest()
    if windows then
      getMouseX = getIn(getControlsScaleX)
