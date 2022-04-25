@@ -16,7 +16,7 @@ function playVideo(videoFile)
      flx.video('mp4')
      flx.sound('mp3')
      windows.fixPathVideo()
-   if play end then
+   if playEnd then
      mp4.video.close()
      mp4.play.remove()
      flx.video.end('mp4')
