@@ -1,6 +1,6 @@
 function playVideo(videoFile)
-   cameraHUD.hide()
-   cameraGame.hide()
+   CameraHUD.hide()
+   CameraGame.hide()
    timer.stop()
    fight.disbale()
    if not android then
