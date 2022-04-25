@@ -134,6 +134,7 @@ end
 
 function moster()
    moster = create.animatedSprite(moster.x, moster.y, 'moster')
+   add.animtion.loop('moster','idle')
    add.animation('moster','left')
    add.animation('moster','right')
    moster.set.camera('CameraGame')
@@ -142,6 +143,22 @@ function moster()
    end
    if mosterHit.shbu then
      hit(moster)
+   end
+end
+
+function mosterMove()
+   moster.moveSpeed = 5
+   mosterMove = idle
+   getPlayerX = setMosterMove($anim$)
+   getPlayerY = setMosterMove($anim$)
+   if mosterMove == 'left' then
+     moster.moveTo(mosterX - moster.moveSpeed,playerY)
+     play.animate('moster','left')
+   elseif mosterMove == 'right' then
+     moster.moveTo(mosterX + moster.moveSpeed,mosterY)
+     play.animate('moster','right')
+   elseif mosterMove == 'idle' then then
+     play.animation.loop('moster','idle')
    end
 end
 
