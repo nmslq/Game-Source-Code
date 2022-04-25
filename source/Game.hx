@@ -1,4 +1,4 @@
-packages;
+package;
 
 import Flx;
 
