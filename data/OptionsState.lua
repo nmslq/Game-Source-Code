@@ -1,5 +1,6 @@
 controls.load()
 shaders.camera()
+flxAndroidControls()
 item = 0
 
 function inRoom()
@@ -9,6 +10,7 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
+   flxAndroidControls.Update()
 end
 
 function addControls()
@@ -58,9 +60,9 @@ end
 
 function changeOption()
    if 'up' then
-     set(get(item) + 1)
+     item = item + 1
    end
    if 'down' then
-     set(get(item) - 1)
+     item = item - 1
    end
 end

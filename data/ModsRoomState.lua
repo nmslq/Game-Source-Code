@@ -1,6 +1,7 @@
 controls.load()
 shaders.camera()
 modPathsOpen()
+flxAndroidControls()
 item = 0
 
 function inRoom()
@@ -39,14 +40,15 @@ end
 
 function changeMod()
    if 'up' then
-     set(get(item) + 1)
+     item = item + 1
    end
    if 'down' then
-     set(get(item) - 1)
+     item = item - 1
    end
 end
 
 function onUpdate()
    controls.Update()
    shaders.Update()
+   flxAndroidControls.Update()
 end
