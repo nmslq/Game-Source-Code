@@ -1,3 +1,5 @@
+package;
+
 import Game;
 
 public static function Flx()
