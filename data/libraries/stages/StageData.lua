@@ -1,4 +1,6 @@
 function stages()
+   addJsonStages()
+   jsonStageHandler()
    if stage == 1 then
      --ground
      gr = create.sprite(0,-100,'stages/ground')
