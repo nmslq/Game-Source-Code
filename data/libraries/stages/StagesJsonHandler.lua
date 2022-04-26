@@ -5,7 +5,8 @@ function jsonHandler()
    stages.handlerJson()
    jsonDefault('
    {
-     "images":{
+     "images": [
+      {
         "imageName": "name",
         "imageXY": [
               0,
@@ -19,7 +20,8 @@ function jsonHandler()
               1,
               1
          ]
-    }
+      }
+   ]
 }'
    getJsonImagesName('function onCreate() images = create.sprite(getX, getY,imagesName)')
    getJsonScale('function onCreate() setObjectScale(getScaleX, getScaleY)')
@@ -27,6 +29,8 @@ function jsonHandler()
    jsonPaths.nameGetDefaultChange()
    changeDefaultJsonTemplate()
    paths.folder('$gameFolder$/stages/$stagesFile$.json')
+   modStageFile()
+   jsonFilePath()
 end
    
           
