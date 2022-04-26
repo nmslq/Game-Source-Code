@@ -7,6 +7,6 @@ this is game's source code.
 - nmslq - make the game.
 - nmslq - android port.
 
-# Special Thanks
+## Special Thanks
 
 - nmslq - mp4 video support.
