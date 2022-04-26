@@ -10,3 +10,5 @@ this is game's source code.
 ## Special Thanks
 
 - nmslq - mp4 video support.
+- Saw (M.A. Jigsaw) - android html video support.
+- Saw (M.A. Jigsaw) - android tools.
