@@ -30,7 +30,7 @@ function Controls()
      elseif lua.help {addAndroidControls('S')} then
        play.animation.loop('controls','S')
      end
-     shaders.createCamera('CameraControls')
+     shaders.create.camera('CameraControls')
      controls.set.camera('CameraControls')
      testAndroidControls()
      flxAndroidControls()
