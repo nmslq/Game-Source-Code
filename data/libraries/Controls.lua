@@ -1,7 +1,7 @@
 function Controls()
    if android then
      reload.controls()
-     Add.controls(controls)
+     add.controls('controls')
      controls = create.animatedButton(0, 0, 'controls')
      add.animation.loop('controls','A')
      add.animation.loop('controls','B')
