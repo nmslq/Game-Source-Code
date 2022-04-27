@@ -72,7 +72,7 @@ function htmlStuff()
    html.bg.remove()
    endVideoHtmlAndroid()
    webView.fixEndVideo()
-   webHtml.FlxG()
+   webHtml.FlxG.endVideo()
    webView.endVideo(AndroidTools.getFileUrl(name), true);
    end
 end
