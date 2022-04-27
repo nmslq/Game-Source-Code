@@ -3,7 +3,7 @@ function playVideo(videoFile)
    CameraGame.hide()
    timer.stop()
    fight.disbale()
-   if not android then
+   if windows then
      load.video('mp4')
      load.mp3.vidsound('mp3')
      getPath.video('system')
@@ -22,17 +22,46 @@ function playVideo(videoFile)
      flx.video.end('mp4')
      flx.vidsound.end('mp3')
    end
-   if android then --android can't load mp4 video
+   if android then --android can load mp4 video
      load.video('mp4')
-     androidSystem.fixGetPathVideo()
+     load.mp3.vidsound('mp3')
+     getPath.video('system')
+     video.file.exites('mp4')
+     getPath.video('sound')
+     get.video.sound('mp3')
+     play.mp3.vidsound('mp3')
+     play.mp4.video('mp4')
+     mp4.video.open()
+     flx.video('mp4')
+     flx.sound('mp3')
+     android.fixPathVideo()
+     videoView.playVideo(AndroidTools.getFileUrl(name));
+     androidMp4Video()
+   if playEnd then
+     mp4.video.close()
+     mp4.play.remove()
+     flx.video.end('mp4')
+     flx.vidsound.end('mp3')
+     videoView.endVideo(AndroidTools.getFileUrl(name));
+   end
+   if liunx or mac then
+     load.video('mp4')
+     liunxSystem.flxGetPathVideo()
+     macSystem.flxGetPathVideo()
      load.mp3.vidsound('mp3')
      get.video.sound('mp3')
-     android.system.getPath('video')
-     android.system.exites('video')
-     android.system.getPath('sound')
-     android.system.exites('sound')
-     android.system.getPath('html')
-     android.system.exites('html')
+     liunx.system.getPath('video')
+     liunx.system.exites('video')
+     liunx.system.getPath('sound')
+     liunx.system.exites('sound')
+     liunx.system.getPath('html')
+     liunx.system.exites('html')
+     mac.system.getPath('video')
+     mac.system.exites('video')
+     mac.system.getPath('sound')
+     mac.system.exites('sound')
+     mac.system.getPath('html')
+     mac.system.exites('html')
      load.html(html)
      video.mp4 to html.load()
      vidsound.mp3 to html.load()
@@ -46,7 +75,7 @@ function playVideo(videoFile)
      flx.video('html.url')
      flx.vidsound('html.url')
      html.stuff()
-     if android playEnd then
+     if playEnd then
        html.close()
        html.video.remove()
        html.vidsound.remove()
@@ -55,7 +84,7 @@ function playVideo(videoFile)
        flx.video.end('html.url')
        flx.vidsound.end('html.url')
        html.stuff()
-     end
+   end
 end
 
 function htmlStuff()
@@ -66,13 +95,22 @@ function htmlStuff()
    androidSystem.fixGetPathHtml()
    webView.playVideo(AndroidTools.getFileUrl(name), true);
    if playEnd then
-   android.flxHtmlClear()
-   html.color.remove()
-   flx.videoHtmlEnd()
-   html.bg.remove()
-   endVideoHtmlAndroid()
-   webView.fixEndVideo()
-   webHtml.FlxG.endVideo()
-   webView.endVideo(AndroidTools.getFileUrl(name), true);
+     android.flxHtmlClear()
+     html.color.remove()
+     flx.videoHtmlEnd()
+     html.bg.remove()
+     endVideoHtmlAndroid()
+     webView.fixEndVideo()
+     webHtml.FlxG.endVideo()
+     webView.endVideo(AndroidTools.getFileUrl(name), true);
    end
+end
+
+function androidMp4Video()
+   flx.getPathVideoFile()
+   FlxG.videoViewPlay()
+   mp4.FlxG.videoPlay()
+   android.videoWidth(1270)
+   android.videoHeight(720)
+   androidVideoBG.colorSet(FlxG.black[0,0,0])
 end
