@@ -57,6 +57,7 @@ function flxAndroidControls()
        flx.buttonInput()
        flxAndroidCheck()
        FlxG.controlsInputCheck()
+       actionAddDoButton()
        flx.input = true
      else
        flx.buttonInput(false)
