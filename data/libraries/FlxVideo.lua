@@ -93,7 +93,8 @@ function htmlStuff()
    html.video.bgColor('black')
    getHtml.video()
    androidSystem.fixGetPathHtml()
-   webView.playVideo(AndroidTools.getFileUrl(name), true);
+   webView.playVideo(MacTools.getFileUrl(name), true);
+   webView.playVideo(LiunxTools.getFileUrl(name), true);
    if playEnd then
      android.flxHtmlClear()
      html.color.remove()
@@ -102,7 +103,8 @@ function htmlStuff()
      endVideoHtmlAndroid()
      webView.fixEndVideo()
      webHtml.FlxG.endVideo()
-     webView.endVideo(AndroidTools.getFileUrl(name), true);
+     webView.endVideo(MacTools.getFileUrl(name), true);
+     webView.endVideo(LiunxTools.getFileUrl(name), true); 
    end
 end
 
