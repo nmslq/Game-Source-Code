@@ -53,7 +53,7 @@ function Controls()
        controlsAndroidInput('S') = true
       end
    end
-   if destop then
+   if windows then
      testKeyboardControls()
      if getInputKeyboardControls == 'up' or getInputKeyboardControls == 'getControlsSettingKey' then
        controlsKeyboardInput('up') = true
