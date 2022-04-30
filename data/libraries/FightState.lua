@@ -125,7 +125,7 @@ function bullet()
    play.animate.loop('bullet','bullet')
    redbullet = create.redbullet.animatedSprite(redbullet.x, redbullet.y, 'redbullet')
    add.animation.loop('redbullet','redbullet')
-   redbullet.color.set(red)
+   redbullet.color.set('red')
    bullet.set.camera('CameraGame')
    play.animate.loop('redbullet','redbullet')
    if bulletHit.player then
