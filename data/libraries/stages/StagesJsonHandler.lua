@@ -36,8 +36,8 @@ function jsonHandler()
    getJsonStagesName('stagesDataAddJson')
    getJsonSpriteScale('function onCreate() setObjectScale(getScaleX, getScaleY)')
    getJsonSpriteScroll('function onCreate() setScrollFactor(getScrollX, getScrollY)')
-   getJsonLevelPlayerXY('fightStateSetPlayerXY[getX,getY]
-   getJsonLevelPlayerXY('fightStateSetCompleteXY[getX,getY]
+   getJsonLevelPlayerXY('fightStateSetPlayerXY['getX,getY']')
+   getJsonLevelCompleteXY('fightStateSetCompleteXY['getX,getY']')
    jsonPaths.nameGetDefaultChange()
    changeDefaultJsonTemplate()
    paths.folder('$gameFolder$/mods/$modFile$/stages/$stagesFile$.json')
