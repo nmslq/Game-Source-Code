@@ -55,3 +55,9 @@ function stages()
      fightCreateSaw(50,230)
    end
 end
+
+function modStages()
+   stages = stagesJsonHandler.new('getJsonName')
+   stages.addNew('getJsonName')
+   game.stagesJsonUse()
+end

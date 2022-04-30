@@ -5,6 +5,15 @@ function jsonHandler()
    stages.handlerJson()
    jsonDefault('
    {
+     "stagesName": "name",
+     "playerXY": [
+           0,
+           0
+      ],
+      "completeXY": [
+           0,
+           0
+      ],
      "images": [
       {
         "imageName": "name",
@@ -24,11 +33,15 @@ function jsonHandler()
    ]
 }'
    getJsonImagesName('function onCreate() images = create.sprite(getX, getY,imagesName)')
-   getJsonScale('function onCreate() setObjectScale(getScaleX, getScaleY)')
-   getJsonScroll('function onCreate() setScrollFactor(getScrollX, getScrollY)')
+   getJsonStagesName('stagesDataAddJson')
+   getJsonSpriteScale('function onCreate() setObjectScale(getScaleX, getScaleY)')
+   getJsonSpriteScroll('function onCreate() setScrollFactor(getScrollX, getScrollY)')
+   getJsonLevelPlayerXY('fightStateSetPlayerXY[getX,getY]
+   getJsonLevelPlayerXY('fightStateSetCompleteXY[getX,getY]
    jsonPaths.nameGetDefaultChange()
    changeDefaultJsonTemplate()
-   paths.folder('$gameFolder$/stages/$stagesFile$.json')
+   paths.folder('$gameFolder$/mods/$modFile$/stages/$stagesFile$.json')
+   modStages.jsonHandlerLoad()
    modStageFile()
    jsonFilePath()
 end
