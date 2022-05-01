@@ -4,18 +4,30 @@ function tools()
    flx.path.files()
    windows.reload()
    android.reload()
-   if lua.help {saveFiles('fileName')} then
+   if lua.help {saveFiles('fileName,text')} then
       if android then
         fileName = getLuaCodeFileName()
+        text = getLuaCodeText()
         save.android.systemFiles('files')
         files.system.exites('files')
         files.create.android('files')
+        load.android.files.name()
+        files.getPath.exites('files')
+        files.system.exites('files')
+        change.android.files()
+        edit.files('fileName','text')
       end
       if windows then
         fileName = getLuaCodeFileName()
+        text = getLuaCodeText()
         windows.files.save('files')
         windows.files.exites('files')
         windows.create.filesExites('files')
+        load.windows.files.name()
+        files.getPath.exites('files')
+        files.system.exites('files')
+        change.windows.files()
+        edit.files('fileName','text')
       end
    elseif lua.help {deleteFiles('fileName')} then
       if android then
@@ -29,21 +41,6 @@ function tools()
         windows.files.delete('files')
         windows.files.deleteExites('files')
         windows.delete.filesExites('files')
-      end
-   elseif lua.help {editFiles('objectName,fileText')} then
-      if android then
-        load.android.files.name()
-        files.getPath.exites('files')
-        files.system.exites('files')
-        change.android.files()
-        edit.files('android')
-      end
-      if windows then
-        load.windows.files.name()
-        files.getPath.exites('files')
-        files.system.exites('files')
-        change.windows.files()
-        edit.files('windows')
       end
    elseif lua.help {openWindow('tag,windowX,windowY,windowsScaleX,windowsScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if windows then
