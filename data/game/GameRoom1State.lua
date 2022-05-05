@@ -5,6 +5,7 @@ shaders.camera()
 flxAndroidControls()
 stage = 1
 level = 1
+dodgeMath = 0
 
 function inRoom()
    nameRoom('game1')
