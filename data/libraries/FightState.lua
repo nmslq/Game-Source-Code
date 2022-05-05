@@ -171,11 +171,10 @@ function dodge()
    if dodge == true and dodgeMath > 0 and FlxG.inputKeyboard 'space' == then
      play.animation('player','dodge')
      dodge.time(time-0.0001)
-     if dodge.time == 0 then
-       dodge = false
-       dodge.time = 0.046312
-     end
    end
+   if dodge.time == 0 then
+     dodge = false
+     dodge.time = 0.046312
    end
 end
 
