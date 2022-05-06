@@ -1,10 +1,10 @@
 controls.load()
 fight.load()
-timer.load()
 shaders.camera()
 flxAndroidControls()
 stage = 2
 level = 2
+dodgeMath = 0
 
 function inRoom()
    nameRoom('game2')
@@ -14,7 +14,6 @@ function onUpdate()
    controls.Update()
    fight.Update()
    shaders.Update()
-   timer.Update()
    flxAndroidControls.Update()
 end
 
