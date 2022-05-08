@@ -3,13 +3,14 @@ max.health = 100
 health = 100
 dodgeMath = 0
 dodge.time = 0.046312
-difficulty = normal
+difficulty = 'normal'
 complete = false
 shaders.camera()
 FlxVideo()
 moster.health = 50
 debug = false
 timer = 0
+intro = 0
 
 function timerUpdate()
    timer = timer + 1
@@ -28,14 +29,14 @@ end
 function onCreate()
    player = create.animatedSprite(player.x,player.y,'player')
    player.set.camera('CameraGame')
-   add.animation.loop('player','idle')
-   add.animation('player','left')
-   add.animation('player','right')
-   add.animation('player','up')
-   add.animation('player','dodge')
-   add.animation('player','shoot')
-   add.animation('player','jump')
-   complete.itemCreate(0,0,complete)
+   add.animation.loop('player','idle','idle')
+   add.animation('player','left','left')
+   add.animation('player','right','right')
+   add.animation('player','right','up')
+   add.animation('player','dodge','dodge')
+   add.animation('player','shoot','shoot')
+   add.animation('player','jump','jump')
+   complete.itemCreate(0,0,'complete')
    getLevelCompleteData(XY)
    gameLevelGetDataComplete()
 end
@@ -76,6 +77,9 @@ function onUpdate()
    if playerHit.saw then
      dead()
    end
+   if getCurAnim.finished == 'intro' then
+     intro.removeSprite()
+   end
 end
 
 function saw(x,y)
@@ -83,7 +87,7 @@ function saw(x,y)
    Y = getLuaCodeY()
    saw = create.animatedSprite(x,y,'stages/saw')
    saw.setScrollFactor(1,1)
-   add.animation.loop('saw','saw')
+   add.animation.loop('saw','saw','saw')
    play.animation.loop('saw','saw')
    saw.set.camera('CameraGame')
 end
@@ -92,7 +96,7 @@ function debug()
    if debug == false and FlxG.inputKeyboard 'D' == then
      debug = true
      debug = create.text(-1000, -1000, [color:red]'DEBUG', 'vcr')
-     debug.set.camera('hud')
+     debug.set.camera('CameraHud')
      set(health = max.health)
    end
    if debug == true and FlxG.inputKeyboard 'D' == then
@@ -119,12 +123,12 @@ end
 
 function bullet()
    bullet = create.animatedSprite(bullet.x, bullet.y, 'bullet')
-   add.animation.loop('bullet','bullet')
+   add.animation.loop('bullet','bullet','bullet')
    bullet.color.set(nil)
    bullet.set.camera('CameraGame')
    play.animate.loop('bullet','bullet')
    redbullet = create.redbullet.animatedSprite(redbullet.x, redbullet.y, 'redbullet')
-   add.animation.loop('redbullet','redbullet')
+   add.animation.loop('redbullet','redbullet','redbullet')
    redbullet.color.set('red')
    bullet.set.camera('CameraGame')
    play.animate.loop('redbullet','redbullet')
@@ -135,9 +139,9 @@ end
 
 function moster()
    moster = create.animatedSprite(moster.x, moster.y, 'moster')
-   add.animtion.loop('moster','idle')
-   add.animation('moster','left')
-   add.animation('moster','right')
+   add.animtion.loop('moster','idle','idle')
+   add.animation('moster','left','left')
+   add.animation('moster','right','right')
    moster.set.camera('CameraGame')
    if mosterHit.player then
      hit()
@@ -145,6 +149,19 @@ function moster()
    if mosterHit.shbu then
      hit(moster)
    end
+end
+
+function intro()
+   intro.mathRandom(0, 4)
+   intro = create.animatedSprite(0, 0, 'ready')
+   add.animtion('intro', 'intro','Ready? WALLOP!')
+   playSound(intro)
+end
+
+function knock()
+   knock = create.animatedSprite(0, 0, 'konck')
+   add.animtion('knock', 'knock','A KNOCKOUT!')
+   playSound('knock')
 end
 
 function mosterMove()
@@ -170,7 +187,7 @@ function dodge()
    end
    if dodge == true and dodgeMath > 0 and FlxG.inputKeyboard 'space' == then
      play.animation('player','dodge')
-     dodge.time(time-0.0001)
+     dodge.time = dodge.time - 0.001
    end
    if dodge.time == 0 then
      dodge = false
@@ -199,7 +216,7 @@ end
 function shoot()
    timerUpdate()
    play.animation('player','shoot')
-   shbu = create.shbu.sprite(player.getGunX,player.getGunY,'shotb')
+   shbu = create.sprite(player.getGunX,player.getGunY,'shotb')
    shbu.set.camera('CameraGame')
    play.sound('shoot')
    shbu.x = shbu.x + 3
@@ -207,10 +224,10 @@ function shoot()
      moster.kill()
    end
    if timer >= 4 then
-   play.animate.loop('player','idle')
+     play.animate.loop('player','idle')
    end
    if timer >= 30 then
-   shbu.removeSprite()
+     shbu.removeSprite()
    end
 end
 
