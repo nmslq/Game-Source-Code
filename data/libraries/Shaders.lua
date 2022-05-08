@@ -2,6 +2,7 @@ camera.list('CameraHud','CameraGame')
 camera = camera.FlxG.create()
 FlxG.shaders()
 FlxG.cameraListCreate()
+camera.createList()
 
 function shaders()
    if lua.help {move.camera:('x,y')} then
