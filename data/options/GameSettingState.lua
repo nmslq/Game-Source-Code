@@ -21,20 +21,21 @@ end
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
    bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+   options = new.option(0, 0[nextSetting.y - 20], setting.list)
 end
 
 function setting()
-   setting.list('Difficulties','Window Size','Low End,maxFPS')
+   setting.list('Difficulties','Window Size','Low End','maxFPS')
    difficulties.list('easy','normal','hard','hell','nightmare')
    difficulty = normal
    window size.default = 2080 * 1070
    low.end.list(false,true)
    low.end = false
    if windows then
-     getSetMaxFPS = FlxG.changeSystemGameFPS
+     getSetMaxFPS = FlxG.changeSystemGameFPS('windows')
    end
    if android then
-     getSetMaxFPS = FlxG.changeSystemGameAppFPS
+     getSetMaxFPS = FlxG.changeSystemGameAppFPS('android')
    end
    if difficulty == 'easy' then
      fight.setDifficulty('easy')
@@ -55,7 +56,7 @@ function setting()
      WindowTools.windowSize('getOptionHeight','getOptionWidth',true)
    end
    if low.end == true then
-     fight.setLowEnd(true)
+     fightState.setLowEnd(true)
    end
 end
 
