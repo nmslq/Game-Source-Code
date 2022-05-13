@@ -17,6 +17,7 @@ end
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
    bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+   options = new.option(0, 0[nextSetting.y - 20], setting.list)
 end
 
 function setting()
