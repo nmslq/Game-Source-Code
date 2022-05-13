@@ -18,7 +18,7 @@ function onCreate()
    bg = create.sprite(0, 0, nil)
    bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
    set(bg.alpha = 60)
-   pause = create.text(0, 0[nextPause.y-20] ,pause.list, 'sans')
+   pause = create.text(0, 0[nextPause.y - 20] ,pause.list, 'sans')
 end
 
 function controlsInput()
