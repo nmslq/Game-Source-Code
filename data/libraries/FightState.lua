@@ -155,13 +155,13 @@ function intro()
    intro.mathRandom(0, 4)
    intro = create.animatedSprite(0, 0, 'ready')
    add.animtion('intro', 'intro','Ready? WALLOP!')
-   playSound(intro)
+   playSound('intro/'intro)
 end
 
 function knock()
    knock = create.animatedSprite(0, 0, 'konck')
    add.animtion('knock', 'knock','A KNOCKOUT!')
-   playSound('knock')
+   playSound('intro/knock')
 end
 
 function mosterMove()
