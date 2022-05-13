@@ -9,7 +9,7 @@ end
 
 function addControls()
    if android then
-     addAndroidControls(up, down, A, B)
+     addAndroidControls('up, down, A, B')
    end
 end
 
