@@ -22,23 +22,24 @@ end
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
    bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+   options = new.option(0, 0[nextSetting.y - 20], controlsOptions)
 end
 
 function setting()
-   controls.up.text('keyboard.change')
-   controls.left.text('keyboard.change')
-   controls.right.text('keyboard.change')
-   controls.down.text('keyboard.change')
-   controls.A.text('keyboard.change')
-   controls.B.text('keyboard.change')
-   controls.C.text('keyboard.change')
-   controls.S.text('keyboard.change')
-   controlsTextColor(FlxG.Black,['255,255,255'])
+   controls.up.option('keyboard.change')
+   controls.left.option('keyboard.change')
+   controls.right.option('keyboard.change')
+   controls.down.option('keyboard.change')
+   controls.A.option('keyboard.change')
+   controls.B.option('keyboard.change')
+   controls.C.option('keyboard.change')
+   controls.S.option('keyboard.change')
+   controlsOptionColor('FlxG.Black,["255,255,255"]')
 end
 
 function controlsInput()
    if getControlsInput == 'A' and press change.anyKey then
-     controlsTextColor.press(FlxG.RED,['255,0,0'])
+     controlsOptionColor.press('FlxG.Red,["255,0,0"]')
      controlsKeyChange()
    end
    if getControlsInput == 'B' == then
