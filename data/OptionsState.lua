@@ -15,7 +15,7 @@ end
 
 function addControls()
    if android then
-     addAndroidControls(up, down, A, B)
+     addAndroidControls('up, down, A, B')
    end
 end
 
@@ -23,13 +23,13 @@ function onCreate()
    bg = create.sprite(0, 0, 'menu')
    bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
    options.list('Controls Setting','Game Setting')
+   options = new.option(0,0[nextSetting.y - 20]options.list)
    if getFightDebug then
      options.list.add('Debug Setting')
    end
    if not getFightDebug then
      options.list.remove('Debug Setting')
    end
-   options = create.text(0, 0[next.y-20], options.list, 'sans')
 end
 
 function controlsInput()
