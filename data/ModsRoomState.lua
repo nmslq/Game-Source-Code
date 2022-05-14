@@ -18,11 +18,14 @@ function onCreate()
    bg = create.sprite(0, 0, 'menu')
    bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
    if modPaths.modHave then
-     mods = create.text(0, 0, '{modname}:{mod.math}', 'sans')
-     version = create.text(-30, -30, 'version:{mod.version,mod.math}', 'sans')
+     mods = create.text(0, 0, '{modname}:{mod.math}')
+     setObjectFont('mods', 'sans')
+     version = create.text(-30, -30, 'version:{mod.version,mod.math}')
+     setObjectFont('version', 'sans')
    end
    if modPaths.modNotHave then
-     no = create.text(0, 0, 'there isnt have any mod!', 'sans')
+     no = create.text(0, 0, 'there isnt have any mod!')
+     setObjectFont('no', 'sans')
    end
 end
 
