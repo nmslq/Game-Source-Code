@@ -21,7 +21,7 @@ end
 
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
-   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+   setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth)
    options.list('Controls Setting','Game Setting')
    options = new.option(0, 0[nextSetting.y - 20], options.list)
    if getFightState.Debug then
