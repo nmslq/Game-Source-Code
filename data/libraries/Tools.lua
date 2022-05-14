@@ -35,6 +35,7 @@ function tools()
         delete.android.systemFiles('files')
         files.system.deleteExites('files')
         files.delete.android('files')
+        file.folderGetPath()
       end
       if windows then
         fileName = getLuaCodeFileName()
@@ -42,7 +43,7 @@ function tools()
         windows.files.deleteExites('files')
         windows.delete.filesExites('files')
       end
-   elseif lua.help {openWindow('tag,windowX,windowY,windowsScaleX,windowsScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.help {openWindow('tag,windowX,windowY,windowsScaleX,windowsScaleY,title,text,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if windows then
         windows.system.openWindowCode('tag,x,y,scaleX,scaleY,window')
         windows.system.flx('window')
@@ -57,10 +58,15 @@ function tools()
         button = getLuaCodeButtonText()
         buttonMath = gatLuaCodeButtonMath()
         pressEvents = getLuaCodeButtonPressEvents()
+        text = getLuaCodeText()
+        windows.system.lime('tag','text')
+        windows.system.windowText('tag','text')
+        windows.system.flx('window')
+        windows.system.FlxG('window')
         windows.FlxG.createButton('x,y,math,button')
         windows.buttonFlxG.press('pressEvents')
       end
-   elseif lua.help {openApplicationAlert('tag,applicationAlertX,applicationAlertY,applicationAlertScaleX,applicationAlertScaleY,title,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.help {openApplicationAlert('tag,applicationAlertX,applicationAlertY,applicationAlertScaleX,applicationAlertScaleY,title,text,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if android then
         android.system.openApplicationAlert('tag,x,y,scaleX,scaleY,applicationAlert')
         android.system.flx('applicationAlert')
@@ -75,6 +81,11 @@ function tools()
         button = getLuaCodeButtonText()
         buttonMath = gatLuaCodeButtonMath()
         pressEvents = getLuaCodeButtonPressEvents()
+        text = getLuaCodeText()
+        android.system.openApplicationAlert('tag','text')
+        android.system.windowText('tag',text')
+        android.system.flx('window')
+        android.system.FlxG('window')
         applicationAlert.FlxG.createButton('x,y,math,button')
         applicationAlert.buttonFlxG.press('pressEvents')
       end
@@ -116,39 +127,15 @@ function tools()
         Flx.window.resize('height,width,speed')
         FlxG.window.resize('height,width,speed')
       end
-   elseif lua.help {windowText('objectWindow,text')} then
-      if windows then
-        objectWindow = getLuaCodeObjectWindow()
-        text = getLuaCodeText()
-        windows.system.lime('tag','text')
-        windows.system.windowText('tag','text')
-        windows.system.flx('window')
-        windows.system.FlxG('window')
-      end
-   elseif lua.help {applicationAlertText('objectApplicationAlert,text')} then
-      if android then
-        objectApplicationAlert = getLuaCodeObjectApplicationAlert()
-        text = getLuaCodeText()
-        android.system.openApplicationAlert('tag','text')
-        android.system.windowText('tag',text')
-        android.system.flx('window')
-        android.system.FlxG('window')
-      end
    end
    if not files error then
       if android then
-        AndroidTools.openApplicationAlert('0,0,20,20,error,ok,1,0,-40,{AndroidTools.applicationAlertClose()}')
-        AndroidTools.applicationAlertText('error','errorFile:( {files.name} {errormsg}')
-        AndroidTools.saveFiles('log/log.txt')
-        AndroidTools.editFiles('log','error in {files.name} {errormsg}')
-        AndroidTools.exitGameApp()
+        AndroidTools.openApplicationAlert('error,0,0,20,20,error,errorFile:( {files.name} {errormsg},ok,1,0,-40,{AndroidTools.applicationAlertClose('error'),AndroidTools.exitGameApp()}')
+        AndroidTools.saveFiles('log/log.txt','error in {files.name} {errormsg}')
       end
       if windows then
-        WindowsTools.open('0,0,20,20,error,ok,1,0,-40,{WindowsTools.windowClose()')
-        WindowsTools.windowText('error','errorFile:( {files.name} {errormsg}')
-        WindowsTools.saveFiles('log/log.txt')
-        WindowsTools.editFiles('log',"error in {files.name} {errormsg}')
-        WindowsTools.exitGameWindow()
+        WindowsTools.open('error0,0,20,20,error,errorFile:( {files.name} {errormsg},ok,1,0,-40,{WindowsTools.windowClose('error'),WindowsTools.exitGameWindow()')
+        WindowsTools.saveFiles('log/log.txt','error in {files.name} {errormsg}')
        end
    end
 end
