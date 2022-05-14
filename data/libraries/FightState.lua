@@ -95,9 +95,11 @@ end
 function debug()
    if debug == false and FlxG.inputKeyboard 'D' == then
      debug = true
-     debug = create.text(-1000, -1000, [color:red]'DEBUG', 'vcr')
+     debug = create.text(-1000, -1000, 'DEBUG')
+     setObjectFont('debug', 'vcr')
+     setObjectColor('debug', 'FlxG.Red["255,0,0"]')
      debug.set.camera('CameraHud')
-     set(health = max.health)
+     health = max.health
    end
    if debug == true and FlxG.inputKeyboard 'D' == then
       debug = false
