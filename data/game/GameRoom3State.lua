@@ -28,6 +28,6 @@ end
 
 function addControls()
    if android then
-      addAndroidControls(full, B, C, S)
+      addAndroidControls('full, B, C, S')
    end
 end
