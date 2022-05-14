@@ -14,23 +14,28 @@ end
 
 function firstDie()
    game = create.sprite(0, -150, 'game')
-   set(game.alpha = 0)
-   set(get(game.alpha) = get(game.alpha) + 1)
+   game.alpha = 0
+   game.alpha = game.alpha + 1
    over = create.sprite(0, -100, 'over')
-   set(over.alpha = 0)
-   set(get(over.alpha) = (over.alpha) + 1)
-   fd = create.fd.text(0, 0, 'you died!', 'sans')
-   fd1 = create.fd1.text(0, 0, 'dont give up', 'sans')
+   over.alpha = 0
+   over.alpha = over.alpha + 1
+   fd = create.fd.text(0, 0, 'you died!')
+   setObjectFont('fd', 'sans')
+   fd1 = create.fd1.text(0, 0, 'dont give up')
+   setObjectFont('fd1', 'sans')
 end
 
 function Die()
    game = create.sprite(0, -150, 'game')
-   set(game.alpha = 0)
-   set(get(game.alpha) = get(game.alpha) + 1)
+   game.alpha = 0
+   game.alpha = game.alpha + 1
    over = create.sprite(0, -100, 'over')
-   set(over.alpha = 0)
-   set(get(over.alpha) = (over.alpha) + 1)
-   die = create.text(0, 0, '...', sans)
+   over.alpha = 0
+   over.alpha = over.alpha + 1
+   fd = create.fd.text(0, 0, 'you died!')
+   setObjectFont('fd', 'sans')
+   fd1 = create.fd1.text(0, 0, '...')
+   setObjectFont('fd1', 'sans')
 end
 
 function addControls()
