@@ -128,7 +128,7 @@ function tools()
         FlxG.window.resize('height,width,speed')
       end
    end
-   if not files error then
+   if noFile.error then
       if android then
         AndroidTools.openApplicationAlert('error,0,0,20,20,error,errorFile:( {files.name} {errormsg},ok,1,0,-40,{AndroidTools.applicationAlertClose('error'),AndroidTools.exitGameApp()}')
         AndroidTools.saveFiles('log/log.txt','error in {files.name} {errormsg}')
