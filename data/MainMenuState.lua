@@ -23,7 +23,7 @@ function onCreate()
    exit = create.text(0, -90, 'exit')
    setObjectFont('exit', 'sans')
    bg = create.sprite(0, 0, 'menu')
-   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+   setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth)
 end
 
 function onUpdate()
