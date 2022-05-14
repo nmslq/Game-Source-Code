@@ -46,7 +46,8 @@ end
 function onCreate()
    bg = create.sprite(0,0,'menu')
    bg.setObjectScale(2.3,2.3)
-   credits = create.text(0,0,{'credits.text'},'sans')
+   credits = create.text(0,0,{'credits.text'})
+   setObjectFont('credits', 'sans')
    icon = create.sprite(-30,0,{'credits.icon'})
    title = create.text(0,30,{'credits.title'})
 end
