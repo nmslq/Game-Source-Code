@@ -32,6 +32,10 @@ function jsonHandler()
       }
    ]
 }'
+   imageJsonScaleX.defaultValue(1)
+   imageJsonScaleY.defaultValue(1)
+   imageJsonScrollX.defaultValue(1)
+   imageJsonScrollY.defaultValue(1)
    getJsonImagesName('function onCreate() images = create.sprite("getX", "getY","imagesName")')
    getJsonStagesName('stagesDataAddJson')
    getJsonSpriteScale('function onCreate() setObjectScale("getScaleX", "getScaleY")')
@@ -40,6 +44,7 @@ function jsonHandler()
    getJsonLevelPlayerY('fightState.SetPlayerY["getY"]')
    getJsonLevelCompleteX('fightState.SetCompleteX["getX"]')
    getJsonLevelCompleteY('fightStateSetCompleteY["getY"]')
+   --if not getImageScale then
    jsonPaths.nameGetDefaultChange()
    changeDefaultJsonTemplate()
    paths.folder('$gameFolder$/mods/$modFile$/stages/$stagesFile$.json')
