@@ -83,8 +83,9 @@ class Achievements {
 		achievementsStuff = achievementShits;
 
 		#if MODS_ALLOWED
-		reloadAchievements();
+		//reloadAchievements(); //custom achievements do not work. will add once it doesn't do the duplication bug -bb
 		#end
+
 		if(FlxG.save.data != null) {
 			if(FlxG.save.data.achievementsMap != null) {
 				achievementsMap = FlxG.save.data.achievementsMap;
@@ -115,6 +116,7 @@ class Achievements {
 
 		// EDIT 2: Uhh this is weird, this message was written for MInd Games, so it doesn't apply logically for Psych Engine LOL
 	}
+
 	public static function reloadAchievements() {	//Achievements in game are hardcoded, no need to make a folder for them
 		loadedAchievements.clear();
 
@@ -176,7 +178,7 @@ class Achievements {
 
 				for (file in FileSystem.readDirectory(directory)) {
 					var path = haxe.io.Path.join([directory, file]);
-
+					
 					var cutName:String = file.substr(0, file.length - 5);
 					if (!FileSystem.isDirectory(path) && file.endsWith('.json') && !loadedAchievements.exists(cutName) && cutName != PlayState.othersCodeName) {
 						loadedAchievements.set(cutName, getAchievementInfo(path));
@@ -230,7 +232,7 @@ class AttachedAchievement extends FlxSprite {
 
 	public function reloadAchievementImage() {
 		if(Achievements.isAchievementUnlocked(tag)) {
-						var imagePath:FlxGraphic = Paths.image('achievementgrid');
+			var imagePath:FlxGraphic = Paths.image('achievementgrid');
 			var isModIcon:Bool = false;
 
 			if (Achievements.loadedAchievements.exists(tag)) {
@@ -278,23 +280,25 @@ class AchievementObject extends FlxSpriteGroup {
 			achieveName = Achievements.loadedAchievements.get(name).name;
 			text = Achievements.loadedAchievements.get(name).description;
 		}
+
 		var achievementBG:FlxSprite = new FlxSprite(60, 50).makeGraphic(420, 120, FlxColor.BLACK);
 		achievementBG.scrollFactor.set();
 
-				var imagePath = Paths.image('achievementgrid');
+		var imagePath = Paths.image('achievementgrid');
 		var modsImage = null;
 		var isModIcon:Bool = false;
 
-		if (Achievements.loadedAchievements.exists(name)) {
+		//fucking hell bro
+		/*if (Achievements.loadedAchievements.exists(name)) {
 			isModIcon = true;
 			modsImage = Paths.image(Achievements.loadedAchievements.get(name).icon);
-		}
+		}*/
 
 		var index:Int = Achievements.getAchievementIndex(name);
 		if (isModIcon) index = 0;
 
-		trace(imagePath);
-		trace(modsImage);
+		//trace(imagePath);
+		//trace(modsImage);
 
 		var achievementIcon:FlxSprite = new FlxSprite(achievementBG.x + 10, achievementBG.y + 10).loadGraphic((isModIcon ? modsImage : imagePath), true, 150, 150);
 		achievementIcon.animation.add('icon', [index], 0, false, false);
