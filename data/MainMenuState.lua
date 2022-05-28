@@ -1,7 +1,6 @@
 controls.load()
 tools.load()
 shaders.camera()
-flxAndroidControls()
 item = 0
 
 function inRoom()
@@ -30,7 +29,6 @@ function onUpdate()
    controls.Update()
    tools.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
 
 function onPress()
