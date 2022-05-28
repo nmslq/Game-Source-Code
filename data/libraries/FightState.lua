@@ -11,6 +11,7 @@ moster.health = 50
 debug = false
 timer = 0
 intro = 0
+damage = 5
 
 function timerUpdate()
    timer = timer + 1
@@ -121,6 +122,17 @@ function blackScreen()
    black.setObjectScale(2,2)
    black.set.camera('CameraGame')
    black.y = black.y - 10
+end
+
+function addDamage()
+   killMosterMath.Update()
+   if killMoster++ then
+     damage = damage + 0.3
+   elseif killMoster== in 0.1min then
+     damage = damage - 0.5
+   elseif damage > 25 then
+     damage = 25
+   end
 end
 
 function bullet()
@@ -234,7 +246,7 @@ function shoot()
 end
 
 function hit(moster)
-   moster.health = moster.health - 15
+   moster.health = moster.health - damage
 end
 
 function hit()
