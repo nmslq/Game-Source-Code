@@ -1,11 +1,9 @@
 controls.load()
 shaders.camera()
-flxAndroidControls()
 
 function onUpdate()
    controls.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
 
 function addControls()
