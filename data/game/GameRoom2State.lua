@@ -1,7 +1,6 @@
 controls.load()
 fight.load()
 shaders.camera()
-flxAndroidControls()
 stage = 2
 level = 2
 dodgeMath = 0
@@ -14,7 +13,6 @@ function onUpdate()
    controls.Update()
    fight.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
 
 function onCreate()
