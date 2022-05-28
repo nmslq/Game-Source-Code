@@ -1,6 +1,5 @@
 controls.load()
 shaders.camera()
-flxAndroidControls()
 
 function inRoom()
    nameRoom('die')
@@ -9,7 +8,6 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
 
 function firstDie()
