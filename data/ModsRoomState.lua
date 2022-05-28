@@ -1,7 +1,6 @@
 controls.load()
 shaders.camera()
-modPathsOpen()
-flxAndroidControls()
+paths.modPaths()
 item = 0
 
 function inRoom()
@@ -17,13 +16,13 @@ end
 function onCreate()
    bg = create.sprite(0, 0, 'menu')
    setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth)
-   if modPaths.modHave then
+   if paths.modHave then
      mods = create.text(0, 0, '{modname}:{mod.math}')
      setObjectFont('mods', 'sans')
      version = create.text(-30, -30, 'version:{mod.version,mod.math}')
      setObjectFont('version', 'sans')
    end
-   if modPaths.modNotHave then
+   if paths.modNotHave then
      no = create.text(0, 0, 'there isnt have any mod!')
      setObjectFont('no', 'sans')
    end
@@ -53,5 +52,4 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
