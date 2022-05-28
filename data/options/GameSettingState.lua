@@ -1,6 +1,5 @@
 controls.load()
 shaders.camera()
-flxAndroidControls()
 
 function onUpdate()
    controls.Update()
