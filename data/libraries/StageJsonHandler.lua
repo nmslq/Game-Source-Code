@@ -37,7 +37,7 @@ function jsonHandler()
    imageJsonScrollX.defaultValue(1)
    imageJsonScrollY.defaultValue(1)
    getJsonImagesName('function onCreate() images = create.sprite("getX", "getY","imagesName")')
-   getJsonStagesName('stagesDataAddJson')
+   getJsonStagesName{stagesData.AddJson()}
    getJsonSpriteScale('function onCreate() setObjectScale("getScaleX", "getScaleY")')
    getJsonSpriteScroll('function onCreate() setScrollFactor("getScrollX", "getScrollY")')
    getJsonLevelPlayerX('fightState.SetPlayerX["getX"]')
