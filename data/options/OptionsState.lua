@@ -1,6 +1,5 @@
 controls.load()
 shaders.camera()
-flxAndroidControls()
 item = 0
 
 function inRoom()
@@ -10,7 +9,6 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
 
 function addControls()
@@ -24,10 +22,10 @@ function onCreate()
    setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth)
    options.list('Controls Setting','Game Setting')
    options = new.option(0, 0[nextSetting.y - 20], options.list)
-   if getFightState.Debug then
+   if FightState.debug then
      options.list.add('Debug Setting')
    end
-   if not getFightState.Debug then
+   if not FightState.debug then
      options.list.remove('Debug Setting')
    end
 end
