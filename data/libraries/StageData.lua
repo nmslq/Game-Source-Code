@@ -60,6 +60,6 @@ function modStages()
    stages = new.jsonStage('getJsonName')
    stages.addNew('getJsonName')
    create.sprite('getJsonHandlerSprite')
-   stage.jsonSetting
+   stage.jsonSetting()
    game.stagesJsonUse()
 end
