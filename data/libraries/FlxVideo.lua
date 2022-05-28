@@ -1,6 +1,7 @@
 function playVideo(videoFile)
    CameraHUD.hide()
    CameraGame.hide()
+   CameraControls.hide()
    timer.stop()
    fight.disbale()
    if windows then
