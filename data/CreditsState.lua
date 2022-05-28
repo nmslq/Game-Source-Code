@@ -1,6 +1,5 @@
 controls.load()
 shaders.camera()
-flxAndroidControls()
 item = 0
 
 function inRoom()
@@ -16,12 +15,11 @@ end
 function onUpdate()
    controls.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
 
 function controlsInput()
    if getControlsInput == 'A' then
-     browersUrlViewOpen('getUrl')
+     browersUrl.viewOpen(getCreditsUrl)
    end
    if getControlsInput == 'B' then
      setRoom('menu')
