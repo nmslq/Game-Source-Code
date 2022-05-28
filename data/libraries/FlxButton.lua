@@ -1,27 +1,45 @@
-function flxAndroidControls()
+function flxButton()
+   button.flxSprite(buttonSprite)
+   if windows then
+      getButton.input()
+      mouseInputGet()
+      button.inputFrame = 1
+   else
+      button.inputFrame = 0
+   end
+   if android then
+      getButton.input()
+      touchInputGet()
+      button.inputFrame = 1
+   else
+      button.inputFrame = 0
+   end
+end
+
+function flxButtonInput()
    controls.buttonInputGetTest()
    if windows then
      getMouseX = getIn(getControlsScaleX)
-     getControlsScaleX.getTest(mouseX)
+     getControlsScaleX.getTest('mouseX')
      mouseX.UpdateX()
      mouseX.getTestControlsScaleX.scaleX()
-        for mouseX in controlsInputX then
+        for (mouseX in controlsInputX) then
           buttonInput()
           inputAndroid = true
           reUpdate.mouseX()
           reUpdate.controlsInputX.base()
         end
      getMouseY = getIn(getControlsScaleY)
-     getControlsScaleX.getTest(mouseY)
+     getControlsScaleX.getTest('mouseY')
      mouseY.UpdateY()
      mouseY.getTestControlsScaleY.scaleY()
-        for mouseY in controlsInputY then
+        for (mouseY in controlsInputY) then
           buttonInput()
           inputAndroid = true
           reUpdate.mouseY()
           reUpdate.controlsInputY.base()
         end
-     getMouseXY for in controlsMaxInputXY then
+     for (getMouseXY in controlsMaxInputXY) then
        buttonInput()
        flx.buttonInput()
        flx.input = true
@@ -31,10 +49,10 @@ function flxAndroidControls()
      end
    if android then
      getAndroidTouchX = getIn(getControlsScaleX)
-     getControlsScaleX.getTest(androidTouchX)
+     getControlsScaleX.getTest('androidTouchX')
      androidTouchX.UpdateX()
      androidTouchX.getTestControlsScaleX.scaleX()
-        for androidTouchX in controlsInputX then
+        for (androidTouchX in controlsInputX) then
           buttonInput()
           inputAndroid = true
           flxActionInput()
@@ -42,17 +60,17 @@ function flxAndroidControls()
           reUpdate.controlsInputX.base()
         end
      getAndroidTouchY = getIn(getControlsScaleY)
-     getControlsScaleX.getTest(androidTouchY)
+     getControlsScaleX.getTest('androidTouchY')
      androidTouchY.UpdateY()
      androidTouchY.getTestControlsScaleY.scaleY()
-        for androidTouchY in controlsInputY then
+        for (androidTouchY in controlsInputY) then
           buttonInput()
           inputAndroid = true
           reUpdate.mouseY()
           flxActionInput()
           reUpdate.controlsInputY.base()
         end
-     getAndroidTouchXY for in controlsMaxInputXY then
+    for (getAndroidTouchXY in controlsMaxInputXY) then
        buttonInput()
        flx.buttonInput()
        flxAndroidCheck()
