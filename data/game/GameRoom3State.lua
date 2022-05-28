@@ -1,5 +1,4 @@
 controls.load()
-flxAndroidControls()
 fight.load()
 shaders.camera()
 stage = 3
@@ -14,7 +13,6 @@ function onUpdate()
    controls.Update()
    fight.Update()
    shaders.Update()
-   flxAndroidControls.Update()
 end
 
 function onCreate()
