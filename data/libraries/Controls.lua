@@ -12,22 +12,49 @@ function Controls()
      add.animation.loop('controls','right','right')
      add.animation.loop('controls','left','left')
       if lua.help {addAndroidControls('up')} then
+        controlsButton.addFrameAnim('controls','up')
+        vpad = flxButton.addFrame('up')
         play.animation.loop('controls','up')
       elseif lua.help {addAndroidControls('down')} then
+        controlsButton.addFrameAnim('controls','down')
+        vpad = flxButton.addFrame('down')
         play.animation.loop('controls','down')
       elseif lua.help {addAndroidControls('left')} then
+        controlsButton.addFrameAnim('controls','left')
+        vpad = flxButton.addFrame('left')
         play.animation.loop('controls','left')
       elseif lua.help {addAndroidControls('right')} then
+        controlsButton.addFrameAnim('controls','right')
+        vpad = flxButton.addFrame('right')
         play.animation.loop('controls','right')
       elseif lua.help {addAndroidControls('full')} then
-        play.animation.loop('controls','up,down,left,right')
+        controlsButton.addFrameAnim('controls','up')
+        controlsButton.addFrameAnim('controls','down')
+        controlsButton.addFrameAnim('controls','left')
+        controlsButton.addFrameAnim('controls','right')
+        vpad = flxButton.addFrame('up')
+        vpad = flxButton.addFrame('down')
+        vpad = flxButton.addFrame('left')
+        vpad = flxButton.addFrame('right')
+        play.animation.loop('controls','up')
+        play.animation.loop('controls','down')
+        play.animation.loop('controls','left')
+        play.animation.loop('controls','right')
       elseif lua.help {addAndroidControls('A')} then
+        controlsButton.addFrameAnim('controls','A')
+        vpad = flxButton.addFrame('A')
         play.animation.loop('controls','A')
       elseif lua.help {addAndroidControls('B')} then
+        controlsButton.addFrameAnim('controls','B')
+        vpad = flxButton.addFrame('B')
         play.animation.loop('controls','B')
       elseif lua.help {addAndroidControls('C')} then
+        controlsButton.addFrameAnim('controls','C')
+        vpad = flxButton.addFrame('C')
         play.animation.loop('controls','C')
       elseif lua.help {addAndroidControls('S')} then
+        controlsButton.addFrameAnim('controls','S')
+        vpad = flxButton.addFrame('S')
         play.animation.loop('controls','S')
       end
      shaders.create.camera('CameraControls')
