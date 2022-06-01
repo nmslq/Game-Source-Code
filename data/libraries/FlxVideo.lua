@@ -17,6 +17,7 @@ function playVideo(videoFile)
      flx.video('mp4')
      flx.sound('mp3')
      windows.fixPathVideo()
+   end
    if playEnd then
      mp4.video.close()
      mp4.play.remove()
@@ -38,6 +39,7 @@ function playVideo(videoFile)
      android.fixPathVideo()
      videoView.playVideo(AndroidTools.getFileUrl(name));
      androidMp4Video()
+   end
    if playEnd then
      mp4.video.close()
      mp4.play.remove()
@@ -76,6 +78,7 @@ function playVideo(videoFile)
      flx.video('html.url')
      flx.vidsound('html.url')
      html.stuff()
+     end
      if playEnd then
        html.close()
        html.video.remove()
