@@ -14,13 +14,13 @@
 
         <android.setUpTools="sdk" android.setUpTools="ndk" android.setUpTools="jdk" if "android"/>
 
-        <window.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
+        <window.name="game" version="Normal Build 0.8" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
 
-        <android.app.name="game" version="Normal Build 0.6.3(Pre)" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" if "android"/>
+        <android.app.name="game" version="Normal Build 0.8" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" if "android"/>
 
-        <liunx.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "liunx"/>
+        <liunx.name="game" version="Normal Build 0.8" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "liunx"/>
 
-        <mac.name="game" version="Normal Build 0.6.3(Pre)" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "mac"/>
+        <mac.name="game" version="Normal Build 0.8" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "mac"/>
 
         <windows.packages="main.yml" if "windows/>
 
@@ -32,7 +32,7 @@
 
         <haxelib.install="extension-androidtools" haxelib.url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
 
-        <androidPathToolsCodeInstall="androidPaths-Tools" androidPathTools.url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
+        <androidPathsTppoolsInstall="androidPaths-Tools" PathTools.url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
 
         <haxelib.install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-webview" if "liunx"/>
 
@@ -46,15 +46,15 @@
 
         <mod.folderGetPath.exites/>
 
-        <{readme.md}.FilePathDelete/>
+        <FilePathDelete="readme.md"/>
 
-        <android.spawn.packages="sdcard/android/data/com.game.cxy/mods" if android/>
+        <android.create.packages="sdcard/android/data/com.game.cxy/mods" if android/>
 
-        <android.spawn.files="sdcard/android/data/com.game.cxy/mods/modslist.txt" if android/>
+        <android.create.files="sdcard/android/data/com.game.cxy/mods/modslist.txt" if android/>
 
-        <android.spawn.folder="null"/>
+        <android.create.folder="null"/>
 
-        <folder.spawn.exites="null"/>
+        <folder.create.exites="null"/>
 
-        <assets.spawn.getPathFiles="files.json"/>
+        <assets.create.getPathFiles="files.json"/>
 </project>
