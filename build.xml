@@ -1,60 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-        <build.list={"android,linux,mac,windows"}/>
+        <build list={"android,linux,mac,windows"}/>
 
-        <android.build="apk" if "android"/>
+        <android build="apk" if "android"/>
 
-        <android.buildManifest="xml" if "android"/>
+        <androidBuildManifest="xml" if "android"/>
 
-        <windows.build="zip" if "windows"/>
+        <windows build="zip" if "windows"/>
 
-        <mac.build="zip" if "mac"/>
+        <mac build="zip" if "mac"/>
 
-        <liunx.build="zip" if "liunx"/>
+        <liunx build="zip" if "liunx"/>
 
-        <android.setUpTools="sdk" android.setUpTools="ndk" android.setUpTools="jdk" if "android"/>
+        <setUpTools="sdk" setUpTools="ndk" setUpTools="jdk" if "android"/>
 
-        <window.name="game" version="Normal Build 0.8.0.1" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
+        <windows name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
 
-        <android.app.name="game" version="Normal Build 0.8.0.1" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" if "android"/>
+        <app name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" if "android"/>
 
-        <liunx.name="game" version="Normal Build 0.8.0.1" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "liunx"/>
+        <liunx name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "liunx"/>
 
-        <mac.name="game" version="Normal Build 0.8.0.1" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "mac"/>
+        <mac name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "mac"/>
 
-        <windows.packages="main.yml" if "windows/>
+        <build packages="main.yml">
 
-        <android.packages="main.yml" if "android"/>
+        <haxelib install="extension-androidtools" haxelib.url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
 
-        <liunx.packages="main.yml" if "liunx"/>
+        <pathsToolsInstall="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
 
-        <mac.packages="main.yml" if "mac"/>
+        <haxelib install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-webview" if "liunx"/>
 
-        <haxelib.install="extension-androidtools" haxelib.url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
+        <haxelib install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-webview" if "mac"/>
 
-        <androidPathsToolsInstall="androidPaths-Tools" PathTools.url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
+        <haxelib install="extension-videoview" haxelib.url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
 
-        <haxelib.install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-webview" if "liunx"/>
-
-        <haxelib.install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-webview" if "mac"/>
-
-        <haxelib.install="extension-videoview" haxelib.url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
-
-        <asstes.path={"data,images,sounds,source,fonts"}/>
-
-        <mod.fileGetPath.exites/>
-
-        <mod.folderGetPath.exites/>
+        <asstes path={"data,images,sounds,source,fonts"}/>
 
         <FilePathDelete="readme.md"/>
 
-        <android.create.packages="sdcard/android/data/com.game.cxy/mods" if android/>
+        <android.createFolder="sdcard/android/data/com.game.cxy/mods" if "android"/>
 
-        <android.create.files="sdcard/android/data/com.game.cxy/mods/modslist.txt" if android/>
+        <android.createFile="sdcard/android/data/com.game.cxy/mods/modslist.txt" if "android"/>
 
-        <android.create.folder="null"/>
+        <android.createFolder="null" if "android"/>
 
-        <folder.create.exites="null"/>
+        <folder.exites="null" if "android"/>
 
-        <assets.create.getPathFiles="files.json"/>
+        <assets.getPathFiles="files.json"/>
 </project>
