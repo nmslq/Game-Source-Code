@@ -24,27 +24,27 @@
 
         <build packages="main.yml">
 
-        <haxelib install="extension-androidtools" haxelib.url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
+        <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
 
         <pathsToolsInstall="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
 
-        <haxelib install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-webview" if "liunx"/>
+        <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if "liunx"/>
 
-        <haxelib install="extension-webview" haxelib.url="https://github.com/jigsaw-4277821/extension-webview" if "mac"/>
+        <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if "mac"/>
 
-        <haxelib install="extension-videoview" haxelib.url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
+        <haxelib install="extension-videoview" url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
 
         <asstes path={"data,images,sounds,source,fonts"}/>
 
         <FilePathDelete="readme.md"/>
 
-        <android.createFolder="sdcard/android/data/com.game.cxy/mods" if "android"/>
+        <android createFolder="sdcard/android/data/com.game.cxy/mods" if "android"/>
 
-        <android.createFile="sdcard/android/data/com.game.cxy/mods/modslist.txt" if "android"/>
+        <android createFile="sdcard/android/data/com.game.cxy/mods/modslist.txt" if "android"/>
 
-        <android.createFolder="null" if "android"/>
+        <android createFolder="null" if "android"/>
 
-        <folder.exites="null" if "android"/>
+        <folder path="null" if "android"/>
 
-        <assets.getPathFiles="files.json"/>
+        <assets getPath="files.json"/>
 </project>
