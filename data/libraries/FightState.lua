@@ -83,9 +83,9 @@ function onUpdate()
    end
 end
 
-function saw(x,y)
+function saw(x:Float, y:Float)
    x = getLuaCodeX()
-   Y = getLuaCodeY()
+   y = getLuaCodeY()
    saw = create.animatedSprite(x,y,'stages/saw')
    saw.setScrollFactor(1,1)
    add.animation.loop('saw','saw','saw')
@@ -169,7 +169,7 @@ function intro()
    intro.mathRandom(0, 4)
    intro = create.animatedSprite(0, 0, 'ready')
    add.animtion('intro', 'intro','Ready? WALLOP!')
-   playSound('intro/'intro)
+   playSound('intro/' + intro)
 end
 
 function knock()
