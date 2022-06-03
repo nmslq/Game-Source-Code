@@ -59,13 +59,13 @@ function shaders()
      cameraFlxG.removeCameraList('cameraList')
      FlxG.cameraListRemove()
    elseif lua.callBack {cameraName.hide()}
-     cameraName = getLuaCameraName()
+     cameraName = getLua(cameraName)
      cameraName.alpha = cameraName.alpha = 0
      cameraName.hide = true
      getCameraSprite.hide()
      getCameraText.hide()
    elseif lua.callBack {cameraName.unhide()}
-     cameraName = getLuaCodeCameraName()
+     cameraName = getLuaCode(cameraName)
      cameraName.alpha = cameraName.alpha = 1
      cameraName.hide = true
      getCameraSprite.hide()
