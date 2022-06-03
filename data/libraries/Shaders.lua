@@ -19,6 +19,7 @@ function shaders()
      camera.rotation(index)
    elseif lua.callBack {setObjectCamera(spr:String, camera:String)} then
      camera = getLuaCode(camera)
+     spr = getLuaCode(spr)
      camera.set.flx()
      camera.set.FlxG()
      flx.camera('CameraHud')
