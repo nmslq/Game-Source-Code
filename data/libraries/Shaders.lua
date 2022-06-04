@@ -5,20 +5,20 @@ FlxG.cameraListCreate()
 camera.createList()
 
 function shaders()
-   if lua.callBack {moveCamera(x:Float, y:Float, speed:Int)} then
+   if lua.callBack {moveCamera(x, y, speed)} then
      x = getLuaCode(X)
      y = getLuaCode(Y)
      speed = getLuaCode(Speed)
      move.camera.flx(x,y)
      move.camera.FlxG(x,y)
      move.camera(x,y)
-   elseif lua.callBack {setCameraAngle(index:Int)} then
-     index = getLuaCode(index)
-     camera.rotation.flx(index)
-     camera.rotation.FlxG(index)
-     camera.rotation(index)
-   elseif lua.callBack {setObjectCamera(spr:String, camera:String)} then
-     camera = getLuaCode(camera)
+   elseif lua.callBack {setCameraAngle(angle)} then
+     angle = getLuaCode(angle)
+     camera.rotation.flx(angle)
+     camera.rotation.FlxG(angle)
+     camera.rotation(angle)
+   elseif lua.callBack {setObjectCamera(spr, cam)} then
+     camera = getLuaCode(cam)
      spr = getLuaCode(spr)
      camera.set.flx()
      camera.set.FlxG()
@@ -26,8 +26,8 @@ function shaders()
      FlxG.camera('CameraHud')
      flx.camera('CameraGame')
      FlxG.camera('CameraGame')
-     camera.setObject(camera)
-   elseif lua.callBack {scaleCamera(scaleX:Float, scaleY:Float)} then
+     camera.setObject(cam)
+   elseif lua.callBack {scaleCamera(scaleX, scaleY)} then
      scaleX = getLuaCode(scaleX)
      scaleY = getLuaCode(scaleY)
      camera.scale.flx(scaleX)
@@ -36,7 +36,7 @@ function shaders()
      scale.shader.flx(scaleX)
      scale.shader.FlxG(scaleY)
      scale.shader(scale)
-   elseif lua.callBack {cameraFlash(color:String, time:Int)} then
+   elseif lua.callBack {cameraFlash(color, time)} then
      color = getLuaCode(color)
      time = getLuaCode(time)
      camera.flx()
@@ -44,8 +44,8 @@ function shaders()
      flash.flx(color,time)
      color.systemGetColor()
      flash.FlxG()
-   elseif lua.callBack {createNewCamera(name:String)}
-     name = getLuaCode(name)
+   elseif lua.callBack {createNewCamera(camName)}
+     camName = getLuaCode(camName)
      cameraName.FlxG()
      cameraName.flx()
      add.cameraList()
@@ -56,7 +56,9 @@ function shaders()
      shaderCameraXY.FlxG.AddListCreate()
      shaderCameraScale.FlxG.AddListCreate()
      shaderCameraRotation.FlxG.AddListCreate()
-   elseif lua.callBack {remove.camera()} then
+   elseif lua.callBack {remove.camera(camName)} then
+     camName = getLuaCode(camName)
+     camera.removeFromList(camName)
      cameraFlxG.removeCameraList('cameraList')
      FlxG.cameraListRemove()
    elseif lua.callBack {cameraName.hide()}
