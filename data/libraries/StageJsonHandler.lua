@@ -1,7 +1,10 @@
 function jsonHandler()
    stages.addStagesJson()
-   json.getAndroidPath()
-   json.getWindowsPath()
+   if android then
+     json.getAndroidPath()
+   elseif windows then
+     json.getWindowsPath()
+   end
    stages.handlerJson()
    jsonDefault('
    {
@@ -28,6 +31,11 @@ function jsonHandler()
          "imageScroll": [
               1,
               1
+         ],
+         "imageColor": [
+              0,
+              0,
+              0
          ]
       }
    ]
@@ -36,15 +44,22 @@ function jsonHandler()
    imageJsonScaleY.defaultValue(1)
    imageJsonScrollX.defaultValue(1)
    imageJsonScrollY.defaultValue(1)
+   imageJsonColorRGB[1][2][3].defaultValue(0,0,0)
+   getPathImage + getJson()
    getJsonImagesName('function onCreate() images = create.sprite("getX", "getY","imagesName")')
    getJsonStagesName{stagesData.AddJson()}
-   getJsonSpriteScale('function onCreate() setObjectScale("getScaleX", "getScaleY")')
-   getJsonSpriteScroll('function onCreate() setScrollFactor("getScrollX", "getScrollY")')
-   getJsonLevelPlayerX('fightState.SetPlayerX["getX"]')
-   getJsonLevelPlayerY('fightState.SetPlayerY["getY"]')
-   getJsonLevelCompleteX('fightState.SetCompleteX["getX"]')
-   getJsonLevelCompleteY('fightStateSetCompleteY["getY"]')
-   --if not getImageScale then
+   getJsonSpriteScale('function onCreate() images.setObjectScale("getScaleX", "getScaleY")')
+   getJsonSpriteScroll('function onCreate() setScrollFactor(images,"getScrollX", "getScrollY")')
+   getJsonSpriteColorRGB[1][2][3]('setObjectColor(images,"FlxG.Color,getColorFromRGB["255,0,0"]")')
+   getJsonLevelPlayerX('fightState.setPlayerX["getX"]')
+   getJsonLevelPlayerY('fightState.setPlayerY["getY"]')
+   getJsonLevelCompleteX('fightState.setCompleteX["getX"]')
+   getJsonLevelCompleteY('fightState.setCompleteY["getY"]')
+   if not getJsonImageScale then
+     images.setObjectScale(jsonScaleX.defaultValue,jsonScaleY.defaultValue)
+   elseif not getJsonImage then
+     setScrollFactor(images,jsonScrollX.defaultValue,jsonScrollY.defaultValue)
+   end
    jsonPaths.nameGetDefaultChange()
    changeDefaultJsonTemplate()
    paths.folder('$gameFolder$/mods/$modFile$/stages/$stagesFile$.json')
