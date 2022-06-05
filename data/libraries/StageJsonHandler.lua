@@ -50,7 +50,7 @@ function jsonHandler()
    getJsonStagesName{stagesData.AddJson()}
    getJsonSpriteScale('function onCreate() images.setObjectScale("getScaleX", "getScaleY")')
    getJsonSpriteScroll('function onCreate() setScrollFactor(images,"getScrollX", "getScrollY")')
-   getJsonSpriteColorRGB[1][2][3]('setObjectColor(images,'FlxG.Color,getColorFromRGB["255,0,0"]')')
+   getJsonSpriteColorRGB[1][2][3]('setObjectColor(images,"FlxG.Color,getColorFromRGB["255,0,0"]")')
    getJsonLevelPlayerX('fightState.setPlayerX["getX"]')
    getJsonLevelPlayerY('fightState.setPlayerY["getY"]')
    getJsonLevelCompleteX('fightState.setCompleteX["getX"]')
