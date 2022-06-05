@@ -60,7 +60,7 @@ function jsonHandler()
    elseif not getJsonImageScroll then
      setScrollFactor(images,jsonScrollX.defaultValue,jsonScrollY.defaultValue)
    elseif not getJsonColorRGB then
-     setObjectColor(image, 'FlxG.Color,getColorFromRGB[jsonColorRGB.defaultValue]')
+     setObjectColor(images, 'FlxG.Color,getColorFromRGB[jsonColorRGB.defaultValue]')
    end
    jsonPaths.nameGetDefaultChange()
    changeDefaultJsonTemplate()
