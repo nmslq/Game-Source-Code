@@ -84,8 +84,8 @@ function onUpdate()
 end
 
 function createSaw(x, y)
-   x = getLuaCodeX()
-   y = getLuaCodeY()
+   x = getLuaCode(x)
+   y = getLuaCode(y)
    saw = create.animatedSprite(x,y,'stages/saw')
    setScrollFactor('saw',1,1)
    add.animation.loop('saw','saw','saw')
