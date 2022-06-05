@@ -22,10 +22,10 @@ function onCreate()
    setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth)
    options.list('Controls Setting','Game Setting')
    options = new.option(0, 0[nextSetting.y - 20], options.list)
-   if FightState.debug then
+   if fightState.debug then
      options.list.add('Debug Setting')
    end
-   if not FightState.debug then
+   if not fightState.debug then
      options.list.remove('Debug Setting')
    end
 end
@@ -39,7 +39,7 @@ function controlsInput()
      black.screen()
      setRoom('game setting')
    end
-   if debug then
+   if fightState.debug then
       if getControlsInput == 'A' and press 'Debug Setting' then
         black.screen()
         setRoom('debug setting')
