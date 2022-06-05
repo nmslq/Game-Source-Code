@@ -4,7 +4,7 @@ function tools()
    flx.path.files()
    windows.reload()
    android.reload()
-   if lua.help {saveFiles('fileName,text')} then
+   if lua.callBack {saveFiles('fileName,text')} then
       if android then
         fileName = getLuaCodeFileName()
         text = getLuaCodeText()
@@ -29,7 +29,7 @@ function tools()
         change.windows.files()
         edit.files('fileName','text')
       end
-   elseif lua.help {deleteFiles('fileName')} then
+   elseif lua.callBack {deleteFiles('fileName')} then
       if android then
         fileName = getLuaCodeFileName()
         delete.android.systemFiles('files')
@@ -43,7 +43,7 @@ function tools()
         windows.files.deleteExites('files')
         windows.delete.filesExites('files')
       end
-   elseif lua.help {openWindow('tag,windowX,windowY,windowsScaleX,windowsScaleY,title,text,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.callBack {openWindow('tag,windowX,windowY,windowsScaleX,windowsScaleY,title,text,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if windows then
         windows.system.openWindowCode('tag,x,y,scaleX,scaleY,window')
         windows.system.flx('window')
@@ -66,7 +66,7 @@ function tools()
         windows.FlxG.createButton('x,y,math,button')
         windows.buttonFlxG.press('pressEvents')
       end
-   elseif lua.help {openApplicationAlert('tag,applicationAlertX,applicationAlertY,applicationAlertScaleX,applicationAlertScaleY,title,text,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
+   elseif lua.callBack {openApplicationAlert('tag,applicationAlertX,applicationAlertY,applicationAlertScaleX,applicationAlertScaleY,title,text,buttonX,buttonY,buttonMath,buttonText,pressEvents')} then
       if android then
         android.system.openApplicationAlert('tag,x,y,scaleX,scaleY,applicationAlert')
         android.system.flx('applicationAlert')
@@ -89,33 +89,33 @@ function tools()
         applicationAlert.FlxG.createButton('x,y,math,button')
         applicationAlert.buttonFlxG.press('pressEvents')
       end
-   elseif lua.help {windowClose('objectWindow')} then
+   elseif lua.callBack {windowClose('objectWindow')} then
       if windows then
         objectWindow = getLuaCodeObjectWindow()
         windows.system.close('lime')
         windows.system.flxClose('window')
         windows.system.FlxG('window')
       end
-   elseif lua.help {applicationAlertClose('objectApplicationAlert') then
+   elseif lua.callBack {applicationAlertClose('objectApplicationAlert') then
       if android then
         objectApplicationAlert = getLuaCodeObjectApplicationAlert()
         android.system.close('lime')
         android.system.flxClose('applicationAlert')
         android.system.FlxG('applicationAlert')
       end
-   elseif lua.help {exitGameWindow()} then
+   elseif lua.callBack {exitGameWindow()} then
       if windows then
         windows.close.game()
         windows.system.close()
         window.exit.system()
       end
-   elseif lua.help {exitGameApp()} then
+   elseif lua.callBack {exitGameApp()} then
       if android then
         android.app.close()
         android.app.system()
         android.exit.system()
       end
-   elseif lua.help {window.size('width,height,speed')} then
+   elseif lua.callBack {window.size('width,height,speed')} then
       if windows then
         windows.system.flx('window')
         winows.system.FlxG('window')
