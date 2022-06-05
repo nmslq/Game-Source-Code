@@ -44,7 +44,7 @@ function jsonHandler()
    imageJsonScaleY.defaultValue(1)
    imageJsonScrollX.defaultValue(1)
    imageJsonScrollY.defaultValue(1)
-   imageJsonColorRGB[1][2][3].defaultValue(0,0,0)
+   imageJsonColorRGB[1][2][3].defaultValue(nil,nil,nil)
    getPathImage + getJson()
    getJsonImagesName('function onCreate() images = create.sprite("getX", "getY","imagesName")')
    getJsonStagesName{stagesData.AddJson()}
@@ -60,7 +60,7 @@ function jsonHandler()
    elseif not getJsonImageScroll then
      setScrollFactor(images,jsonScrollX.defaultValue,jsonScrollY.defaultValue)
    elseif not getJsonColorRGB then
-     --null
+     setObjectColor(image, 'FlxG.Color,getColorFromRGB[jsonColorRGB.defaultValue]')
    end
    jsonPaths.nameGetDefaultChange()
    changeDefaultJsonTemplate()
