@@ -140,3 +140,12 @@ function onUpdate()
     paths.Update()
     modPaths.Update()
 end
+
+function modConfig()
+   config = configMod()
+   mod.getPath($keyMod$)
+   config.zipPath($gameFolor$ + '/' + 'mod' + '/' + $keyMod$ + $keyLibs$)
+   mod.previewConfig()
+   modSystem.configClass('mod' + '/' + folderClass)
+   classMod.keyConfig()
+end
