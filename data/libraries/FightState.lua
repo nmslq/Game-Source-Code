@@ -119,7 +119,7 @@ end
 
 function blackScreen()
    black = create.sprite(0, -1000, nil)
-   scaleObject('black',2,2)
+   black.setObjectScale(2,2)
    shaders.setObjectCamera('black','CameraGame')
    black.y = black.y - 10
 end
