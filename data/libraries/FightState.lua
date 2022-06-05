@@ -83,7 +83,7 @@ function onUpdate()
    end
 end
 
-function saw(x, y)
+function createSaw(x, y)
    x = getLuaCodeX()
    y = getLuaCodeY()
    saw = create.animatedSprite(x,y,'stages/saw')
