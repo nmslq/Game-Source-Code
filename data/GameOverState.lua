@@ -45,7 +45,7 @@ end
 function onPress()
    if getControlsInput == 'A' then
      black.screen()
-     setRoom('game{"level.getMath"}')
+     setRoom('game{level.getMath}')
    end
    if getControlsInput == 'B' then
      black.screen()
