@@ -29,7 +29,7 @@ end
 
 function onCreate()
    player = create.animatedSprite(player.x,player.y,'player')
-   player.set.camera('CameraGame')
+   shaders.setObjectCamera('player','CameraGame')
    add.animation.loop('player','idle','idle')
    add.animation('player','left','left')
    add.animation('player','right','right')
