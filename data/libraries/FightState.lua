@@ -47,15 +47,15 @@ function move()
    if getControlsInput == 'left' then
      player.moveTo(playerX - player.moveSpeed,playerY)
      play.animate('player','left')
-     shaders.move.camera(player.x,player.y)
+     shaders.moveCamera(player.x,player.y,0.5)
    elseif getControlsInput == 'right' then
      player.moveTo(playerX + player.moveSpeed,playerY)
      play.animate('player','right')
-     shaders.move.camera(player.x,player.y)
+     shaders.moveCamera(player.x,player.y,0.5)
    elseif getControlsInput == 'up' then
      player.moveTo(playerX,playerY + 5)
      play.animate('player','jump')
-     shaders.move.camera(player.x,player.y)
+     shaders.moveCamera(player.x,player.y,0.5)
    elseif noMove then
      play.animation.loop('player','idle')
    end
@@ -78,19 +78,19 @@ function onUpdate()
    if playerHit.saw then
      dead()
    end
-   if getCurAnim.finished == 'intro' then
+   if getSpriteTag == 'intro' and getCurAnim.finished == 'intro' then
      intro.removeSprite()
    end
 end
 
-function saw(x:Float, y:Float)
+function saw(x, y)
    x = getLuaCodeX()
    y = getLuaCodeY()
    saw = create.animatedSprite(x,y,'stages/saw')
-   saw.setScrollFactor(1,1)
+   setScrollFactor('saw',1,1)
    add.animation.loop('saw','saw','saw')
    play.animation.loop('saw','saw')
-   saw.set.camera('CameraGame')
+   shaders.setObjectCamera('saw','CameraGame')
 end
 
 function debug()
@@ -98,8 +98,8 @@ function debug()
      debug = true
      debug = create.text(-1000, -1000, 'DEBUG')
      setObjectFont('debug', 'vcr')
-     setObjectColor('debug', 'FlxG.Red["255,0,0"]')
-     debug.set.camera('CameraHud')
+     setObjectColor('debug', 'FlxG.Red,getColorFromRGB["255,0,0"]')
+     shaders.setObjectCamera('debug','CameraHud')
      health = max.health
    end
    if debug == true and FlxG.inputKeyboard 'D' == then
@@ -119,8 +119,8 @@ end
 
 function blackScreen()
    black = create.sprite(0, -1000, nil)
-   black.setObjectScale(2,2)
-   black.set.camera('CameraGame')
+   scaleObject('black',2,2)
+   shaders.setObjectCamera('black','CameraGame')
    black.y = black.y - 10
 end
 
@@ -139,12 +139,12 @@ function bullet()
    bullet = create.animatedSprite(bullet.x, bullet.y, 'bullet')
    add.animation.loop('bullet','bullet','bullet')
    bullet.setColorVar(nil)
-   bullet.set.camera('CameraGame')
+   shaders.setObjectCamera('bullet','CameraGame')
    play.animate.loop('bullet','bullet')
    redbullet = create.redbullet.animatedSprite(redbullet.x, redbullet.y, 'redbullet')
    add.animation.loop('redbullet','redbullet','redbullet')
    redbullet.setColorVar('red')
-   bullet.set.camera('CameraGame')
+   shaders.setObjectCamera('redbullet','CameraGame')
    play.animate.loop('redbullet','redbullet')
    if bulletHit.player then
      hit()
@@ -156,7 +156,7 @@ function moster()
    add.animtion.loop('moster','idle','idle')
    add.animation('moster','left','left')
    add.animation('moster','right','right')
-   moster.set.camera('CameraGame')
+   shaders.setObjectCamera('moster','CameraGame')
    if mosterHit.player then
      hit()
    end
@@ -231,7 +231,7 @@ function shoot()
    timerUpdate()
    play.animation('player','shoot')
    shbu = create.sprite(player.getGunX,player.getGunY,'shotb')
-   shbu.set.camera('CameraGame')
+   shaders.setObjectCamera('shbu','CameraGame')
    play.sound('shoot')
    shbu.x = shbu.x + 3
    if shbuHit.moster then
