@@ -19,7 +19,7 @@ end
 
 function controlsInput()
    if getControlsInput == 'A' then
-     browersUrl.viewOpen(getCreditsUrl)
+     browersUrl.viewOpen(creditsUrl)
    end
    if getControlsInput == 'B' then
      setRoom('menu')
