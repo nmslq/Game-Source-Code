@@ -58,7 +58,7 @@ function Controls()
         play.animation.loop('controls','S')
       end
      shaders.createNewCamera('CameraControls')
-     shaders.setObjectCamera('CameraControls')
+     shaders.setObjectCamera('controls','CameraControls')
      testAndroidControls()
      flxAndroidControls()
      flxAndroidControlsInput('check')
