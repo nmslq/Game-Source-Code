@@ -37,19 +37,19 @@ function setting()
      getSetMaxFPS = FlxG.changeSystemGameAppFPS('android')
    end
    if difficulty == 'easy' then
-     fight.setDifficulty('easy')
+     fightState.setDifficulty('easy')
    end
    if difficulty == 'normal' then
-     fight.setDifficulty('normal')
+     fightState.setDifficulty('normal')
    end
    if difficulty == 'hard' then
-     fight.setDifficulty('hard')
+     fightState.setDifficulty('hard')
    end
    if difficulty == 'hell' then
-     fight.setDifficulty('hell')
+     fightState.setDifficulty('hell')
    end
    if difficulty == 'nightmare' then
-     fight.setDifficulty('nightmare')
+     fightState.setDifficulty('nightmare')
    end
    if window.size == math.setting then
      WindowTools.windowSize('getOptionHeight','getOptionWidth',true)
