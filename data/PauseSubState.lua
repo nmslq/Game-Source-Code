@@ -57,7 +57,7 @@ end
 
 function resetLevel()
    black.screen()
-   setRoom('game{level.getMath})
+   setRoomBackSubState('game{level.getMath}')
 end
 
 function exit()
