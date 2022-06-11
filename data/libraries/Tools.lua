@@ -19,7 +19,7 @@ function tools()
       end
       if windows then
         fileName = getLuaCode('fileName')
-        text = getLuaCode(text)
+        text = getLuaCode('text')
         windows.files.save('files')
         windows.files.exites('files')
         windows.create.filesExites('files')
