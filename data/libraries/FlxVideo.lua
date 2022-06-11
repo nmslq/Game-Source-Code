@@ -78,7 +78,7 @@ function playVideo(videoFile)
      flx.video('html.url')
      flx.vidsound('html.url')
      html.stuff()
-     end
+   end
      if playEnd then
        html.close()
        html.video.remove()
