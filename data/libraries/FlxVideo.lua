@@ -1,7 +1,7 @@
 function playVideo(videoFile)
-   CameraHUD.hide()
-   CameraGame.hide()
-   CameraControls.hide()
+   cameraVisible('cameraHUD')
+   cameraVisible('cameraGame')
+   cameraVisible('cameraControls')
    timer.stop()
    fight.disbale()
    if windows then
@@ -100,11 +100,12 @@ function htmlStuff()
    webView.playVideo(MacTools.getFileUrl(name), true);
    webView.playVideo(LiunxTools.getFileUrl(name), true);
    if playEnd then
-     android.flxHtmlClear()
+     liunx.flxHtmlClear()
+     mac.flxHtmlClear()
      html.color.remove()
      flx.videoHtmlEnd()
      html.bg.remove()
-     endVideoHtmlAndroid()
+     endVideoHtmlBuild()
      webView.fixEndVideo()
      webHtml.FlxG.endVideo()
      webView.endVideo(MacTools.getFileUrl(name), true);
@@ -119,5 +120,5 @@ function androidMp4Video()
    videoView.FlxG.playVideo('file')
    android.videoWidth(1270)
    android.videoHeight(720)
-   androidVideoBG.colorSet(FlxG.black[0,0,0])
+   androidVideoBG.colorSet('getColorFromRGB[0,0,0]')
 end
