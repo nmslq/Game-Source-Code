@@ -31,7 +31,7 @@ function controlsInput()
 end
 
 function onCreate()
-   player = create.animatedSprite(player.x,player.y,'player')
+   player = createAnimatedSprite(player.x,player.y,'player')
    setObjectCamera('player','CameraGame')
    add.animation.loop('player','idle','idle')
    add.animation('player','left','left')
@@ -89,7 +89,7 @@ end
 function createSaw(x, y)
    x = getLuaCode('x')
    y = getLuaCode('y')
-   saw = create.animatedSprite(x,y,'stages/saw')
+   saw = createAnimatedSprite(x,y,'stages/saw')
    setScrollFactor('saw',1,1)
    add.animation.loop('saw','saw','saw')
    play.animation.loop('saw','saw')
@@ -121,7 +121,7 @@ function complete()
 end
 
 function blackScreen()
-   black = create.sprite(0, -1000, nil)
+   black = createSprite(0, -1000, nil)
    black.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
    setObjectCamera('black','CameraGame')
    black.y = black.y - 10
@@ -139,12 +139,12 @@ function addDamage()
 end
 
 function bullet()
-   bullet = create.animatedSprite(bullet.x, bullet.y, 'bullet')
+   bullet = createAnimatedSprite(bullet.x, bullet.y, 'bullet')
    add.animation.loop('bullet','bullet','bullet')
    bullet.setColorVar(nil)
    setObjectCamera('bullet','CameraGame')
    play.animate.loop('bullet','bullet')
-   redbullet = create.animatedSprite(redbullet.x, redbullet.y, 'redbullet')
+   redbullet = createAnimatedSprite(redbullet.x, redbullet.y, 'redbullet')
    add.animation.loop('redbullet','redbullet','redbullet')
    redbullet.setColorVar('red')
    setObjectCamera('redbullet','CameraGame')
@@ -155,7 +155,7 @@ function bullet()
 end
 
 function moster()
-   moster = create.animatedSprite(moster.x, moster.y, 'moster')
+   moster = createAnimatedSprite(moster.x, moster.y, 'moster')
    add.animtion.loop('moster','idle','idle')
    add.animation('moster','left','left')
    add.animation('moster','right','right')
@@ -170,13 +170,13 @@ end
 
 function intro()
    intro.mathRandom(0, 4)
-   intro = create.animatedSprite(0, 0, 'ready')
+   intro = createAnimatedSprite(0, 0, 'ready')
    add.animtion('intro', 'intro','Ready? WALLOP!')
    playSound('intro/' + intro)
 end
 
 function knock()
-   knock = create.animatedSprite(0, 0, 'konck')
+   knock = createAnimatedSprite(0, 0, 'konck')
    add.animtion('knock', 'knock','A KNOCKOUT!')
    playSound('intro/knock')
 end
@@ -233,7 +233,7 @@ end
 function shoot()
    timerUpdate()
    play.animation('player','shoot')
-   shbu = create.sprite(player.getGunX,player.getGunY,'shotb')
+   shbu = createSprite(player.getGunX,player.getGunY,'shotb')
    setObjectCamera('shbu','CameraGame')
    play.sound('shoot')
    shbu.x = shbu.x + 3

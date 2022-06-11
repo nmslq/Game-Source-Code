@@ -20,6 +20,9 @@ function jsonHandler()
      "images": [
       {
         "imageName": "name",
+        "isAnimateSprite" : false,
+        "animtion" : nil,
+        "animtionLoop" : false,
         "imageXY": [
               0,
               0
@@ -45,8 +48,14 @@ function jsonHandler()
    imageJsonScrollX.defaultValue(1)
    imageJsonScrollY.defaultValue(1)
    imageJsonColorRGB[1][2][3].defaultValue(nil,nil,nil)
+   imageJsonIsAnimateSprite.defaultValue(false)
+   imageJsonAnimation.defaultValue(nil)
+   imageJsonAnimationLoop.defaultValue(false)
    getPathImage + getJson()
-   getJsonImagesName('function onCreate() images = create.sprite("getX", "getY","imagesName")')
+   getJsonImagesName('function onCreate() images = createSprite("getX", "getY","imagesName")')
+   getJsonImagesIsAnimateSprite('function onCreate() images = createAnimateSprite("getX", "getY","imagesName")')
+   getJsonImagesAnimation('function onCreate() add.animation("image", "animation")')
+   getJsonImagesAnimationLoop('function onCreate() add.animation.loop("image", "animation")')
    getJsonStagesName{stagesData.AddJson()}
    getJsonSpriteScale('function onCreate() images.setObjectScale("getScaleX", "getScaleY")')
    getJsonSpriteScroll('function onCreate() setScrollFactor(images,"getScrollX", "getScrollY")')

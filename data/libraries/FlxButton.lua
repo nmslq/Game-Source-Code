@@ -1,5 +1,5 @@
 function flxButton()
-   button.create.animatedSprite(buttonSprite,x,y)
+   button = createAnimatedSprite(buttonSprite,x,y)
    buttonInput.addFrame(1,2)
    if windows then
       getButton.input()
