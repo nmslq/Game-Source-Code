@@ -71,7 +71,7 @@ function shaders()
      cameraName = getLuaCode(cameraName)
      cameraName.alpha = cameraName.alpha = 1
      cameraName.unhide = true
-     getCameraSprite.hide()
-     getCameraText.hide()
+     getCameraSprite.unhide()
+     getCameraText.unhide()
    end
 end
