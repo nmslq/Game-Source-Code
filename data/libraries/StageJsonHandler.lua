@@ -42,7 +42,7 @@ function jsonHandler()
          ]
       }
    ]
-}'
+}')
    imageJsonScaleX.defaultValue(1)
    imageJsonScaleY.defaultValue(1)
    imageJsonScrollX.defaultValue(1)
