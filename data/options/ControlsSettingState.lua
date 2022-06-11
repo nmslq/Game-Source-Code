@@ -32,7 +32,7 @@ function setting()
    controls.B.option('keyboard.change')
    controls.C.option('keyboard.change')
    controls.S.option('keyboard.change')
-   controlsOptionColor('FlxG.Black,getColorFromRGB["255,255,255"]')
+   controlsOptionColor('FlxG.Black','getColorFromRGB[255,255,255]')
 end
 
 function controlsInput()
