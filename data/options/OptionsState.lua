@@ -45,8 +45,11 @@ function controlsInput()
         setRoom('debug setting')
       end
    end
-   if getControlsInput == 'B' then
+   if getControlsInput == 'B' and PauseSubState.toFight = false then
      setRoom('menu')
+   end
+   if getControlsInput == 'B' and PauseSubState.toFight = true then
+     setRoom('game{level.getMath}')
    end
    if getControlsInput == 'up' then
      change.option('up')
