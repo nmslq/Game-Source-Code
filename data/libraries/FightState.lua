@@ -99,7 +99,7 @@ end
 function debug()
    if debug == false and FlxG.inputKeyboard 'D' == then
      debug = true
-     debug = create.text(-1000, -1000, 'DEBUG')
+     debug = createText(-1000, -1000, 'DEBUG')
      setObjectFont('debug', 'vcr')
      setObjectColor('debug', 'FlxG.Red,getColorFromRGB["255,0,0"]')
      setObjectCamera('debug','CameraHud')
@@ -122,7 +122,7 @@ end
 
 function blackScreen()
    black = createSprite(0, -1000, nil)
-   black.setObjectScale(FlxG.screenHeight,FlxG.screenWidth)
+   setObjectScale('black',FlxG.screenHeight,FlxG.screenWidth)
    setObjectCamera('black','CameraGame')
    black.y = black.y - 10
 end
