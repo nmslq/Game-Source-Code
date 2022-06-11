@@ -12,7 +12,7 @@
 
         <liunx build="zip" if "liunx"/>
 
-        <setUpTools="sdk" version="2.0.8" setUpTools="ndk" ndk version="r22b" setUpTools="jdk" version="11" if "android"/>
+        <setUpTools="sdk" version="2.0.8" setUpTools="ndk" version="r22b" setUpTools="jdk" version="11" if "android"/>
 
         <windows name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
 
