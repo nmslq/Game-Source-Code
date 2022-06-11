@@ -1,6 +1,7 @@
 controls.load()
 shaders.camera()
 item = 0
+toFight = false
 
 function inRoom()
    nameRoom('pause')
@@ -12,7 +13,7 @@ function onUpdate()
 end
 
 function onCreate()
-   pause.list('Resume','Reset level','Exit to menu')
+   pause.list('Resume','Reset level','option','Exit to menu')
    bg = create.sprite(0, 0, nil)
    setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth)
    bg.alpha = 60
@@ -25,6 +26,11 @@ function controlsInput()
    end
    if getControlsInput == 'A' and press 'Reset Level' then
      reset()
+   end
+   if getControlsInput == 'A' and press 'Reset Level' then
+     blackScreen()
+     setRoom('option')
+     toFight = true
    end
    if getControlsInput == 'A' and press 'Exit to menu' then
      exit()
