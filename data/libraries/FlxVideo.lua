@@ -93,8 +93,7 @@ end
 
 function htmlStuff()
    html.android.playVideo()
-   html.video.bg(null)
-   html.video.bgColor('black')
+   html.video.bgColor('FlxG.black,getColorFromRGB["0,0,0"]')
    getHtml.video()
    androidSystem.fixGetPathHtml()
    webView.playVideo(MacTools.getFileUrl(name), true);
@@ -120,5 +119,5 @@ function androidMp4Video()
    videoView.FlxG.playVideo('file')
    android.videoWidth(1270)
    android.videoHeight(720)
-   androidVideoBG.colorSet('getColorFromRGB[0,0,0]')
+   androidVideoBG.colorSet('FlxG.black,getColorFromRGB["0,0,0"]')
 end
