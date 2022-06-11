@@ -32,12 +32,12 @@ function setting()
    controls.B.option('keyboard.change')
    controls.C.option('keyboard.change')
    controls.S.option('keyboard.change')
-   controlsOptionColor('FlxG.Black','getColorFromRGB[255,255,255]')
+   controlsOptionColor('getColorFromRGB[255,255,255]')
 end
 
 function controlsInput()
    if getControlsInput == 'A' and press change.anyKey then
-     controlsOptionColor.press('FlxG.Red,getColorFromRGB["255,0,0"]')
+     controlsOptionColor.press('getColorFromRGB[255,0,0]')
      controlsKeyChange()
    end
    if getControlsInput == 'B' == then
