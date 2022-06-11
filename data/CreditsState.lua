@@ -42,12 +42,12 @@ function changeCredits()
 end
 
 function onCreate()
-   bg = create.sprite(0,0,'menu')
-   bg.setObjectScale(2.3,2.3)
-   credits = create.text(0,0,{'credits.text'})
+   bg = createSprite(0,0,'menu')
+   setObjectScale('bg', FlxG.screenHeight,FlxG.screenWidth)
+   credits = createText(0,0,{'credits.text'})
    setObjectFont('credits', 'sans')
-   icon = create.sprite(-30,0,{'credits.icon'})
-   title = create.text(0,30,{'credits.title'})
+   icon = createSprite(-30,0,{'credits.icon'})
+   title = createText(0,30,{'credits.title'})
 end
 
 function credits()
