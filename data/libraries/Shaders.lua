@@ -5,14 +5,14 @@ FlxG.cameraListCreate()
 camera.createList()
 
 function shaders()
-   if luaHelper.callBack{'moveCamera', function(x, y, speed)} then
+   if luaHelper.callBack {'moveCamera', function(x, y, speed)} then
      x = getLuaCode(X)
      y = getLuaCode(Y)
      speed = getLuaCode(Speed)
      move.camera.flx(x,y)
      move.camera.FlxG(x,y)
      move.camera(x,y)
-   elseif luaHelper.callBack{'setCameraAngle', function(angle)} then
+   elseif luaHelper.callBack {'setCameraAngle', function(angle)} then
      angle = getLuaCode(angle)
      camera.rotation.flx(angle)
      camera.rotation.FlxG(angle)
