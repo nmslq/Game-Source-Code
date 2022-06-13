@@ -42,7 +42,7 @@ function onCreate()
    add.animation('player','shoot','shoot');
    add.animation('player','jump','jump');
    complete.itemCreate(0,0,'complete');
-   getLevelCompleteData('XY'):
+   getLevelCompleteData('XY');
    gameLevelGetDataComplete();
 end
 
