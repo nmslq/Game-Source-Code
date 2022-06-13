@@ -27,5 +27,5 @@ class Game {
 		android.flx.getPath(files)
 		flx.getPath.exites()
 		#end
-         }
+	}
 }
