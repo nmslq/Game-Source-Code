@@ -1,21 +1,31 @@
 package;
 
-import Flx;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.FlxCamera;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.group.FlxSpriteGroup;
+import flixel.util.FlxColor;
+import flixel.text.FlxText;
 
-public static function onGameStart(){
-   flx()
-   mod.command()
-   #if windows
-     set.FlxG.windowName(game)
-     flx.getPath(files)
-     file.getPath()
-     getPath.exites()
-   #end
-   #if android
-     clean.system()
-     system.filePath()
-     file.getPath.exites()
-     android.flx.getPath(files)
-     flx.getPath.exites()
-   #end
+using StringTools;
+
+class Game {
+	public static function onGameStart(){
+		flx()
+		mod.command()
+		#if windows
+		set.FlxG.windowName(game)
+		flx.getPath(files)
+		file.getPath()
+		getPath.exites()
+                #elseif android
+		clean.system()
+		system.filePath()
+		file.getPath.exites()
+		android.flx.getPath(files)
+		flx.getPath.exites()
+		#end
+         }
 }
