@@ -2,39 +2,29 @@
 <project>
         <build list={"android,linux,mac,windows"}/>
 
-        <android build="apk" if "android"/>
-
         <androidBuildManifest="xml" if "android"/>
 
+        <android build="apk" if "android"/>
         <windows build="zip" if "windows"/>
-
         <mac build="zip" if "mac"/>
-
         <liunx build="zip" if "liunx"/>
 
         <android setUpTools="sdk" version="2.0.8" setUpTools="ndk" version="r22b" setUpTools="jdk" version="11" if "android"/>
 
         <windows name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
-
         <app name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" if "android"/>
-
         <liunx name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "liunx"/>
-
         <mac name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "mac"/>
 
         <build packages="main.yml">
 
+        <haxelib name="flixel">
         <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
-
-        <pathsToolsInstall="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
-
+        <tool install="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
         <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if "liunx"/>
-
         <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if "mac"/>
-
         <haxelib install="extension-videoview" url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
 
         <asstes path={"data,images,sounds,source,fonts"}/>
-
         <FilePathDelete="readme.md"/>
 </project>
