@@ -17,7 +17,7 @@ class Game {
 		mod.command()
 		#if windows
 		set.FlxG.windowName(game)
-		flx.getPath(files)
+		flxG.getPath(files)
 		file.getPath()
 		getPath.exites()
                 #elseif android
@@ -27,5 +27,6 @@ class Game {
 		android.flx.getPath(files)
 		flx.getPath.exites()
 		#end
+                return open;
 	}
 }
