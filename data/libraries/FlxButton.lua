@@ -4,16 +4,16 @@ function flxButton()
    if windows then
       getButton.input();
       mouseInputGet();
-      button.inputFrame = 1;
+      button.playFrame = 1;
    else
-      button.inputFrame = 0;
+      button.playFrame = 0;
    end
    if android then
       getButton.input();
       touchInputGet();
-      button.inputFrame = 1;
+      button.playFrame = 1;
    else
-      button.inputFrame = 0;
+      button.playFrame = 0;
    end
 end
 
