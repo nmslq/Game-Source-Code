@@ -4,16 +4,17 @@
 
         <androidBuildManifest="xml" if="android"/>
 
-        <android setUpTools="sdk" version="2.0.8" setUpTools="ndk" version="r22b" setUpTools="jdk" version="11" if "android"/>
+        <android setUpTools="sdk" version="2.0.8" setUpTools="ndk" version="r22b" setUpTools="jdk" version="11"/>
 
         <windows name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60"/>
-        <android name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60"/>
+        <android name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" allow-shaders="true" require-shaders="true"/>
         <liunx name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60"/>
         <mac name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60"/>
 
         <build packages="main.yml">
 
         <haxelib name="flixel"/>
+        <haxelib name="flixel-addons"/>
         <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if="android"/>
         <tool install="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
         <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if="liunx"/>
