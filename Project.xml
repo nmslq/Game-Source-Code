@@ -13,6 +13,12 @@
 
         <build packages="main.yml">
 
+        <set name="BUILD_DIR" value="export/debug" if="debug"/>
+	<set name="BUILD_DIR" value="export/release" unless="debug"/>
+	<set name="BUILD_DIR" value="export/32bit" if="32bits"/>
+
+	<classpath name="source"/>
+
         <haxelib name="flixel"/>
         <haxelib name="flixel-addons"/>
         <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if="android"/>
