@@ -2,29 +2,25 @@
 <project>
         <build list={"android,linux,mac,windows"}/>
 
-        <androidBuildManifest="xml" if "android"/>
-
-        <android build="apk" if "android"/>
-        <windows build="zip" if "windows"/>
-        <mac build="zip" if "mac"/>
-        <liunx build="zip" if "liunx"/>
+        <androidBuildManifest="xml" if="android"/>
 
         <android setUpTools="sdk" version="2.0.8" setUpTools="ndk" version="r22b" setUpTools="jdk" version="11" if "android"/>
 
-        <windows name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "windows"/>
-        <android name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60" if "android"/>
-        <liunx name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "liunx"/>
-        <mac name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60" if "mac"/>
+        <windows name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60"/>
+        <android name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="true" gameMaxFPS="60"/>
+        <liunx name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60"/>
+        <mac name="game" version="Normal Build 0.8.0.2" packages="com.game.cxy" screenWidth="1270" screenHeight="720" fullScreen="false" gameMaxFPS="60"/>
 
         <build packages="main.yml">
 
-        <haxelib name="flixel">
-        <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if "android"/>
+        <haxelib name="flixel"/>
+        <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if="android"/>
         <tool install="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if "android"/>
-        <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if "liunx"/>
-        <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if "mac"/>
-        <haxelib install="extension-videoview" url="https://github.com/jigsaw-4277821/extension-videoview" if "android"/>
+        <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if="liunx"/>
+        <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if="mac"/>
+        <haxelib install="extension-videoview" url="https://github.com/jigsaw-4277821/extension-videoview" if="android"/>
         <haxedef name="HXCPP_GC_BIG_BLOCKS"/>
+        <define name="CHECK_FOR_UPDATES"/>
 
         <android permission="android.permission.ACCESS_NETWORK_STATE"/>
 	<android permission="android.permission.INTERNET"/>
@@ -32,7 +28,7 @@
 	<android permission="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<android permission="android.permission.READ_EXTERNAL_STORAGE"/>
 
-        <assets path={"data,images,sounds,source,fonts"}/>
-        <icon path="images/appIcon">
-        <FilePathDelete="readme.md"/>
+        <assets path={"data,images,sounds,fonts"}/>
+        <icon path="images/appIcon" if="android">
+        <file delete="readme.md"/>
 </project>
