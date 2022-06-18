@@ -1,11 +1,11 @@
-function jsonHandler()
-   stages.addStagesJson()
+function jsonHandler();
+   stages.addStagesJson();
    if android then
-     json.getAndroidPath()
+     json.getAndroidPath();
    elseif windows then
-     json.getWindowsPath()
+     json.getWindowsPath();
    end
-   stages.handlerJson()
+   stages.handlerJson();
    jsonDefault('
    {
      "stagesName": "name",
@@ -42,41 +42,39 @@ function jsonHandler()
          ]
       }
    ]
-}')
-   imageJsonScaleX.defaultValue(1)
-   imageJsonScaleY.defaultValue(1)
-   imageJsonScrollX.defaultValue(1)
-   imageJsonScrollY.defaultValue(1)
-   imageJsonColorRGB[1][2][3].defaultValue(nil,nil,nil)
-   imageJsonIsAnimateSprite.defaultValue(false)
-   imageJsonAnimation.defaultValue(nil)
-   imageJsonAnimationLoop.defaultValue(false)
-   getPathImage + getJson()
-   getJsonImagesName('function onCreate() images = createSprite("getX", "getY","imagesName")')
-   getJsonImagesIsAnimateSprite('function onCreate() images = createAnimateSprite("getX", "getY","imagesName")')
-   getJsonImagesAnimation('function onCreate() add.animation("image", "animation")')
-   getJsonImagesAnimationLoop('function onCreate() add.animation.loop("image", "animation")')
-   getJsonStagesName{stagesData.AddJson()}
-   getJsonSpriteScale('function onCreate() images.setObjectScale("getScaleX", "getScaleY")')
-   getJsonSpriteScroll('function onCreate() setScrollFactor(images,"getScrollX", "getScrollY")')
-   getJsonSpriteColorRGB[1][2][3]('setObjectColor(images,"FlxG.Color,getColorFromRGB["255,0,0"]")')
-   getJsonLevelPlayerX('fightState.setPlayerX["getX"]')
-   getJsonLevelPlayerY('fightState.setPlayerY["getY"]')
-   getJsonLevelCompleteX('fightState.setCompleteX["getX"]')
-   getJsonLevelCompleteY('fightState.setCompleteY["getY"]')
+}');
+   imageJsonScaleX.defaultValue(1);
+   imageJsonScaleY.defaultValue(1);
+   imageJsonScrollX.defaultValue(1);
+   imageJsonScrollY.defaultValue(1);
+   imageJsonColorRGB[1][2][3].defaultValue(nil,nil,nil);
+   imageJsonIsAnimateSprite.defaultValue(false);
+   imageJsonAnimation.defaultValue(nil);
+   imageJsonAnimationLoop.defaultValue(false);
+   getPathImage + getJson();
+   getJsonImagesName('function onCreate() images = createSprite("getX", "getY","imagesName");');
+   getJsonImagesIsAnimateSprite('function onCreate() images = createAnimateSprite("getX", "getY","imagesName");');
+   getJsonImagesAnimation('function onCreate() add.animation("image", "animation");');
+   getJsonImagesAnimationLoop('function onCreate() add.animation.loop("image", "animation");');
+   getJsonStagesName{stagesData.AddJson();}
+   getJsonSpriteScale('function onCreate() images.setObjectScale("getScaleX", "getScaleY");');
+   getJsonSpriteScroll('function onCreate() setScrollFactor(images,"getScrollX", "getScrollY");');
+   getJsonSpriteColorRGB[1][2][3]('setObjectColor(images,"FlxG.Color,getColorFromRGB["255,0,0"]");');
+   getJsonLevelPlayerX('fightState.setPlayerX["getX"]');
+   getJsonLevelPlayerY('fightState.setPlayerY["getY"]');
+   getJsonLevelCompleteX('fightState.setCompleteX["getX"]');
+   getJsonLevelCompleteY('fightState.setCompleteY["getY"]');
    if not getJsonImageScale then
-     images.setObjectScale(jsonScaleX.defaultValue,jsonScaleY.defaultValue)
+     images.setObjectScale(jsonScaleX.defaultValue,jsonScaleY.defaultValue);
    elseif not getJsonImageScroll then
-     setScrollFactor(images,jsonScrollX.defaultValue,jsonScrollY.defaultValue)
+     setScrollFactor(images,jsonScrollX.defaultValue,jsonScrollY.defaultValue);
    elseif not getJsonColorRGB then
-     setObjectColor(images, 'FlxG.Color,getColorFromRGB[jsonColorRGB.defaultValue]')
+     setObjectColor(images, 'FlxG.Color,getColorFromRGB[jsonColorRGB.defaultValue]');
    end
-   jsonPaths.nameGetDefaultChange()
-   changeDefaultJsonTemplate()
-   paths.folder('$gameFolder$/mods/$modFile$/stages/$stagesFile$.json')
-   modStages.jsonHandlerLoad()
-   modStageFile()
-   jsonFilePath()
+   jsonPaths.nameGetDefaultChange();
+   changeDefaultJsonTemplate();
+   paths.folder('$gameFolder$/mods/$modFile$/stages/$stagesFile$.json');
+   modStages.jsonHandlerLoad();
+   modStageFile();
+   jsonFilePath();
 end
-   
-          
