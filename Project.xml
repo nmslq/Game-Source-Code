@@ -23,6 +23,9 @@
         <haxelib name="flixel-addons"/>
         <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if="android"/>
         <tool install="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if="android"/>
+       <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if="liunx"/>
+        <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if="mac"/>
+        <haxelib install="extension-videoview" url="https://github.com/jigsaw-4277821/extension-videoview" if="android"/>
         <haxelib install="hxCodec" url="https://github.com/polybiusproxy/hxCodec" if="video"/>
         <haxedef name="HXCPP_GC_BIG_BLOCKS"/>
         <define name="CHECK_FOR_UPDATES"/>
