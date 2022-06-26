@@ -38,7 +38,7 @@ function playVideo()
      flx.sound('mp3');
      android.fixPathVideo();
      videoView.playVideo(Tools.getFileUrl(name));
-     hxCodec.videoMp4.android();
+     hxCodec.mp4Video.play();
      androidMp4Video();
    end
    if playEnd then
@@ -85,7 +85,7 @@ function playVideo()
        html.video.remove();
        html.vidsound.remove();
        play.html.video('end');
-       url.html.video('end');u
+       url.html.video('end');
        flx.video.end('html.url');
        flx.vidsound.end('html.url');
        html.stuff();
