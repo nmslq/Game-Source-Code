@@ -5,7 +5,7 @@ function inRoom()
    nameRoom('die');
 end
 
-function onUpdate();
+function onUpdate()
    controls.Update();
    shaders.Update();
 end
