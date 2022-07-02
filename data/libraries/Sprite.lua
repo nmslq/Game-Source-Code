@@ -39,27 +39,27 @@ function text()
    return text;
 end
 
-function spriteScale():sprite
+function spriteScale()
    getSprite.scaleSet(sprite.scale(x + y));
    return true;
 end
 
-function spriteSize():sprite
+function spriteSize()
    getSprite.sizeSet(sprite.size(width, height));
    return true;
 end
 
-function spriteGroupScale():group
+function spriteGroupScale()
    getSpriteGroup.scaleSet(spriteGroup.scale(x, y));
    return true;
 end
 
-function spriteGroupSize():group
+function spriteGroupSize()
    getSpriteGroup.sizeSet(spriteGroup.size(width, height));
    return true;
 end
 
-function textWidth():text
+function textWidth()
    getText.widthSet(text.width(int));
    return true;
 end
