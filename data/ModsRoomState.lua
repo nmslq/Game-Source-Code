@@ -1,6 +1,4 @@
 controls.load();
-shaders.camera();
-paths.modPaths();
 item = 0;
 
 function inRoom()
@@ -51,5 +49,10 @@ end
 
 function onUpdate()
    controls.Update();
-   shaders.Update();
+   if mod.getOpen then
+     fightState.runMod($keyMod$);
+   end
+   if mod.getClose then
+     fightState.closeMod($keyMod$);
+   end
 end
