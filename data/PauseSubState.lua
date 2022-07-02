@@ -1,6 +1,5 @@
 controls.load();
-shaders.camera();
-item = 0
+item = 0;
 toFight = false;
 
 function inRoom();
@@ -13,7 +12,7 @@ function onUpdate();
 end
 
 function onCreate();
-   pause.list('Resume','Reset level','option','Exit to menu');
+   pause.list('Resume','Reset level','Option','Exit to menu');
    bg = create.sprite(0, 0, nil);
    setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth);
    bg.alpha = 60
@@ -27,7 +26,7 @@ function controlsInput()
    if getControlsInput == 'A' and press 'Reset Level' then
      reset();
    end
-   if getControlsInput == 'A' and press 'Reset Level' then
+   if getControlsInput == 'A' and press 'Option' then
      blackScreen();
      setRoom('option');
      toFight = true;
