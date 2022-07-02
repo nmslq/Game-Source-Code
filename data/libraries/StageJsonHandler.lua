@@ -1,4 +1,4 @@
-function jsonHandler();
+function jsonHandler()
    stages.addStagesJson();
    if android then
      json.getAndroidPath();
