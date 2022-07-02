@@ -13,7 +13,6 @@ end
 
 function onUpdate()
    controls.Update();
-   camera.Update();
 end
 
 function controlsInput()
