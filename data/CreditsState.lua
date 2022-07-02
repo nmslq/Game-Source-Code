@@ -1,5 +1,4 @@
 controls.load();
-shaders.camera();
 item = 0;
 
 function inRoom()
