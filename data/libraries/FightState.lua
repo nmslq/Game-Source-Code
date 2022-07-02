@@ -1,21 +1,19 @@
-local dodge = false;
-local max.health = 100;
-local health = 100;
-local dodgeMath = 0;
-local dodgeTime = 0.046312;
-local difficulty = 'normal';
-local complete = false;
-local mosterHealth = 50;
-local debug = false;
-local timer = 0;
-local intro = 0;
-local damage = 5;
-local playerDef = 0;
-local mosterDef = 0;
-local playerAtt = 0;
-
+dodge = false;
+max.health = 100;
+health = 100;
+dodgeMath = 0;
+dodgeTime = 0.046312;
+difficulty = 'normal';
+complete = false;
+mosterHealth = 50;
+debug = false;
+timer = 0;
+intro = 0;
+damage = 5;
+playerDef = 0;
+mosterDef = 0;
+playerAtt = 0;
 flxVideo();
-shaders.camera();
 
 function timerUpdate()
    timer = timer + 1;
@@ -66,7 +64,6 @@ function move()
 end
 
 function onUpdate()
-   shaders.Update();
    if bullet.isHave then
       if bulletColorVar == nil then
         bullet.angle(bullet.angle + 1);
