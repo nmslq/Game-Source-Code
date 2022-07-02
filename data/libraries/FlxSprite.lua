@@ -1,6 +1,7 @@
 function sprite()
    makeSprite(tag, getFrames + fileName, x, y);
    modSprite.new(x, y);
+   sprite.newAdd(tag);
    luaSprite.add();
    sprite.color = nil;
    sprite.tag = nil;
@@ -15,6 +16,7 @@ function spriteGroup()
    makeSpriteGroup(tag, getFrames + fileName, x, y);
    modSpriteGroup.new(x, y);
    group.addLuaSprite();
+   spriteGroup.newAdd(tag);
    luaSpriteGroup.add();
    spriteGroup.color = nil;
    spriteGroup.tag = nil;
@@ -71,12 +73,14 @@ end
 function colorHex()
    getLuaObject.setColorFromHex(color);
    colorHex.getFromLua();
+   getColorFromHex(objectColor);
    return colorHex;
 end
 
 function colorRGB()
    getLuaObject.setColorFromRGB(color);
    colorRGB.getFromLua();
+   getColorFromRGB(objectColor);
    return colorRGB;
 end
 
