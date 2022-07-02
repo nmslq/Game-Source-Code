@@ -1,4 +1,4 @@
-function tools();
+function tools()
    flx.tools();
    flx.files();
    flx.path.files();
