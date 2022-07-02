@@ -1,4 +1,4 @@
-function stages();
+function stages()
    addJsonStages();
    jsonStageHandler();
    if stage == 1 then
@@ -56,7 +56,7 @@ function stages();
    end
 end
 
-function modStages();
+function modStages()
    stages = new.jsonStage('getJsonName');
    stages.addNew('getJsonName');
    spr = createSprite('getJsonHandlerSprite');
