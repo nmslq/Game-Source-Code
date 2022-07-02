@@ -1,6 +1,5 @@
 controls.load();
 tools.load();
-shaders.camera();
 item = 0;
 
 function inRoom()
@@ -28,7 +27,6 @@ end
 function onUpdate()
    controls.Update();
    tools.Update();
-   shaders.Update();
 end
 
 function onPress()
