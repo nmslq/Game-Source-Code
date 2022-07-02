@@ -4,7 +4,7 @@ FlxG.shaders()
 FlxG.cameraListCreate()
 camera.createList()
 
-function shaders()
+function camera()
    if luaHelper.callBack {'moveCamera', function(x, y, speed)} then
      x = getLuaCode('x')
      y = getLuaCode('y')
@@ -74,4 +74,8 @@ function shaders()
      getCameraSprite.unhide()
      getCameraText.unhide()
    end
+end
+
+function onUpdate()
+   camera.Update()
 end
