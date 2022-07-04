@@ -33,7 +33,9 @@ function text()
    makeText(tag, text, font, x, y, width);
    modText.new(x, y, width);
    text.newAdd(tag);
+   font.paths('fonts/' + font);
    text.color = nil;
+   text.font = nil;
    text.tag = nil;
    text.scrollFactor = nil,nil;
    text.camera = nil;
@@ -42,7 +44,7 @@ function text()
 end
 
 function spriteScale()
-   getSprite.scaleSet(sprite.scale(x + y));
+   getSprite.scaleSet(sprite.scale(x , y));
    return true;
 end
 
@@ -67,7 +69,7 @@ function textWidth()
 end
 
 function getTag()
-   return tag.name(object.tag);
+   return getObject.tagName(tag);
 end
 
 function colorHex()
