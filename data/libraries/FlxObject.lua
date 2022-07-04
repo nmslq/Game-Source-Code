@@ -44,7 +44,7 @@ function text()
 end
 
 function spriteScale()
-   getSprite.scaleSet(sprite.scale(x , y));
+   getSprite.scaleSet(sprite.scale(x, y));
    return true;
 end
 
