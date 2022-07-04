@@ -10,7 +10,7 @@ function controls()
      add.animation.loop('controls','down','down');
      add.animation.loop('controls','right','right');
      add.animation.loop('controls','left','left');
-     if luaHelper.callBack {addAndroidControls, function(controls)} then
+     if luaHelper.callBack {'addAndroidControls', function(controls)} then
         if luaHelper.callBack {addAndroidControls('up')} then
           controlsButton.addFrameAnim('controls','up');
           vpad = flxButton.addFrame('up');
@@ -41,7 +41,7 @@ function controls()
           play.animation.loop('controls','left');
           play.animation.loop('controls','right');
      end
-     if luaHelper.callBack {addAndroidControls, function(action)} then
+     if luaHelper.callBack {'addAndroidControls', function(action)} then
         elseif luaHelper.callBack {addAndroidControls('A')} then
           controlsButton.addFrameAnim('controls','A');
           vpad = flxButton.addFrame('A');
