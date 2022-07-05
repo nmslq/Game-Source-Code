@@ -1,0 +1,11 @@
+{
+  "name": "luaLib",
+  "url": "https://github.com/nmslq/Game-Source-Code/",
+  "license": "MIT",
+  "tags": ["liunx", "windows", "macOS", "android", "lime"],
+  "description": "",
+  "version": "1.0.0",
+  "releasenote": "",
+  "contributors": [""],
+  "dependencies": {}
+}
