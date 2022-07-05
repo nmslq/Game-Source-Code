@@ -1,0 +1,11 @@
+{
+  "name": "androidPermissions",
+  "url": "https://github.com/nmslq/androidPaths-Tools/",
+  "license": "MIT",
+  "tags": ["android", "lime"],
+  "description": "",
+  "version": "1.0.0",
+  "releasenote": "",
+  "contributors": [""],
+  "dependencies": {}
+}
