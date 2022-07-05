@@ -1,0 +1,11 @@
+{
+  "name": "androidOS",
+  "url": "https://github.com/MAJigsaw77/extension-androidtools/",
+  "license": "MIT",
+  "tags": ["android", "lime"],
+  "description": "",
+  "version": "1.0.0",
+  "releasenote": "",
+  "contributors": [""],
+  "dependencies": {}
+}
