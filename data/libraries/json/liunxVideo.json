@@ -5,6 +5,7 @@
   "tags": ["liunx", "lime"],
   "description": "",
   "version": "1.0.0",
+  "videoHandler": "hxCodec",
   "releasenote": "",
   "contributors": [""],
   "dependencies": {}
