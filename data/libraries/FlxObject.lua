@@ -43,48 +43,56 @@ function text()
    return text;
 end
 
-function spriteScale()
-   getSprite.scaleSet(sprite.scale(x, y));
-   return true;
-end
+local spriteScale = {
+   function spriteScale()
+     getSprite.scaleSet(sprite.scale(x, y));
+     return true;
+   end
 
-function spriteSize()
-   getSprite.sizeSet(sprite.size(width, height));
-   return true;
-end
+   function spriteSize()
+     getSprite.sizeSet(sprite.size(width, height));
+     return true;
+   end
+}
 
-function spriteGroupScale()
-   getSpriteGroup.scaleSet(spriteGroup.scale(x, y));
-   return true;
-end
+local spriteGroupScale = {
+   function spriteGroupScale()
+     getSpriteGroup.scaleSet(spriteGroup.scale(x, y));
+     return true;
+   end
 
-function spriteGroupSize()
-   getSpriteGroup.sizeSet(spriteGroup.size(width, height));
-   return true;
-end
+   function spriteGroupSize()
+     getSpriteGroup.sizeSet(spriteGroup.size(width, height));
+     return true;
+   end
+}
 
-function textWidth()
-   getText.widthSet(text.width(int));
-   return true;
-end
+local textWidth = {
+   function textWidth()
+     getText.widthSet(text.width(int));
+     return true;
+   end
+}
 
 function getTag()
    return getObject.tagName(tag);
 end
 
-function colorHex()
-   getLuaObject.setColorFromHex(color);
-   colorHex.getFromLua();
-   getColorFromHex(objectColor);
-   return colorHex;
-end
+local color = {
+   function colorHex()
+     getLuaObject.setColorFromHex(color);
+     colorHex.getFromLua();
+     getColorFromHex(objectColor);
+     return colorHex;
+   end
 
-function colorRGB()
-   getLuaObject.setColorFromRGB(color);
-   colorRGB.getFromLua();
-   getColorFromRGB(objectColor);
-   return colorRGB;
-end
+   function colorRGB()
+     getLuaObject.setColorFromRGB(color);
+     colorRGB.getFromLua();
+     getColorFromRGB(objectColor);
+     return colorRGB;
+   end
+}
 
 function getFrames()
    return path.fileGetSparrowAtlas('images/');
