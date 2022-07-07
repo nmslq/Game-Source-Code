@@ -5,6 +5,7 @@
   "tags": ["liunx", "windows", "macOS", "android", "lime"],
   "description": "",
   "version": "1.0.0",
+  "languages": "lua",
   "releasenote": "",
   "contributors": [""],
   "dependencies": {}
