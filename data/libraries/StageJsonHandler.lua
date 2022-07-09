@@ -20,9 +20,9 @@ function jsonHandler()
      "images": [
       {
         "imageName": "name",
-        "isAnimateSprite" : false,
-        "animtion" : nil,
-        "animtionLoop" : false,
+        "isAnimateSprite": "false",
+        "animtion": "",
+        "animtionLoop": "false",
         "imageXY": [
               0,
               0
