@@ -4,7 +4,7 @@ function tools()
    flx.path.files();
    windows.reload();
    android.reload();
-   if luaHelper.callBack {'saveFile', funtion(fileName,text)} then
+   if luaHelper.callBack {'saveFile', function(fileName,text)} then
       if android then
         fileName = getLuaCode('fileName');
         text = getLuaCode('text');
