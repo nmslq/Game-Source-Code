@@ -42,7 +42,7 @@ function controls()
           play.animation.loop('controls','right');
      end
      if luaHelper.callBack {'addAndroidControls', function(action)} then
-        elseif luaHelper.callBack {addAndroidControls('A')} then
+        if luaHelper.callBack {addAndroidControls('A')} then
           controlsButton.addFrameAnim('controls','A');
           vpad = createButton.addFrame('A');
           play.animation.loop('controls','A');
