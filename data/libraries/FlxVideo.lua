@@ -1,4 +1,4 @@
-function playVideo()
+function videoHandler()
    cameraVisible('cameraHUD');
    cameraVisible('cameraGame');
    cameraVisible('cameraControls');
@@ -14,15 +14,15 @@ function playVideo()
      play.mp3.vidsound('mp3');
      play.mp4.video('mp4');
      mp4Video.openPlay();
-     flx.video('mp4');
-     flx.sound('mp3');
-     windows.fixPathVideo();
+     paths.video('mp4');
+     paths.sound('mp3');
+     windows.pathVideo(file);
    end
    if playEnd then
      mp4.video.close();
      mp4.play.remove();
-     flx.video.end('mp4');
-     flx.vidsound.end('mp3');
+     mp4.videoEnd('mp4');
+     mp3.vidsoundEnd('mp3');
    end
    if android then --android can load mp4 video
      load.video('mp4');
@@ -34,8 +34,8 @@ function playVideo()
      play.mp3.vidsound('mp3');
      play.mp4.video('mp4');
      mp4Video.openPlay();
-     flx.video('mp4');
-     flx.sound('mp3');
+     paths.video('mp4');
+     paths.sound('mp3');
      android.fixPathVideo();
      videoView.playVideo(Tools.getFileUrl(name));
      hxCodec.mp4Video.play();
@@ -44,8 +44,8 @@ function playVideo()
    if playEnd then
      mp4.video.close();
      mp4.play.remove();
-     flx.video.end('mp4');
-     flx.vidsound.end('mp3');
+     mp4.videoEnd('mp4');
+     mp3.vidsoundEnd('mp3');
      videoView.endVideo(Tools.getFileUrl(name));
    end
    if liunx or mac then
@@ -76,8 +76,8 @@ function playVideo()
      play.html('video.mp4');
      play.html('sound.mp3');
      url.html.video();
-     flx.video('html.url');
-     flx.vidsound('html.url');
+     url.playVideo('html.url');
+     url.playVidsound('html.url');
      html.stuff();
    end
      if playEnd then
@@ -86,8 +86,8 @@ function playVideo()
        html.vidsound.remove();
        play.html.video('end');
        url.html.video('end');
-       flx.video.end('html.url');
-       flx.vidsound.end('html.url');
+       html.videoEnd('html.url');
+       html.vidsoundEnd('html.url');
        html.stuff();
    end
 end
@@ -101,22 +101,35 @@ function htmlStuff()
    if playEnd then
      liunx.flxHtmlClear();
      mac.flxHtmlClear();
-     html.color.remove();
-     flx.videoHtmlEnd();
+     html.videoColor.remove();
+     videoHtmlEnd.clear();
      html.bg.remove();
      endVideoHtmlBuild();
      webView.fixEndVideo();
-     webHtml.FlxG.endVideo();
+     webHtml.endVideo();
      hxCodec.endVideo();
    end
 end
 
 function androidMp4Video()
-   flx.getPathVideoFile();
-   FlxG.videoViewPlay();
-   mp4.FlxG.videoPlay();
-   videoView.FlxG.playVideo('file'):
+   paths.getPathVideoFile();
+   video.videoViewPlay();
+   mp4.videoPlay();
+   hxCodec.playVideo('file'):
    android.videoWidth = 1270;
    android.videoHeight = 720;
    androidVideoBG.colorSet('FlxG.Black,getColorFromRGB["0,0,0"]');
+end
+
+function playVideo()
+   video = new.videoHandler();
+   videoHandler.pathVideo('file');
+   videoHandler.playVideo('video', file);
+end
+
+function onUpdate()
+   if video.playEnd then
+     videoHandler.videoEnd();
+     hxCodec.videoEnd();
+   end
 end
