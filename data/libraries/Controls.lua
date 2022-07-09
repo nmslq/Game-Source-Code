@@ -4,7 +4,7 @@ function controls()
      controls = create.animatedButton(0, 0, 'controls');
      add.animation.loop('controls','A','A');
      add.animation.loop('controls','B','B');
-     add.animate.loop('controls','C','C');
+     add.animation.loop('controls','C','C');
      add.animation.loop('controls','S','S');
      add.animation.loop('controls','up','up');
      add.animation.loop('controls','down','down');
@@ -13,29 +13,29 @@ function controls()
      if luaHelper.callBack {'addAndroidControls', function(controls)} then
         if luaHelper.callBack {addAndroidControls('up')} then
           controlsButton.addFrameAnim('controls','up');
-          vpad = flxButton.addFrame('up');
+          vpad = createButton.addFrame('up');
           play.animation.loop('controls','up');
         elseif luaHelper.callBack {addAndroidControls('down')} then
           controlsButton.addFrameAnim('controls','down');
-          vpad = flxButton.addFrame('down');
+          vpad = createButton.addFrame('down');
           play.animation.loop('controls','down');
         elseif luaHelper.callBack {addAndroidControls('left')} then
           controlsButton.addFrameAnim('controls','left');
-          vpad = flxButton.addFrame('left');
+          vpad = createButton.addFrame('left');
           play.animation.loop('controls','left');
         elseif luaHelper.callBack {addAndroidControls('right')} then
           controlsButton.addFrameAnim('controls','right');
-          vpad = flxButton.addFrame('right');
+          vpad = createButton.addFrame('right');
           play.animation.loop('controls','right');
         elseif luaHelper.callBack {addAndroidControls('full')} then
           controlsButton.addFrameAnim('controls','up');
           controlsButton.addFrameAnim('controls','down');
           controlsButton.addFrameAnim('controls','left');
           controlsButton.addFrameAnim('controls','right');
-          vpad = flxButton.addFrame('up');
-          vpad1 = flxButton.addFrame('down');
-          vpad2 = flxButton.addFrame('left');
-          vpad3 = flxButton.addFrame('right');
+          vpad = createButton.addFrame('up');
+          vpad1 = createButton.addFrame('down');
+          vpad2 = createButton.addFrame('left');
+          vpad3 = createButton.addFrame('right');
           play.animation.loop('controls','up');
           play.animation.loop('controls','down');
           play.animation.loop('controls','left');
@@ -44,26 +44,25 @@ function controls()
      if luaHelper.callBack {'addAndroidControls', function(action)} then
         elseif luaHelper.callBack {addAndroidControls('A')} then
           controlsButton.addFrameAnim('controls','A');
-          vpad = flxButton.addFrame('A');
+          vpad = createButton.addFrame('A');
           play.animation.loop('controls','A');
         elseif luaHelper.callBack {addAndroidControls('B')} then
           controlsButton.addFrameAnim('controls','B');
-          vpad = flxButton.addFrame('B');
+          vpad = createButton.addFrame('B');
           play.animation.loop('controls','B');
         elseif luaHelper.callBack {addAndroidControls('C')} then
           controlsButton.addFrameAnim('controls','C');
-          vpad = flxButton.addFrame('C');
+          vpad = createButton.addFrame('C');
           play.animation.loop('controls','C');
         elseif luaHelper.callBack {addAndroidControls('S')} then
           controlsButton.addFrameAnim('controls','S');
-          vpad = flxButton.addFrame('S');
+          vpad = createButton.addFrame('S');
           play.animation.loop('controls','S');
       end
      create.newCamera('CameraControls');
      setObjectCamera('controls','CameraControls');
      testAndroidControls();
-     flxButton();
-     flxControlsInput('check');
+     checkControlsInput();
       if getInputAndroidControls == 'up' then
         controlsAndroidInput('up') = true;
       elseif getInputAndroidControls == 'down' then
