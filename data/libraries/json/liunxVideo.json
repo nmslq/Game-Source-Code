@@ -1,11 +1,11 @@
 {
   "name": "liunxVideo",
-  "url": "https://github.com/polybiusproxy/hxCodec/",
+  "url": ["https://github.com/polybiusproxy/hxCodec/", "https://github.com/nmslq/Game-Source-Code/"],
   "license": "MIT",
   "tags": ["liunx", "lime"],
   "description": "",
   "version": "1.0.0",
-  "videoHandler": "hxCodec",
+  "videoHandler": ["hxCodec", "videoHandler"],
   "releasenote": "",
   "contributors": [""],
   "dependencies": {}
