@@ -42,10 +42,10 @@ function flxButtonInput()
         end
      for (getMouseXY in controlsMaxInputXY) then
        buttonInput();
-       flx.buttonInput();
+       buttonInput.mouse();
        controls.input = true;
      else
-       flx.buttonInput(false);
+       buttonInput = false;
        controls.input = false;
      end
    if android then
@@ -56,7 +56,7 @@ function flxButtonInput()
         for (androidTouchX in controlsInputX) then
           buttonInput();
           inputAndroid = true;
-          flxActionInput();
+          actionInput();
           reUpdate.mouseX();
           reUpdate.controlsInputX.base();
         end
@@ -68,19 +68,19 @@ function flxButtonInput()
           buttonInput();
           inputAndroid = true;
           reUpdate.mouseY();
-          flxActionInput();
+          actionInput();
           reUpdate.controlsInputY.base();
         end
     for (getAndroidTouchXY in controlsMaxInputXY) then
        buttonInput();
-       flx.buttonInput();
-       flxAndroidCheck();
-       FlxG.controlsInputCheck();
+       buttonInput.touch();
+       androidVpadCheck();
+       controlsInputCheck();
        actionAddDoButton();
        controls.input = true;
      else
-       flx.buttonInput(false);
-       FlxG.controlsInputCheck();
+       buttonInput = false;
+       controlsInputCheck();
        controls.input = false;
       end
    end
