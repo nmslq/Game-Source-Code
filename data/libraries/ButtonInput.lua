@@ -1,4 +1,4 @@
-function flxButton()
+function button()
    button = createAnimatedSprite(buttonSprite,x,y);
    button.addFrame(1,2);
    if windows then
