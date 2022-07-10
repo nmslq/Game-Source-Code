@@ -33,6 +33,7 @@ function text()
    makeText(tag, text, font, x, y, width);
    modText.new(x, y, width);
    text.newAdd(tag);
+   luaText.add();
    font.paths('fonts/' + font);
    text.color = nil;
    text.font = nil;
