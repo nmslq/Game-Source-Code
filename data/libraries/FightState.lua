@@ -13,7 +13,7 @@ damage = 5;
 playerDef = 0;
 mosterDef = 0;
 playerAtt = 0;
-flxVideo();
+videoHandler();
 
 function timerUpdate()
    timer = timer + 1;
@@ -234,7 +234,7 @@ function shoot()
    shbu = createSprite(player.getGunX,player.getGunY,'shotb');
    setObjectCamera('shbu','CameraGame');
    play.sound('shoot');
-   shbu.x = shbu.x + 3:
+   shbu.x = shbu.x + 3;
    if shbuHit.moster then
      moster.kill();
    end
@@ -255,7 +255,7 @@ function hit()
      health = health - 15;
    end
    if bulletHitColor = red then
-     health = 0:
+     health = 0;
    end
    if no.hitBullet then
      health = health -= 0;
