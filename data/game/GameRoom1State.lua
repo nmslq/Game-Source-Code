@@ -19,7 +19,8 @@ end
 
 function onComplate()
     black.screen();
-    setRoom('game2');
+    FightState.loadLevelFromLua(1);
+    setRoom('fight');
 end
 
 function addControls()
