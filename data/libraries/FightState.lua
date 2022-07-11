@@ -13,10 +13,16 @@ damage = 5;
 playerDef = 0;
 mosterDef = 0;
 playerAtt = 0;
-videoHandler();
+local videoHandler();
+gameRoom = nil;
 
 function timerUpdate()
    timer = timer + 1;
+end
+
+function loadLevelFromLua(path)
+   paths.pathFromSource('data/game/GameRoom' + path + 'State');
+   return FightState.loadLevel(path);
 end
 
 function controlsInput()
