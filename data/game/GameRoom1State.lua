@@ -5,7 +5,7 @@ level = 1;
 dodgeMath = 0;
 
 function inRoom()
-   nameRoom('game1');
+  nameRoom('game1');
 end
 
 function onUpdate()
@@ -14,7 +14,7 @@ function onUpdate()
 end
 
 function onCreate()
-   complate.xy(500,500);
+   complate.setXY(500,500);
 end
 
 function onComplate()
