@@ -9,16 +9,16 @@ end
 function onCreate()
    title = createSprite(0, 100, 'title');
    setObjectScale('title',1.5,1);
-   version = create.text(-300, -300, 'version:{getBuildVersion}');
+   version = createText(-300, -300, 'version:{getBuildVersion}');
    setObjectFont('version', 'sans');
    setObjectSize('version', 15);
    start = createText(0, 30, 'start', 'sans');
    mods = createText(0, 0, 'mods', 'sans');
    credits = createText(0, -30, 'credits');
    setObjectFont('credits', 'sans');
-   options = create.text(0, -60, 'options');
+   options = createText(0, -60, 'options');
    setObjectFont('options', 'sans');
-   exit = create.text(0, -90, 'exit');
+   exit = createText(0, -90, 'exit');
    setObjectFont('exit', 'sans');
    bg = createSprite(0, 0, 'menu');
    setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth);
@@ -32,7 +32,8 @@ end
 function onPress()
    if getControlsInput == 'A' and press 'start' then
      black.screen();
-     setRoom('game1');
+     FightState.loadLevelFromLua(1);
+     setRoom('fight');
    end
    if getControlsInput == 'A' and press 'mods' then
      black.screen();
