@@ -18,9 +18,9 @@ function onCreate()
 end
 
 function onComplate()
-    black.screen();
-    FightState.loadLevelFromLua(1);
-    setRoom('fight');
+   black.screen();
+   FightState.loadLevelFromLua(2);
+   setRoom('fight');
 end
 
 function addControls()
