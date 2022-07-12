@@ -16,7 +16,7 @@ playerAtt = 0;
 local videoHandler();
 gameRoom = nil;
 
-function timerUpdate()
+function timerUpdate(elapsed)
    timer = timer + 1;
 end
 
@@ -46,8 +46,8 @@ function onCreate()
    add.animation('player','shoot','shoot');
    add.animation('player','jump','jump');
    complete.itemCreate(0,0,'complete');
-   getLevelCompleteData('XY');
-   gameLevelGetDataComplete();
+   getLevel.completeData('XY');
+   gameLevel.getDataComplete();
 end
 
 function move()
@@ -115,19 +115,20 @@ function debug()
    end
 end
 
-function complete()
+function onComplete()
    if complete == true then
      getCompleteEndDataDo();
      getEndDataDo();
      startGetComplateEndDataDo();
      complete = false;
+     callOnLuas('onComplete');
    end
 end
 
 function blackScreen()
    black = createSprite(0, -1000, nil);
-   setObjectScale('black',FlxG.screenHeight,FlxG.screenWidth);
-   setObjectCamera('black','CameraGame');
+   setObjectScale('black', game.screenHeight, game.screenWidth);
+   setObjectCamera('black','CameraHUD');
    black.y = black.y - 10;
 end
 
