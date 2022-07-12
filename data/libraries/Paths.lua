@@ -138,8 +138,13 @@ function paths()
 end
 
 function onUpdate()
-    paths.Update();
-    modPaths.Update();
+   paths.Update();
+   modPaths.Update();
+end
+
+function pathFromSource(path)
+   source.getPath(path);
+   return sourcePath.file(path);
 end
 
 function modConfig()
