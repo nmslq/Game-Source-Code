@@ -1,4 +1,4 @@
-function button()
+function createButton()
    button = createAnimatedSprite(buttonSprite,x,y);
    button.addFrame(1,2);
    if windows then
@@ -17,7 +17,7 @@ function button()
    end
 end
 
-function flxButtonInput()
+function buttonInput()
    controls.buttonInputGetTest();
    if windows then
      getMouseX = getIn(getControlsScaleX);
