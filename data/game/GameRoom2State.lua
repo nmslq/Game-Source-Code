@@ -14,12 +14,13 @@ function onUpdate()
 end
 
 function onCreate()
-   complate.xy(600,700);
+   complate.setXY(600,700);
 end
 
 function onComplate()
     black.screen();
-    setRoom('game3');
+    FightState.loadLevelFromLua(2);
+    setRoom('fight');
 end
 
 function addControls()
