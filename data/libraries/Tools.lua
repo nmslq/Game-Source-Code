@@ -18,7 +18,7 @@ function tools()
         text = getLuaCode('text');
         windows.file.save('files');
         windows.file.exites('files');
-        windows.create.fileExites('files');
+        windows.create.fileExites('file');
         load.windows.fileName();
         file.getPath.exites('file');
         file.system.exites('file');
@@ -27,9 +27,9 @@ function tools()
    elseif luaHelper.callBack {'deleteFile',  function(fileName)} then
       if android then
         fileName = getLuaCode('fileName');
-        delete.systemFile('files');
-        file.system.deleteExites('files');
-        file.delete.android('files');
+        delete.systemFile('file');
+        file.system.deleteExites('file');
+        file.delete.android('file');
         file.folderGetPath();
       end
       if windows then
