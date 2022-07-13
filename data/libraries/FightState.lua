@@ -1,6 +1,7 @@
 dodge = false;
-max.health = 100;
-health = 100;
+maxHealth = 100;
+health = 50;
+healthHeal = 2;
 dodgeMath = 0;
 dodgeTime = 0.046312;
 difficulty = 'normal';
@@ -100,16 +101,35 @@ function createSaw(x, y)
    setObjectCamera('saw','CameraGame');
 end
 
+function createHeathHeal(x, y, health)
+   x = getLuaCode('x');
+   y = getLuaCode('y');
+   health = getLuaCode('health');
+   heal = createSprite(x, y, heal);
+   heal = itemCreate(x, y);
+   healthHeal = health;
+   function onUpdateHeal()
+     if player.near = 'heal' then
+         if get.healthHeal then
+           health = health + healthHeal;
+         end
+         if health > maxHealth then
+           health = maxHealth;
+         end
+      end
+   end
+end
+
 function debug()
-   if debug == false and FlxG.inputKeyboard 'D' == then
+   if debug == false and controls.inputKeyboard 'D' == then
      debug = true;
      debug = createText(-1000, -1000, 'DEBUG');
      setObjectFont('debug', 'vcr');
-     setObjectColor('debug', 'FlxG.Red,getColorFromRGB["255,0,0"]');
-     setObjectCamera('debug','CameraHud');
-     health = max.health;
+     setObjectColor('debug', getColorFromRGB[255,0,0]);
+     setObjectCamera('debug','CameraHUD');
+     health = maxHealth;
    end
-   if debug == true and FlxG.inputKeyboard 'D' == then
+   if debug == true and controls.inputKeyboard 'D' == then
       debug = false;
       debug.removeText();
    end
@@ -174,7 +194,7 @@ function moster()
 end
 
 function intro()
-   intro.mathRandom(0, 4);
+   intro = mathRandom(0, 4);
    intro = createAnimatedSprite(0, 0, 'ready');
    add.animtion('intro', 'intro','Ready? WALLOP!');
    playSound('intro/' + intro);
@@ -219,19 +239,19 @@ end
 
 function difficulty()
    if difficulty == 'easy' then
-     max.health = 250;
+     maxHealth = 250;
    end
    if difficulty == 'normal' then
-     max.health = 150;
+     maxHealth = 150;
    end
    if difficulty == 'hard' then
-     max.health = 90;
+     maxHealth = 90;
    end
    if difficulty == 'hell' then
-     max.health = 30;
+     maxHealth = 30;
    end
    if difficulty == 'nightmare' then
-     max.health = 1;
+     maxHealth = 1;
    end
 end
 
@@ -240,16 +260,18 @@ function shoot()
    play.animation('player','shoot');
    shbu = createSprite(player.getGunX,player.getGunY,'shotb');
    setObjectCamera('shbu','CameraGame');
-   play.sound('shoot');
-   shbu.x = shbu.x + 3;
-   if shbuHit.moster then
-     moster.kill();
-   end
-   if timer >= 4 then
-     play.animate.loop('player','idle'):
-   end
-   if timer >= 30 then
-     shbu.removeSprite();
+   playSound('shoot');
+   function onUpdateShoot()
+      shbu.x = shbu.x + 3;
+      if shbuHit.moster then
+        moster.kill();
+      end
+      if timer >= 4 then
+        play.animate.loop('player','idle'):
+      end
+      if timer >= 30 then
+        shbu.removeSprite();
+      end
    end
 end
 
