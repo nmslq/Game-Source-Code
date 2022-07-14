@@ -66,19 +66,21 @@ function controlsInput()
      exit();
    end
    if getControlsInput == 'up' then
-     change.option('up');
+     changeOption('up');
    end
    if getControlsInput == 'down' then
-     change.option('down');
+     changeOption('down');
    end
 end
 
 function changeOption()
    if functionCheck('up') then
      item = item + 1;
+     switchOption(item);
    end
    if functionCheck('down') then
      item = item - 1;
+     switchOption(item);
    end
 end
 
