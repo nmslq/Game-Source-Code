@@ -16,8 +16,8 @@ function inRoom()
 end
 
 function onCreate()
-   bg = create.sprite(0, 0, 'menu');
-   bg.setObjectScale(game.screenHeight,game.screenWidth);
+   bg = createSprite(0, 0, 'menu');
+   setObjectScale('bg', game('screenHeight'),game('screenWidth'));
    addSprite('bg');
 
    up = createOption(0, 0, 'up', 'controlUp');
