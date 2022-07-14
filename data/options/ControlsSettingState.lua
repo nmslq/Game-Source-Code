@@ -12,24 +12,48 @@ function addControls()
 end
 
 function inRoom()
-   nameRoom('controls setting');
+   nameRoom('controlsSetting');
 end
 
 function onCreate()
    bg = create.sprite(0, 0, 'menu');
-   bg.setObjectScale(FlxG.screenHeight,FlxG.screenWidth);
-   options = new.option(0, 0[nextSetting.y - 20], controlsOptions);
+   bg.setObjectScale(game.screenHeight,game.screenWidth);
+   addSprite('bg');
+
+   up = createOption(0, 0, 'up', 'controlUp');
+   addOption('up');
+
+   left = createOption(0, 0, 'left', 'controlLeft');
+   addOption('left');
+
+   down = createOption(0, 0, 'down', 'controlDown');
+   addOption('down');
+
+   right = createOption(0, 0, 'up', 'controlUp');
+   addOption('up');
+
+   a = createOption(0, 0, 'a', 'controlA');
+   addOption('a');
+
+   b = createOption(0, 0, 'b', 'controlB');
+   addOption('b');
+
+   c = createOption(0, 0, 'c', 'controlC');
+   addOption('c');
+
+   s = createOption(0, 0, 's', 'controlS');
+   addOption('s');
 end
 
 function setting()
-   controls.up.option('keyboard.change');
-   controls.left.option('keyboard.change');
-   controls.right.option('keyboard.change');
-   controls.down.option('keyboard.change');
-   controls.A.option('keyboard.change');
-   controls.B.option('keyboard.change');
-   controls.C.option('keyboard.change');
-   controls.S.option('keyboard.change');
+   controlUp.option(get('keyboardChange'));
+   controlLeft.option(get('keyboardChange'));
+   controlRight.option(get('keyboardChange'));
+   controlDown.option(get('keyboardChange'));
+   controlA.option(get('keyboardChange'));
+   controlB.option(get('keyboardChange'));
+   controlC.option(get('keyboardChange'));
+   controlsS.option(get('keyboardChange'));
    controlsOption.setColor(getColorFromRGB[0,0,0]);
 end
 
@@ -50,19 +74,24 @@ function controlsInput()
 end
 
 function changeOption()
-   if 'up' then
+   if functionCheck('up') then
      item = item + 1;
    end
-   if 'down' then
+   if functionCheck('down') then
      item = item - 1;
    end
 end
 
 function exit()
-   get.change('data');
-   get.change('controls');
-   save();
-   controls.change();
+   option.save(option('controlUp'));
+   option.save(option('controlDown'));
+   option.save(option('controlLeft'));
+   option.save(option('controlRight'));
+   option.save(option('controlA'));
+   option.save(option('controlB'));
+   option.save(option('controlC'));
+   option.save(option('controlS'));
+   controlsChange('up,down,left,right,a,b,c,s');
    black.screen();
    setRoom('options');
 end
