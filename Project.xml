@@ -2,7 +2,7 @@
 <project>
         <build list={"android,linux,mac,windows"}/>
 
-        <androidBuildManifest="xml" if="android"/>
+        <androidBuild manifest="xml" if="android"/>
 
         <android setUpTools="sdk" version="2.0.8" setUpTools="ndk" version="r22b" setUpTools="jdk" version="11"/>
 
