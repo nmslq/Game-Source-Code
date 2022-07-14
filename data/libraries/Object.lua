@@ -3,6 +3,7 @@ function sprite()
    modSprite.new(x, y);
    sprite.newAdd(tag);
    luaSprite.add();
+   sprite.image = nil;
    sprite.color = nil;
    sprite.tag = nil;
    sprite.size = nil,nil;
@@ -13,9 +14,11 @@ function sprite()
 end
 
 function spriteGroup()
-   makeSpriteGroup(tag, getFrames + fileName, x, y);
+   makeSpriteGroup(tag, x, y);
    modSpriteGroup.new(x, y);
    group.addLuaSprite();
+   group.addLuaText();
+   group.addLuaButton();
    spriteGroup.newAdd(tag);
    luaSpriteGroup.add();
    spriteGroup.color = nil;
@@ -35,6 +38,7 @@ function text()
    text.newAdd(tag);
    luaText.add();
    font.paths('fonts/' + font);
+   text.text = nil;
    text.color = nil;
    text.font = nil;
    text.tag = nil;
@@ -42,6 +46,21 @@ function text()
    text.camera = nil;
    text.width = nil;
    return text;
+end
+
+function button()
+   makeButton(tag, getFrames + sprite, frames);
+   modButton.new(x, y, width);
+   button.newAdd(tag);
+   luaButton.add();
+   button.sprite = nil;
+   button.frames = nil;
+   button.color = nil;
+   button.tag = nil;
+   button.scrollFactor = nil,nil;
+   button.camera = nil;
+   button.width = nil;
+   return button;
 end
 
 local spriteScale = {
