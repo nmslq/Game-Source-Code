@@ -21,8 +21,9 @@
 
         <haxelib name="flixel"/>
         <haxelib name="flixel-addons"/>
+        <haxelib name="lime"/>
         <haxelib install="extension-androidtools" url="https://github.com/jigsaw-4277821/extension-androidtools" if="android"/>
-        <tool install="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if="android"/>
+        <tools install="androidPaths-Tools" url="https://github.com/nmslq/AndroidPaths-Tools" if="android"/>
         <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if="liunx"/>
         <haxelib install="extension-webview" url="https://github.com/jigsaw-4277821/extension-webview" if="mac"/>
         <haxelib install="extension-videoview" url="https://github.com/jigsaw-4277821/extension-videoview" if="android"/>
