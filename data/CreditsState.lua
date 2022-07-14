@@ -41,7 +41,7 @@ end
 
 function onCreate()
    bg = createSprite(0,0,'menu');
-   setObjectScale('bg', FlxG.screenHeight,FlxG.screenWidth);
+   setObjectScale('bg', game.screenHeight,game.screenWidth);
    credits = createText(0,0,{'credits.text'});
    setObjectFont('credits', 'sans');
    icon = createSprite(-30,0,{'credits.icon'});
