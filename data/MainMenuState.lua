@@ -21,7 +21,7 @@ function onCreate()
    exit = createText(0, -90, 'exit');
    setObjectFont('exit', 'sans');
    bg = createSprite(0, 0, 'menu');
-   setObjectScale('bg',FlxG.screenHeight,FlxG.screenWidth);
+   setObjectScale('bg',game.screenHeight,game.screenWidth);
 end
 
 function onUpdate()
