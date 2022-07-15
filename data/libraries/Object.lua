@@ -29,6 +29,7 @@ function spriteGroup()
    spriteGroup.camera = nil;
    spriteGroup.imagesIn(spriteImages);
    spriteGroup.textIn(text);
+   spriteGroup.buttonIn(button);
    return spriteGroup;
 end
 
