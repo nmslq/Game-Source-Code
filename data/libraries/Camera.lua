@@ -40,9 +40,9 @@ function cameraLua()
      add.cameraList(camName);
      camera.addListCreate(camName);
      cameraAddCreate(camName);
-     cameraXY.AddListCreate()
-     cameraScale.AddListCreate()
-     cameraRotation.AddListCreate()
+     cameraXY.AddListCreate();
+     cameraScale.AddListCreate();
+     cameraRotation.AddListCreate();
    elseif luaHelper.callBack {'removeCamera', function(camName)} then
      camName = getLuaCode('camName');
      camera.removeFromList(camName);
@@ -66,5 +66,5 @@ function cameraLua()
 end
 
 function onUpdate()
-   camera.Update()
+   camera.Update();
 end
