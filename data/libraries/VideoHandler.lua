@@ -118,7 +118,7 @@ function androidMp4Video()
    hxCodec.playVideo('file'):
    android.videoWidth = 1270;
    android.videoHeight = 720;
-   androidVideoBG.colorSet('FlxG.Black,getColorFromRGB["0,0,0"]');
+   androidVideoBG.colorSet(getColorFromRGB[0,0,0]);
 end
 
 function playVideo()
