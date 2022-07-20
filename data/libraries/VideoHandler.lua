@@ -101,7 +101,7 @@ function htmlStuff()
    if playEnd then
      liunx.flxHtmlClear();
      mac.htmlClear();
-4     html.videoColor.remove();
+     html.videoColor.remove();
      videoHtmlEnd.clear();
      html.bg.remove();
      endVideoHtmlBuild();
