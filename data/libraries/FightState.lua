@@ -280,10 +280,10 @@ function hitMoster()
 end
 
 function hit()
-   if bulletHitColor = nil then
+   if bulletHitColor == nil then
      health = health - 15;
    end
-   if bulletHitColor = red then
+   if bulletHitColor == 'red' then
      health = 0;
    end
    if no.hitBullet then
