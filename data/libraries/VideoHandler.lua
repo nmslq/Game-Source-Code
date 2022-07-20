@@ -67,8 +67,8 @@ function videoHandler()
      mac.system.getPath('html');
      mac.system.exites('html');
      load.html('path');
-     ['video.mp4'].load();
-     ['vidsound.mp3'].load();
+     ('video.mp4').load();
+     ('vidsound.mp3').load();
      reload('html');
      html.video();
      html.vidsound();
@@ -76,9 +76,9 @@ function videoHandler()
      play.html('video.mp4');
      play.html('sound.mp3');
      url.html.video();
-     url.playVideo('html.url');
-     url.playVidsound('html.url');
-     html.stuff();
+     url.playVideo('html(url));
+     url.playVidsound(html(url));
+     htmlStuff();
    end
      if playEnd then
        html.close();
@@ -88,19 +88,19 @@ function videoHandler()
        url.html.video('end');
        html.videoEnd('html.url');
        html.vidsoundEnd('html.url');
-       html.stuff();
+       htmlStuff();
    end
 end
 
 function htmlStuff()
    html.android.playVideo();
-   html.video.bgColor('FlxG.Black,getColorFromRGB["0,0,0"]');
+   html.video.bgColor(getColorFromRGB[0,0,0]);
    getHtml.video();
    androidSystem.fixGetPathHtml();
-   hxCodec.playVideo(getVideoFile);
+   hxCodec.playVideo(get(videoFile));
    if playEnd then
      liunx.flxHtmlClear();
-     mac.flxHtmlClear();
+     mac.htmlClear();
      html.videoColor.remove();
      videoHtmlEnd.clear();
      html.bg.remove();
