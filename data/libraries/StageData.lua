@@ -59,7 +59,7 @@ end
 function modStages()
    stages = new.jsonStage('getJsonName');
    stages.addNew('getJsonName');
-   spr = createSprite('getJsonHandlerSprite');
+   spr = createSprite(get(jsonHandlerSprite));
    stage.jsonSetting();
    game.stagesJsonUse();
 end
