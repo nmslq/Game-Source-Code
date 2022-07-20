@@ -9,7 +9,7 @@ function modPaths()
    path.modFolder('videos');
    path.modFolder('stages');
    if windows then
-     windows.modFilesSystemGetPath.exites('$sdcard$/mods/$modFilesName$.mod');
+     windows.filePath.exites('$sdcard$/mods/$modFilesName$.mod');
      getPathSystem.folder('mods');
      getPathSystem.modFileName('$modFilesName$.mod');
      file.getPath();
@@ -45,7 +45,7 @@ function modPaths()
      mod.getPathFiles.exites('$getJsonImagesName$.png');
    end
    if android then
-     android.modFilesAndroidSystemGetPath('sdcard/android/data/com.game.name/mods/$modFilesName$/$folder$');
+     android.apk.filePath('sdcard/android/data/com.game.name/mods/$modFilesName$/$folder$');
      getPathSystem.folder('mods');
      getPathSystem.modFileName('$modFilesName$.mod');
      file.getPath();
@@ -84,7 +84,7 @@ end
 
 function paths()
    if windows then
-     windows.gameFolderSystemGetPath.exites('$sdcard$/');
+     windows.gameFolderPath.exites('$sdcard$/');
      game.getPathFolder.exites('data');
      game.getPathFiles.exites('data/$roomFile$.lua');
      game.getPathFolder.exites('data/game');
@@ -107,7 +107,7 @@ function paths()
      game.getPathFiles.exites('videos/$videoFile$.mp4');
    end
    if android then
-     android.gameFolderAndroidApkGetPath('assets/');
+     android.apk.gameFolderPath('assets/');
      androidApkDirSetting();
      androidApkDirFilesPaths();
      androidApkGetPathDirFiles();
@@ -144,7 +144,9 @@ end
 
 function pathFromSource(path)
    source.getPath(path);
-   return sourcePath.file(path);
+   getFile(sourceCode(get(path)));
+   get.pathSource(get(path)));
+   return sourceCode.pathFile(path).getContent(pathFromSource(path)).returnSource(getContentFromSource(path));
 end
 
 function modConfig()
